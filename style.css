@@ -45,7 +45,7 @@ max-width: 300px;
 }
 
 pre {
-    border: 3px solid #000;
+    border: 3px solid paleturquoise;
     padding-top: 15px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -53,4 +53,6 @@ pre {
     white-space: pre-wrap;
     overflow-x:auto;
     margin-bottom: 20px;
+    max-width: 50%;
+    border-radius: 10px;
 }
