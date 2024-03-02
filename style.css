@@ -1,13 +1,38 @@
-body {
+body.index {
     margin: 0;
-    background: gray;
-    text-align: center;
-}
+    background: rgb(241, 234, 241);
 
+}
+.topHeading{
+
+text-align: center;    
+}
 .edit {
     text-align: center;
     border: 1px;
-background-color: pink;
 
+
+}
+
+.Thank{
+
+    position: absolute;
+    bottom: 10%;
+    transform: translate(100px, -10px);
+    text-align: center;
+    width: 100%;
+color:rgb(43, 226, 52)
+}
+
+.content1D{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin-left: 50px;
+
+border:3px dotted #333;
+
+padding-left: 30px;
+padding-top: 20px;
+padding-bottom: 20px;
+max-width: 300px;
 
 }
