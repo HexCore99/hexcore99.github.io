@@ -30,7 +30,12 @@ text = text.replace(/#include\s*<([^\s>]+)>/g, '#include < $1 >');
 // 2. Color the text within the < > brackets (modified)
 text = text.replace(/#include\s*<(.*?)>/g, '<span class="preprocessor">#include</span> <span class="header"><$1></span>'); 
 
-
+  // Color data types (you can adjust the colors later)
+  text = text.replace(/\bint\b/g, '<span class="int-type">int</span>'); 
+  text = text.replace(/\bfloat\b/g, '<span class="float-type">float</span>'); 
+  text = text.replace(/\bdouble\b/g, '<span class="double-type">double</span>'); 
+  text = text.replace(/\bchar\b/g, '<span class="char-type">char</span>'); 
+  // Handling 'string' and 'vector' is trickier (see notes below)
 
   const modifiedText = text.replace(/\bfor\b/g, '<span class="highlight">for</span>');
   

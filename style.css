@@ -13,10 +13,8 @@ body{
     padding-bottom: 5%;
 }
 .content {
-    /* Styles for the body container itself */
+    padding-left: 10%;
     background-color: whitesmoke; 
-    padding: 20px;
-    margin: 15px;
 }
 
 
@@ -57,10 +55,23 @@ pre {
 .highlight{
     color: orange;
 }
+.int-type{
+    color: darkorchid;
+}
+.float-type{
+    color:darkorchid;
+}
+.double-type{
+    color:darkorchid;
+}
+.char-type{
+    color:darkorchid;
+}
 .integer{
     color:orange;
 
 }
+
 .format-specifier{
     color:red;
 }
