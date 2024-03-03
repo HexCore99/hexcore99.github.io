@@ -1,8 +1,25 @@
-body.index {
-    margin: 0;
-    background: rgb(241, 234, 241);
 
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+
+body{
+    font-family: "Madimi One";
 }
+.index-content{
+    /* border: 3px solid darkgoldenrod; */
+    max-width: 50%;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.content {
+    /* Styles for the body container itself */
+    background-color: whitesmoke; 
+    padding: 20px;
+    margin: 15px;
+}
+
+
 .topHeading{
 
 text-align: center;    
@@ -14,37 +31,17 @@ text-align: center;
 
 }
 
-.Thank{
-
-    position: absolute;
-    bottom: 10%;
-    transform: translate(100px, -10px);
-    text-align: center;
-    width: 100%;
-color:rgb(43, 226, 52)
-}
-
-.content1D{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-margin-left: 50px;
-
-border:3px dotted #333;
-
-padding-left: 30px;
-padding-top: 20px;
-padding-bottom: 20px;
-max-width: 300px;
-
-}
-
-.content{
-
-    margin-left: 70px;
-
-
-}
-
+.Thank {
+    position: absolute;       /* Remove element from normal document flow */
+    bottom: 0;                /* Position at the bottom */
+    left: 50%;                /* Position at 50% from the left */
+    transform: translate(-50%, 50%); 
+    padding-bottom: 15%;
+    font-size: larger;
+    color: firebrick;
+  }
 pre {
+    font-family: "Madimi One", monospace;
     border: 3px solid paleturquoise;
     padding-top: 15px;
     padding-right: 20px;
@@ -52,7 +49,33 @@ pre {
     padding-left: 10px;
     white-space: pre-wrap;
     overflow-x:auto;
+    margin-left: 30px;
     margin-bottom: 20px;
-    max-width: 50%;
+    max-width: 70%;
     border-radius: 10px;
+}
+.highlight{
+    color: orange;
+}
+.integer{
+    color:orange;
+
+}
+.format-specifier{
+    color:red;
+}
+.bracket{
+    color: orangered;
+}
+.Third-bracket{
+    color: lightblue;
+}
+.curly-braces{
+    color: chocolate;
+}
+.preprocessor{
+    color: cornflowerblue;
+}
+.header{
+    color: brown;
 }
