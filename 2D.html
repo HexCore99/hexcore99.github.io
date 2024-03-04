@@ -1,29 +1,32 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+<link href="style.css" rel="stylesheet"/>
 </head>
-<body class = "content">
+<body class="content">
 <h1>prb01</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
   
  int arr[3][3];
 
- for (int i = 0; i < 3; i++)
+ for (int i = 0; i &lt; 3; i++)
  {
-    for (int j = 0; j < 3; j++)
+    for (int j = 0; j &lt; 3; j++)
     {
-        scanf("%d", &arr[i][j]);
+        scanf("%d", &amp;arr[i][j]);
     }
     
  }
   
-  for (int i = 0; i < 3; i++)
+  for (int i = 0; i &lt; 3; i++)
  {
-    for (int j = 0; j < 3; j++)
+    for (int j = 0; j &lt; 3; j++)
     {
         printf("%d ", arr[i][j]);
     }
@@ -31,29 +34,30 @@ int main() {
  }   
   
     return 0;
-}</pre>
-
+}</stdio.h></pre>
 <h1>prb02</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
  int m , n;
- scanf("%d %d", &m, &n); 
+ scanf("%d %d", &amp;m, &amp;n); 
  int arr[m][n];
 
- for (int i = 0; i < m; i++)
+ for (int i = 0; i &lt; m; i++)
  {
-    for (int j = 0; j < n; j++)
+    for (int j = 0; j &lt; n; j++)
     {
-        scanf("%d", &arr[i][j]);
+        scanf("%d", &amp;arr[i][j]);
     }
     
  }
  printf("Row-wise: "); 
-  for (int i = 0; i < m; i++)
+  for (int i = 0; i &lt; m; i++)
  {
-    for (int j = 0; j < n; j++)
+    for (int j = 0; j &lt; n; j++)
     {
         printf("%d ", arr[i][j]);
     }
@@ -61,9 +65,9 @@ int main() {
  }   
  printf("\n");
  printf("Column-wise: ");
-  for (int i = 0; i < n; i++)
+  for (int i = 0; i &lt; n; i++)
  {
-    for (int j = 0; j < m; j++)
+    for (int j = 0; j &lt; m; j++)
     {
         printf("%d ", arr[j][i]);
     }
@@ -75,19 +79,20 @@ int main() {
 
 
     return 0;
-}</pre>
-
+}</stdio.h></pre>
 <h1>prb03</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
     float arr[3][3];
 
     // Input the matrix elements
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            scanf("%f", &arr[i][j]);
+    for (int i = 0; i &lt; 3; i++) {
+        for (int j = 0; j &lt; 3; j++) {
+            scanf("%f", &amp;arr[i][j]);
         }
     }
 
@@ -101,32 +106,33 @@ int main() {
 
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb04</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
   
  int n;
- scanf("%d", &n);
+ scanf("%d", &amp;n);
 
  int arr[n][n];
 
- for (int i = 0; i < n; i++)
+ for (int i = 0; i &lt; n; i++)
  {
-    for (int j = 0; j < n; j++)
+    for (int j = 0; j &lt; n; j++)
     {
-        scanf("%d", &arr[i][j]);
+        scanf("%d", &amp;arr[i][j]);
     }
     
  }
 
  printf("Major diagonal: "); 
- for (int i = 0; i < n; i++)
+ for (int i = 0; i &lt; n; i++)
  {
-    for (int j = 0; j < n; j++)
+    for (int j = 0; j &lt; n; j++)
     {
         if (i == j )
         {
@@ -137,9 +143,9 @@ int main() {
     
  }
 printf("\nMinor diagonal: ");
- for (int i = 0; i< n; i++)
+ for (int i = 0; i&lt; n; i++)
  {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j &lt; n; j++)
     {
                         // printing ...
        if (j == n-i-1)  // 1st row n-1 column;
@@ -153,22 +159,23 @@ printf("\nMinor diagonal: ");
  }
   
     return 0;
-}</pre>
-
+}</stdio.h></pre>
 <h1>prb05</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
     int n;
 
-    scanf("%d", &n);
+    scanf("%d", &amp;n);
     int arr[n][n];
 
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i &lt; n; i++)
     {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j &lt; n; j++)
         {
             if (i == j)
             {
@@ -185,36 +192,37 @@ int main() {
     }
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb06</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
     int m, n;
 
-    scanf("%d", &m);
+    scanf("%d", &amp;m);
 
-    scanf("%d", &n);
+    scanf("%d", &amp;n);
 
     int A[m][n], B[m][n], C[m][n];
 
     // Input elements for matrix A
  
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
 
-            scanf("%d", &A[i][j]);
+            scanf("%d", &amp;A[i][j]);
         }
     }
 
     // Input elements for matrix B
 
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
 
-            scanf("%d", &B[i][j]);
+            scanf("%d", &amp;B[i][j]);
 
             C[i][j] = A[i][j] + B[i][j];
         }
@@ -222,8 +230,8 @@ int main() {
 
     // Display the elements of matrix C
 
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
             printf("%d ", C[i][j]);
         }
         printf("\n");
@@ -231,11 +239,12 @@ int main() {
 
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb07</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 
 
@@ -244,24 +253,24 @@ int SIZE = 3;
     int A[SIZE][SIZE], B[SIZE][SIZE], C[SIZE][SIZE];
 
     //  matrix A
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            scanf("%d", &A[i][j]);
+    for (int i = 0; i &lt; SIZE; i++) {
+        for (int j = 0; j &lt; SIZE; j++) {
+            scanf("%d", &amp;A[i][j]);
         }
     }
 
     // matrix B
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            scanf("%d", &B[i][j]);
+    for (int i = 0; i &lt; SIZE; i++) {
+        for (int j = 0; j &lt; SIZE; j++) {
+            scanf("%d", &amp;B[i][j]);
         }
     }
 
     // Multipling matrices A and B to matrix C
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
+    for (int i = 0; i &lt; SIZE; i++) {
+        for (int j = 0; j &lt; SIZE; j++) {
             C[i][j] = 0;
-            for (int k = 0; k < SIZE; k++) {
+            for (int k = 0; k &lt; SIZE; k++) {
                 C[i][j] += A[i][k] * B[k][j];
             }
         }
@@ -269,8 +278,8 @@ int SIZE = 3;
 
     // Display  matrix C
 
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
+    for (int i = 0; i &lt; SIZE; i++) {
+        for (int j = 0; j &lt; SIZE; j++) {
             printf("%d\t", C[i][j]);
         }
         printf("\n");
@@ -278,17 +287,18 @@ int SIZE = 3;
 
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb08</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
     int m, n;
 
     // Input the dimensions of the matrix
-    scanf("%d %d", &m, &n);
+    scanf("%d %d", &amp;m, &amp;n);
 
 
     // Declare the matrix
@@ -298,12 +308,12 @@ int main() {
     int RowIndx = 0, ColIndx = 0;
 
     // Input the matrix elements
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            scanf("%d", &matrix[i][j]);
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            scanf("%d", &amp;matrix[i][j]);
 
 
-            if (matrix[i][j] > element) {
+            if (matrix[i][j] &gt; element) {
                 element = matrix[i][j];
                 RowIndx = i;
                 ColIndx = j;
@@ -319,17 +329,18 @@ int main() {
 
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb09</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
     int m;
 
     // Input the dimensions of the matrix
-    scanf("%d", &m);
+    scanf("%d", &amp;m);
 
 
     // Declare the matrix
@@ -338,16 +349,16 @@ int main() {
 
 int sum = 0;
     // Input the matrix elements
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < m ; j++) {
-            scanf("%d", &matrix[i][j]);
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; m ; j++) {
+            scanf("%d", &amp;matrix[i][j]);
         }
     }
 
 
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i &lt; m; i++)
     {
-        for (int j = 0; j < m; j++)
+        for (int j = 0; j &lt; m; j++)
         {
             if ( i == 0 || i == (m-1)) // adding first row and last row
             {
@@ -367,17 +378,18 @@ printf("%d\n", sum);
 
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb10</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
     int m;
 
     // Input the dimensions of the matrix
-    scanf("%d", &m);
+    scanf("%d", &amp;m);
 
 
     // Declare the matrix
@@ -386,20 +398,20 @@ int main() {
 
 int sum = 0;
     // Input the matrix elements
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < m ; j++) {
-            scanf("%d", &matrix[i][j]);
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; m ; j++) {
+            scanf("%d", &amp;matrix[i][j]);
         }
     }
 
 
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i &lt; m; i++)
     {
-        for (int j = 0; j < m; j++)
+        for (int j = 0; j &lt; m; j++)
         {
-           if (i<  m/2)
+           if (i&lt;  m/2)
            {
-            if ((i == 0 && j<= m/2) || (i == 0 && j == m-1))
+            if ((i == 0 &amp;&amp; j&lt;= m/2) || (i == 0 &amp;&amp; j == m-1))
             {
                 sum += matrix[i][j];
             }else if ( j== m/2 || j == m-1)
@@ -413,7 +425,7 @@ int sum = 0;
             sum += matrix[i][j];
            }else
            {
-         if ((i == m-1 && j == 0) || (i == m-1 && j>m/2))
+         if ((i == m-1 &amp;&amp; j == 0) || (i == m-1 &amp;&amp; j&gt;m/2))
            {
             sum += matrix[i][j];
            }else if (j == 0 || j == m/2)
@@ -433,17 +445,18 @@ printf("%d\n", sum);
 
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb11</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
     int m;
 
     // Input the dimensions of the matrix
-    scanf("%d", &m);
+    scanf("%d", &amp;m);
 
 
     // Declare the matrix
@@ -452,19 +465,19 @@ int main() {
     int element = 0;
 int sum = 0;
     // Input the matrix elements
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < m ; j++) {
-            scanf("%d", &matrix[i][j]);
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; m ; j++) {
+            scanf("%d", &amp;matrix[i][j]);
         }
     }
 
 
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i &lt; m; i++)
     {
-        for (int j = 0; j < m; j++)
+        for (int j = 0; j &lt; m; j++)
         {
 
-          if (i % 2 == 0 && j% 2 != 0)
+          if (i % 2 == 0 &amp;&amp; j% 2 != 0)
           {
            sum += matrix[i][j]; 
           }else if(i % 2 != 0)
@@ -481,31 +494,32 @@ printf("%d\n", sum);
 
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb12</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
     int m, n;
 
-    scanf("%d %d", &m, &n);
+    scanf("%d %d", &amp;m, &amp;n);
 
     // Declare the matrix
     int matrix[m][n];
 
 
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            scanf("%d", &matrix[i][j]);
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            scanf("%d", &amp;matrix[i][j]);
         }
     }
 
     // Reverse the matrix within itself
-for (int  i = 0; i < m; i++)
+for (int  i = 0; i &lt; m; i++)
 {
-    for (int j = 0; j < n/2; j++)
+    for (int j = 0; j &lt; n/2; j++)
     {
        int temp = matrix[i][j];
        matrix[i][j] = matrix[i][n-j-1];
@@ -517,8 +531,8 @@ for (int  i = 0; i < m; i++)
 
     // Display the reversed matrix
    
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
             printf("%d ", matrix[i][j]);
         }
         printf("\n");
@@ -526,32 +540,33 @@ for (int  i = 0; i < m; i++)
 
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb13</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 int main() {
     int m, n;
     int flag = 0;
 
-    scanf("%d", &m);
+    scanf("%d", &amp;m);
 
     // Declare the matrix
     int matrix[m][m];
 
 
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < m; j++) {
-            scanf("%d", &matrix[i][j]);
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; m; j++) {
+            scanf("%d", &amp;matrix[i][j]);
         }
     }
 
 
-for (int i = 0; i < m; i++)
+for (int i = 0; i &lt; m; i++)
 {
-for (int j = 0; j < m; j++)
+for (int j = 0; j &lt; m; j++)
 {
 if (matrix[i][j] != matrix[j][i])
 {
@@ -579,35 +594,36 @@ if (flag)
 
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb14</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 
 int main() {
     int m, n;
 
-    scanf("%d %d", &m, &n);
+    scanf("%d %d", &amp;m, &amp;n);
 
     // Declare the matrix
     int matrix[m][n];
 
     // Input the matrix elements
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            scanf("%d", &matrix[i][j]);
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            scanf("%d", &amp;matrix[i][j]);
         }
     }
-            for(int i = 0; i< m; i++){
-                for (int j = 0; j < n; j++)
+            for(int i = 0; i&lt; m; i++){
+                for (int j = 0; j &lt; n; j++)
                 {
 
                     // here traversing the whole matrix for every [i][j]
-            for (int p = 0; p < m; p++) {
-                for (int q = 0; q < n; q++) {
-                    if (p == i && j == q)
+            for (int p = 0; p &lt; m; p++) {
+                for (int q = 0; q &lt; n; q++) {
+                    if (p == i &amp;&amp; j == q)
                     {
                        continue; 
                     }
@@ -628,8 +644,8 @@ int main() {
 
 
     // Display the modified matrix
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
             printf("%d\t", matrix[i][j]);
         }
         printf("\n");
@@ -637,11 +653,12 @@ int main() {
 
     return 0;
 }
-</pre>
-
+</stdio.h></pre>
 <h1>prb15</h1>
-<pre>
-#include <stdio.h>
+<pre class_="question"></pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
 
 
 
@@ -649,7 +666,7 @@ int main() {
     int m, n;
 
     // Input the dimensions of the matrix
-    scanf("%d %d", &m, &n);
+    scanf("%d %d", &amp;m, &amp;n);
 
 
 
@@ -657,9 +674,9 @@ int main() {
     int matrix[m][n];
 int sum  = 0;
     // Input the matrix elements
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            scanf("%d", &matrix[i][j]);
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            scanf("%d", &amp;matrix[i][j]);
             sum += matrix[i][j];
 
 
@@ -669,7 +686,7 @@ int sum  = 0;
 printf("%d\n", sum);
           return 0;
 }
-</pre>
+</stdio.h></pre>
 <script src="script.js"></script>
 </body>
 </html>
