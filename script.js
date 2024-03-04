@@ -12,7 +12,7 @@ function modifyIncludeLines() {
           return `<span class="header">&lt;${p1}&gt;</span>`;
         });
 
-       // line = line.replace('#include', '<span class="preprocessor">#include</span>');
+        line = line.replace('#include', '<span class="preprocessor">#include</span>');
       }
       return line;
     });
