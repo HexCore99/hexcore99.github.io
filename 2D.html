@@ -6,7 +6,27 @@
 </head>
 <body class="content">
 <h1>prb01</h1>
-<pre class_="question"></pre>
+<pre class="question">
+
+    WAP that will take 9 integers into a 3 by 3 array (2D) and show them as traditional matrix view.
+    
+    Sample input
+    9 8 7 6 5 4 3 2 1
+     
+    1 1 1 2 2 2 3 3 3
+    
+    
+    Sample output
+    9 8 7
+    6 5 4
+    3 2 1
+
+    1 1 1
+    2 2 2
+    3 3 3
+    
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -36,7 +56,34 @@ int main() {
     return 0;
 }</stdio.h></pre>
 <h1>prb02</h1>
-<pre class_="question"></pre>
+
+<pre class ="question">
+
+    WAP that will take (m x n) integers into a m by n array (2D) and print them both row-wise
+    and column-wise.
+    
+    
+    
+    Sample input (m,n)
+    2 3
+    1 2 3
+    6 5 4
+
+    3 3
+    1 1 1
+    2 2 2
+    3 3 3
+    
+    
+    Sample output
+    Row-wise: 1 2 3 6 5 4
+    Column-wise: 1 6 2 5 3 4
+    
+    Row-wise: 1 1 1 2 2 2 3 3 3
+    Column-wise: 1 2 3 1 2 3 1 2 3
+    
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -81,7 +128,21 @@ int main() {
     return 0;
 }</stdio.h></pre>
 <h1>prb03</h1>
-<pre class_="question"></pre>
+<pre class ="question">
+
+    WAP that will take inputs of a 3 by 3 matrix into a 2D array. Now find the determinant of this matrix. http://www.mathsisfun.com/algebra/matrix-determinant.html
+
+
+Sample input
+1 2 3
+4 5 6
+7 8 9
+
+Sample output
+0
+
+    
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -108,7 +169,25 @@ int main() {
 }
 </stdio.h></pre>
 <h1>prb04</h1>
-<pre class_="question"></pre>
+<pre class ="question">
+
+    WAP that will take inputs of a n sized square matrix into a 2D array. Now show all the elements of its two diagonals. Reference: http://en.wikipedia.org/wiki/Main_diagonal
+
+
+Sample input
+5
+1 2 3 4 5
+5 4 3 2 1
+2 2 2 2 2
+6 7 8 9 0
+1 9 3 7 4
+
+Sample output
+Major diagonal: 1 4 2 9 4
+Minor diagonal: 5 2 2 7 1
+
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -161,7 +240,23 @@ printf("\nMinor diagonal: ");
     return 0;
 }</stdio.h></pre>
 <h1>prb05</h1>
-<pre class_="question"></pre>
+<pre class ="question">
+
+    WAP that will take the size of an identity matrix from the user and generate the identity matrix into a 2D array. Finally display it. Reference:http://en.wikipedia.org/wiki/Identity_matrix
+    
+    
+    Sample input
+    5   
+    
+    Sample output
+    1 0 0 0 0
+    0 1 0 0 0
+    0 0 1 0 0
+    0 0 0 1 0
+    0 0 0 0 1
+      
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -194,7 +289,25 @@ int main() {
 }
 </stdio.h></pre>
 <h1>prb06</h1>
-<pre class_="question"></pre>
+<pre class ="question">
+
+    WAP that will take inputs of two m x n sized matrix into two 2D array, suppose A and B. Now do C = A + B. Finally display all the elements from matrix / 2D array C.
+    
+    
+    Sample input
+    2 3
+    1 2 3
+    2 3 4
+    1 1 1
+    2 2 2
+    
+    
+    Sample output
+    2 3 4
+    4 5 6
+    
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -241,7 +354,25 @@ int main() {
 }
 </stdio.h></pre>
 <h1>prb07</h1>
-<pre class_="question"></pre>
+<pre class ="question">
+
+    WAP that will take inputs of two 3 x 3 sized matrix into two 2D array, suppose A and B. Now     do C = A * B (multiplication). Finally display all the elements from matrix / 2D array C.
+    
+    Sample input
+    1 2 3
+    4 5 6
+    7 8 9
+    2 2 2
+    2 2 2
+    1 1 1
+       
+    Sample output
+    9 9 9
+    24 24 24
+    39 39 39
+     
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -289,7 +420,31 @@ int SIZE = 3;
 }
 </stdio.h></pre>
 <h1>prb08</h1>
-<pre class_="question"></pre>
+<pre class ="question">
+
+    WAP that will take inputs of m x n sized matrix into a 2D array and find the maximum element with index location from that matrix.
+     
+    
+    Sample input
+    3 3
+    1 2 3
+    4 5 6
+    2 9 2
+
+    2 3
+    9 8 7
+    3 4 5   
+    
+    Sample output
+    Max: 9
+    Location: [2][1]
+    
+    
+    Max: 9
+    Location: [0][0]
+    
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -331,7 +486,11 @@ int main() {
 }
 </stdio.h></pre>
 <h1>prb09</h1>
-<pre class_="question"></pre>
+<pre class_="question">
+
+
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -496,7 +655,34 @@ printf("%d\n", sum);
 }
 </stdio.h></pre>
 <h1>prb12</h1>
-<pre class_="question"></pre>
+<pre class ="question">
+
+
+WAP that will take (m x n) integer inputs into a matrix of dimension m x n. Now reverse that matrix within itself and display it. Reversal means swap 1ˢᵗ column with the nᵗʰ column, swap  2ⁿᵈ column with the (n-1)ᵗʰ column and so on…
+
+
+Sample input
+3 3
+1 2 3
+4 5 6
+2 9 2
+
+2 6
+1 2 3 4 5 6
+9 8 7 6 5 4
+
+
+
+Sample output
+3 2 1
+6 5 4
+2 9 2
+
+6 5 4 3 2 1
+4 5 6 7 8 9
+
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -542,7 +728,37 @@ for (int  i = 0; i &lt; m; i++)
 }
 </stdio.h></pre>
 <h1>prb13</h1>
-<pre class_="question"></pre>
+<pre class ="question">
+
+    WAP that will take (n x n) integer inputs into a square matrix of dimension n. Now
+    determine whether the matrix is symmetric or not. Reference: 
+    http://en.wikipedia.org/wiki/Symmetric_matrix
+    
+    
+    
+    
+    
+    Sample input
+    3
+    1 7 3
+    7 4 5
+    3 5 6
+
+    2
+    1 3
+    4 2
+
+    
+    
+    Sample output
+    Yes
+    
+    
+    
+    No
+    
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -596,7 +812,32 @@ if (flag)
 }
 </stdio.h></pre>
 <h1>prb14</h1>
-<pre class_="question"></pre>
+<pre class ="question">
+
+    WAP that will take (m x n) positive integer inputs into a matrix of dimension m x n. Now    replace all the duplicate integers by -1 in that matrix. Finally display it.
+     
+    
+    Sample input
+    3 3
+    1 7 3
+    7 4 5
+    3 5 6
+
+    2 6
+    2 2 2 2 2 2
+    6 5 4 3 2 1
+    
+    
+    Sample output
+    1 7 3
+    -1 4 5
+    -1 -1 6
+    
+    2 -1 -1 -1 -1 -1
+    6 5 4 3 -1 1
+    
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
@@ -655,7 +896,30 @@ int main() {
 }
 </stdio.h></pre>
 <h1>prb15</h1>
-<pre class_="question"></pre>
+<pre class ="question">
+
+    WAP that will take (m x n) integer inputs into a matrix of dimension m x n. Now just  simply add all the integers in that matrix and show the result.
+    
+    
+    
+    Sample input
+    3 3
+    1 7 3
+    7 4 5
+    3 5 6
+
+    2 6
+    2 2 2 2 2 2
+    6 5 4 3 2 1
+    
+    
+    Sample output
+    41
+    
+    33
+    
+
+</pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
