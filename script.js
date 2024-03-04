@@ -1,5 +1,27 @@
 
+// Code to modify #include lines
+function modifyIncludeLines() {
+  const answerElements = document.getElementsByClassName('answer');
 
+  for (let i = 0; i < answerElements.length; i++) {
+    const codeLines = answerElements[i].textContent.split('\n');
+    const modifiedCodeLines = codeLines.map(line => {
+      if (line.startsWith('#include')) {
+        // Add the code to modify the header part
+        line = line.replace(/\<(.*?)\>/, (match, p1) => {
+          return `<span class="header">&lt;${p1}&gt;</span>`;
+        });
+
+        line = line.replace('#include', '<span class="preprocessor">#include</span>');
+      }
+      return line;
+    });
+    answerElements[i].innerHTML = modifiedCodeLines.join('\n');
+  }
+}
+
+// Call the function to modify #include lines
+modifyIncludeLines();
 //const preTags = document.getElementsByTagName('pre');
 const answerElements = document.getElementsByClassName('answer');
 
