@@ -2,13 +2,13 @@ def replace_pre_tags(filename):
     with open(filename, 'r') as file:
         file_content = file.read()
 
-    updated_content = file_content.replace('<pre>', '<pre class="answer">')
+    updated_content = file_content.replace('<pre class ="question">', '<pre class ="question"><img src="Loop/loop_Images/prb1.png" alt="">')
 
     with open(filename, 'w') as file:
         file.write(updated_content)
 
 # Example usage:
-replace_pre_tags('blank.html')
+replace_pre_tags('junk.html')
 
 
 
@@ -28,4 +28,4 @@ replace_pre_tags('blank.html')
 #         file.writelines(updated_lines)
 
 # # Example usage
-# replace_symbols('blank.html') # Replace with your filename
+# replace_symbols('junk.html') # Replace with your filename

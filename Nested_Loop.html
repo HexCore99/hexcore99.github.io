@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>01</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb18.png" alt="">
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+/*
+1 2 3
+1 2 3
+1 2 3
+*/
+
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= n; j++) {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>02</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb17.png" alt="">
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+/*
+1 2 3
+2 3 4
+3 4 5
+*/
+void main() {
+    int n; 
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = i; j &lt; i+n; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>03</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb16.png" alt="">
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+/*
+1
+2 3
+3 4 5
+*/
+void main() {
+    int n; 
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = i; j &lt; 2*i; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>04</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb15.png" alt="">
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+/*
+_ _ 1
+_ 2 2
+3 3 3
+*/
+void main() {
+    int n; 
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= n-i; j++) {
+            printf("_", j);
+        }
+        for (int j = 1; j &lt;= i; j++) {
+            printf("%d", i);
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>05</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb14.png" alt="">
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+/*
+3 
+3 2 
+3 2 1 
+*/
+
+void main() {
+    int n; 
+    scanf("%d", &amp;n);
+
+    for (int i = n; i &gt;= 1; i--) {
+        for (int j = n; j &gt;= i; j--) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>06</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb13.png" alt="">
+</pre>
+
+<pre class="answer">
+#include&lt;stdio.h&gt;
+/*
+1 
+1 2 
+1 2 3 
+*/
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= i; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>07</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb12.png" alt="">
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+/*
+
+* * * * 
+* * * * 
+* * * * 
+* * * *
+
+*/
+void main() {
+    int n; 
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= n; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>08</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb11.png" alt="">
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+/*
+
+* * * 
+* * 
+* 
+
+*/
+
+void main() {
+    int n; 
+    scanf("%d", &amp;n);
+
+    for (int i = n; i &gt;= 1; i--) {
+        for (int j = 1; j &lt;= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>09</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb10.png" alt="">
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+/*
+101     123        
+010     234
+101     345
+*/
+
+void main() {
+    int n; 
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = i; j &lt; n+i; j++) {
+            printf("%d", j%2);
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>10</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb9.png" alt="">
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+/*
+_ _ * 
+_ * * 
+* * * 
+
+*/
+
+void main() {
+    int n; 
+    scanf("%d", &amp;n);
+
+    for(int i = 1; i &lt;= n; i++) {
+        for(int j = 1; j &lt;= n-i; j++) {
+            printf("_ ", j);
+        }
+        for(int j = 1; j &lt;= i; j++) {
+            printf("* ", j);
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>11</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb8.png" alt="">
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+/*
+____*
+___***
+__*****
+_*******
+*********
+
+*/
+
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= n-i; j++) {
+            printf("_");
+        }
+        for (int k = 1; k &lt;= i * 2 - 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>12</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb7.png" alt="">
+</pre>
+
+<pre class="answer">
+#include&lt;stdio.h&gt;
+/*
+
+__*
+_***
+*****
+_***
+__*
+
+*/
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= (n/2)+1; i++) {
+        for (int j = 1; j &lt;= (n/2)+1-i; j++) {
+            printf("_");
+        }
+        for (int k = 1; k &lt;= 2*i-1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    for (int i = n/2; i &gt;= 1; i--) {
+        for (int j = 1; j &lt;= n/2 +1-i; j++) {
+            printf("_");
+        }
+        for (int k = 1; k &lt;= 2*i-1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>13</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb6.png" alt="">
+</pre>
+
+<pre class="answer">
+#include&lt;stdio.h&gt;
+/*
+1___1
+12_21
+12321
+*/
+
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= n*2-1-i; j++) {
+            if (j &lt;= i) {
+                printf("%d", j);
+            } else {
+                printf("_");
+            }
+        }
+        
+        for (int k = i; k &gt;= 1; k--) {
+            printf("%d", k);
+        }    
+        printf("\n");  
+    }      
+}</pre>
+<h1>14</h1>
+<pre class ="question">
+<img src="/Nested_Loop/loop_Images/prb5.png" alt="">
+
+</pre>
+
+<pre class="answer">
+#include&lt;stdio.h&gt;
+/*
+*****
+*___*
+*****
+*___*
+*****
+*/
+
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= n; j++) {
+            if (i % 2 != 0) {
+                printf("*");
+            } else {
+                if (j == 1 || j == n) {
+                    printf("*");
+                }
+                else {
+                    printf("_");
+                }
+            }
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>15</h1>
+<pre class ="question">
+    <img src="/Nested_Loop/loop_Images/prb4.png" alt="">
+
+
+</pre>
+
+<pre class="answer">
+#include&lt;stdio.h&gt;
+/*
+ZZZZZ
+   Z
+  Z
+ Z
+ZZZZZ
+*/
+
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= n; j++) {
+            if (i == 1 || i == n) {
+                printf("Z");
+            } else {
+                if (j &lt; n-i+1) {
+                    printf(" ");
+                } 
+                else if(j == n-i+1){
+                    printf("Z");
+                }
+            }    
+        }
+        printf("\n");   
+    }
+}</pre>
+
+<h1>16</h1>
+<pre class ="question">
+
+    <img src="/Nested_Loop/loop_Images/prb3.png" alt="">
+</pre>
+
+<pre class="answer">
+#include&lt;stdio.h&gt;
+/*
+
+*___*
+_*_*_
+__*__
+_*_*_
+*___*
+
+*/
+
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= n; j++) {
+            if (j == i || j == n-i+1) {
+                printf("*");
+            }
+            else {
+                printf("_");
+            }
+        }
+        printf("\n");
+    }
+}</pre>
+<h1>17</h1>
+<pre class ="question">
+
+    <img src="/Nested_Loop/loop_Images/prb2.png" alt="">
+
+
+</pre>
+
+<pre class="answer">
+#include &lt;stdio.h&gt;
+
+int main() {
+  
+    int rows; scanf("%d", &amp;rows);
+   
+    for (int i = 1; i &lt;= rows/2 + 1; i++)
+    {
+       for (int j = 1; j &lt;= rows; j++)
+       {
+        if (j == rows/2-i+2 || j == rows/2+1 || j == (2*i - i)+ rows/2 || i == rows/2 +1)
+         {
+           printf("$");
+         }else printf("_");
+         
+       }
+   
+      printf("\n"); 
+        
+   }
+   
+       for (int i = rows/2; i &gt;= 1; i--)
+    {
+       for (int j = 1; j &lt;= rows; j++)
+       {
+     if (j == rows/2-i+2 || j == rows/2+1 || j == (2*i - i)+ rows/2 || i == rows/2 +1)
+         {
+           printf("$");
+         }else printf("_");
+          
+       }
+   
+      printf("\n"); 
+        
+    }
+    
+       return 0;
+   }
+</pre>
+<h1>18</h1>
+<pre class ="question">
+
+<img src="/Nested_Loop/loop_Images/prb1.png" alt="">
+
+</pre>
+
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= n; j++) {
+            if (j == 1 || j == n || i == (n/2)+1) {
+                printf("H ");
+            } else {
+                printf("  ");
+            }   
+        }
+        printf("\n");
+    }    
+}</pre>
+<script src="script.js"></script>
+</body>
+</html>

@@ -5,6 +5,9 @@
 body{
     font-family: "Madimi One";
 }
+pre{
+    white-space: pre-wrap;
+}
 .index-content{
     /* border: 3px solid darkgoldenrod; */
     max-width: 50%;

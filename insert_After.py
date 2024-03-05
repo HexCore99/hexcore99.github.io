@@ -10,7 +10,7 @@
 #     return str(soup)
 
 # # Example usage
-# with open('1D_Modified.html', 'r') as f:
+# with open('junk.html', 'r') as f:
 #     html_content = f.read()
 
 # new_html_content = insert_pre_after_h1(html_content)
@@ -33,10 +33,10 @@ def insert_pre_after_h1(html_content):
 
     return str(soup)
 # Example usage
-with open('2D.html', 'r') as f:
+with open('junk.html', 'r') as f:
     html_content = f.read()
 
 new_html_content = insert_pre_after_h1(html_content)
 
-with open('blank.html', 'w') as f:
+with open('junk.html', 'w') as f:
     f.write(new_html_content)
