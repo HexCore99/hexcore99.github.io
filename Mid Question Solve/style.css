@@ -15,7 +15,14 @@ font-family: 'Oswald', sans-serif;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
-
+h1 {
+    font-family: "Madimi One", monospace;
+    font-size: 50px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    text-align: center;
+}
 pre{
     white-space: pre-wrap;
     font-family: "Nunito Sans", sans-serif;
