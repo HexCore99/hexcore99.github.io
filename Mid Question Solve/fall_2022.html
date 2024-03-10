@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -112,21 +124,170 @@
        
        <span style="color: red; font-size: 18px; font-weight: bold;"> Q3) b) </span>
   
-       i = 1         j = 1        (j<=n-i)=TRUE        (count<= n-1 ) = TRUE            count = 1
-       i = 1         j = 2        (j<=n-i)=TRUE        (count<= n-1 ) = TRUE            count = 2
-       i = 1         j = 3        (j<=n-i)=TRUE        (count<= n-1 ) = TRUE            count = 3
-       i = 1         j = 4        (j<=n-i)=FALSE                                                         count = 0
-
-       i = 2         j = 1        (j<=n-i)=TRUE        (count<= n-1 ) = TRUE            count = 1
-       i = 2         j = 2        (j<=n-i)=TRUE        (count<= n-1 ) = TRUE            count = 2
-       i = 2         j = 3        (j<=n-i)=FALSE                                                         count = 0
-       
-       i = 3         j = 1        (j<=n-i)=TRUE        (count<= n-1 ) = TRUE            count = 1
-       i = 3         j = 2        (j<=n-i)=FALSE                                                         count = 0
-       
-       i = 4         j = 1        (j<=n-i)=FALSE                                                         count = 0
-       
-       
+       <table>
+        <colgroup>
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+        </colgroup>
+        <tbody>
+            <tr>
+                <td>i</td>
+                <td>j</td>
+                <td>(j&lt;=n-i)</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>(count&lt;= n-1 )</td>                
+                <td>&#xa0;</td>
+                <td>count</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>3</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>4</td>
+                <td>FALSE</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>FALSE</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>TRUE</td>
+                <td>&#xa0;</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2</td>
+                <td>FALSE</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>1</td>
+                <td>FALSE</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+        </tbody>
+    </table>
        
        <span style="color: red; font-size: 18px; font-weight: bold;"> Q4) a) </span>
    
