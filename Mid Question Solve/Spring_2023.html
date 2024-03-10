@@ -214,34 +214,200 @@
  <span style="color: red; font-size: 18px; font-weight: bold;"> Q5) a) </span>
 
 
- //First Loop
- i = 1   K = 17  arr[1]  = 14
- i = 3   K = 19  arr[3]  = 16
- i = 5   K = 21  arr[5]  = 18
- 
- //2nd Loop/ Nested Loop
- i= 6    j = 10  c = 1    arr[10]= 1
- i= 6    j = 9   c = 2    arr[9]= 2
- i= 6    j = 8   c = 3    arr[8]= 3
- i= 6    j = 7   c = 4    arr[7]= 4
- i= 6    j = 6   c = 5    arr[6]= 5
- i= 7    j = 10  c = 6    arr[10]= 6
- i= 7    j = 9   c = 7    arr[9]= 7
- i= 7    j = 8   c = 8    arr[8]= 8
- i= 7    j = 7   c = 9    arr[7]= 9
- i= 8    j = 10  c = 10   arr[10]= 10
- i= 8    j = 9   c = 11   arr[9]= 11
- i= 8    j = 8   c = 12   arr[8]= 12
- i= 9    j = 10  c = 13   arr[10]= 13
- i= 9    j = 9   c = 14   arr[9]= 14
- 
- //Last Loop
- i = 0   (0 % 2 ) = TRUE     arr[0] = 22     K = 22
- i = 2   (2 % 2 ) = TRUE     arr[2] = 23     K = 23
- i = 4   (4 % 2 ) = TRUE     arr[4] = 24     K = 24
- i = 6   (6 % 2 ) = TRUE     arr[6] = 25     K = 25
- i = 8   (8 % 2 ) = TRUE     arr[8] = 26     K = 26
- 
+ <table>
+    <colgroup>
+    <col />
+    <col />
+    <col />
+    <col />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td >i</td>
+    <td >K</td>
+    <td >arr[i]</td>
+    <td >&#xa0;</td>
+    </tr>
+    <tr>
+    <td >1</td>
+    <td >17</td>
+    <td >14</td>
+    <td >&#xa0;</td>
+    </tr>
+    <tr>
+    <td >3</td>
+    <td >19</td>
+    <td >16</td>
+    <td >&#xa0;</td>
+    </tr>
+    <tr>
+    <td >5</td>
+    <td >21</td>
+    <td >18</td>
+    <td >&#xa0;</td>
+    </tr>
+    </tbody>
+    </table>
+    <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+    
+    <colgroup>
+    <col />
+    <col />
+    <col />
+    <col />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td >i</td>
+    <td >j</td>
+    <td >c</td>
+    <td >arr[i]</td>
+    </tr>
+    <tr>
+    <td >&#xa0;</td>
+    <td >&#xa0;</td>
+    <td >&#xa0;</td>
+    <td >&#xa0;</td>
+    </tr>
+    <tr>
+    <td >6</td>
+    <td >9</td>
+    <td >1</td>
+    <td >9</td>
+    </tr>
+    <tr>
+    <td >6</td>
+    <td >8</td>
+    <td >2</td>
+    <td >8</td>
+    </tr>
+    <tr>
+    <td >6</td>
+    <td >7</td>
+    <td >3</td>
+    <td >7</td>
+    </tr>
+    <tr>
+    <td >6</td>
+    <td >6</td>
+    <td >4</td>
+    <td >6</td>
+    </tr>
+    <tr>
+    <td >7</td>
+    <td >9</td>
+    <td >5</td>
+    <td >9</td>
+    </tr>
+    <tr>
+    <td >7</td>
+    <td >8</td>
+    <td >6</td>
+    <td >8</td>
+    </tr>
+    <tr>
+    <td >7</td>
+    <td >7</td>
+    <td >7</td>
+    <td >7</td>
+    </tr>
+    <tr>
+    <td >8</td>
+    <td >9</td>
+    <td >8</td>
+    <td >9</td>
+    </tr>
+    <tr>
+    <td >8</td>
+    <td >8</td>
+    <td >9</td>
+    <td >8</td>
+    </tr>
+    <tr>
+    <td >9</td>
+    <td >9</td>
+    <td >10</td>
+    <td >9</td>
+    </tr>
+    </tbody>
+    </table>
+    <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+    
+    <colgroup>
+    <col />
+    <col />
+    <col />
+    <col />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td >i</td>
+    <td >(i % 2)</td>
+    <td >arr[i]</td>
+    <td >K</td>
+    </tr>
+    <tr>
+    <td >0</td>
+    <td >TRUE</td>
+    <td >0</td>
+    <td >0</td>
+    </tr>
+    <tr>
+    <td >1</td>
+    <td >FALSE</td>
+    <td >1</td>
+    <td >1</td>
+    </tr>
+    <tr>
+    <td >2</td>
+    <td >TRUE</td>
+    <td >2</td>
+    <td >2</td>
+    </tr>
+    <tr>
+    <td >3</td>
+    <td >FALSE</td>
+    <td >3</td>
+    <td >3</td>
+    </tr>
+    <tr>
+    <td >4</td>
+    <td >TRUE</td>
+    <td >4</td>
+    <td >4</td>
+    </tr>
+    <tr>
+    <td >5</td>
+    <td >FALSE</td>
+    <td >5</td>
+    <td >5</td>
+    </tr>
+    <tr>
+    <td >6</td>
+    <td >TRUE</td>
+    <td >6</td>
+    <td >6</td>
+    </tr>
+    <tr>
+    <td >7</td>
+    <td >FALSE</td>
+    <td >7</td>
+    <td >7</td>
+    </tr>
+    <tr>
+    <td >8</td>
+    <td >TRUE</td>
+    <td >8</td>
+    <td >8</td>
+    </tr>
+    <tr>
+    <td >9</td>
+    <td >FALSE</td>
+    <td >9</td>
+    <td >9</td>
+    </tr>
+    </tbody>
+    </table>
  
  <span style="color: red; font-size: 18px; font-weight: bold;"> Q5) b) </span>
  <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -324,15 +490,15 @@
     <td>8</td>
     </tr>
     <tr>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
     <td>1</td>
     <td>1</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
     </tr>
     <tr>
     <td>1</td>
@@ -390,15 +556,15 @@
     <td>13</td>
     </tr>
     <tr>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
     <td>1</td>
     <td>2</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
     </tr>
     <tr>
     <td>2</td>
@@ -456,15 +622,15 @@
     <td>21</td>
     </tr>
     <tr>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
     <td>2</td>
     <td>3</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
     </tr>
     <tr>
     <td>3</td>
@@ -522,15 +688,15 @@
     <td>34</td>
     </tr>
     <tr>
-    <td>3</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>2</td>
     <td>5</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
     </tr>
     <tr>
     <td>4</td>
@@ -588,38 +754,17 @@
     <td>55</td>
     </tr>
     <tr>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
     <td>5</td>
     <td>8</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
     </tr>
-    <tr>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    </tr>
-    <tr>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    <td>&#xa0;</td>
-    </tr>
+
     </tbody>
     </table>
  // printing array result
@@ -629,10 +774,6 @@
   5   8   13   21   34
   8   13   21   34   55
  
- 
- 
-
-
 
 </pre>
 
