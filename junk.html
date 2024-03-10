@@ -1,434 +1,273 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<h1>01</h1><pre class ="question"><img src="Loop/loop_Images/prb20.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-
-void main() {
-    int n;
-    scanf("%d", &amp;n);
-
-    for (int i = 1; i&lt;=n; i++) {
-        printf("%d, ", i);
-    }
-}</pre>
-<h1>02</h1><pre class ="question"><img src="Loop/loop_Images/prb19.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-
-void main() {
-    int n, term;
-    scanf("%d", &amp;n);
-
-    for (int i = 1; i&lt;=n; i++) {
-        term = 2*(i-1)+1;
-        printf("%d, ", term);
-    }
-}</pre>
-<h1>03</h1><pre class ="question"><img src="Loop/loop_Images/prb18.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-
-void main() {
-    int n;
-    scanf("%d", &amp;n);
-
-    for(int i = 1; i&lt;=n; i++) {
-        if(i%2 != 0) 
-            printf("1, ");
-        else
-            printf("0, ");
-    }
-}</pre>
-<h1>04</h1><pre class ="question"><img src="Loop/loop_Images/prb17.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-
-void main() {
-    float n, term, sum=0;
-    scanf("%f", &amp;n);
-
-    for(int i = 1; i&lt;=n; i++) {
-        scanf("%f", &amp;term);
-        sum = sum + term;
-    }
-    printf("AVG of %.0f inputs: %f", n,(sum/n));
-}</pre>
-<h1>05</h1><pre class ="question"><img src="Loop/loop_Images/prb16.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-#include&lt;math.h&gt;
-
-void main() {
-    int x, y;
-    scanf("%d %d", &amp;x, &amp;y);
-
-    int i = 1;
-    while (1) {
-        
-        float sq = pow(x,2);
-        //int sq = x*x;
-
-        if(x<y) ",="" else="" if(x="" printf("%f,="" sq);="" x++;="" {="" }="">y) {
-            printf("%f, ", sq);
-            x--;
-        }
-        else if(x==y) {
-            printf("Reached!");
-            break;
-        }
-    }
     
-}</y)></pre>
-<h1>06</h1><pre class ="question"><img src="Loop/loop_Images/prb15.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
+<h1 class = "topHeading">Spring 2023 Midterm Question Solve</h1>
 
-void main() {
-    int X, N, n;
-    scanf("%d %d", &amp;X, &amp;N); // X = player1, N = tries, n = player2
+<pre >
 
-    for (int i = 1; ; i++) {
-        scanf("%d", &amp;n);
 
-        if(n != X) {
-            N--;
-            printf("Wrong, %d choices left!\n", N);
-        }
-        else if(n == X) {
-            printf("Right, Player-2 wins!\n");
-            break;
-        }
-        if(N == 0) {
-            printf("Player-1 wins!\n");
-            break;
-        }
-    }
-}</pre>
-<h1>07</h1><pre class ="question"><img src="Loop/loop_Images/prb14png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
+    1. a) i, iii,iv, v
 
-void main() {
-    char ch;
-    int count=1;
+    b) a= 3, b =12.000000, c= 2, d = 1.000000;
+ 
+    c) for b = 10		for b = 2
+      -------------	   -----------------------
+ 
+     SPL				Spring
+     Spring
+ 
+ 
+ 
+ 2. a)
+ #include <stdio.h>
+ 
+ int main() {
+     int n, a;
+     scanf("%d %d", &n, &a);
+ 
+     int diff = n - a;
+ 
+     switch (n > a) {
+         case 1:
+             switch (diff > 5) {
+                 case 1:
+                     printf("Difference is greater than 5 \n");
+                     break;
+                 case 0:
+                     printf("Difference is less than or equal to 5 \n");
+                     break;
+             }
+             break;
+         case 0:
+             printf("Please give a larger value of n \n");
+             break;
+     }
+ 
+     return 0;
+ }
+ 
+ 2. b) 
+ 
+ i = 20, j = 8 result = 7,  x = 2,  y = 3
+ i = 24, j = 7 result = 10, x = 3,  y = 4
+ i = 20, j = 6 result = 14, x = 5,  y = 5
+ i = 14, j = 5 result = 19, x = 8,  y = 6
+ i = 9,  j = 4 result = 25, x = 12, y = 7
+ 
+ 
+ 
+ 3) a) 
+ #include <stdio.h>
+ 
+ int main() {
+     int weeks = 2, days_in_week = 7;
+     int i = 1;
+ 
+     do {
+         printf("Week: %d\n", i);
+ 
+         int j = 1;
+         do {
+             if (i % 2 == 0) {
+                 if (j % 2 == 0)
+                     printf("  Day: %d\n", j);
+             } else {
+                 if (j % 2 != 0)
+                     printf("  Day: %d\n", j);
+             }
+             j++;
+         } while (j <= days_in_week);
+ 
+         i++;
+     } while (i <= weeks);
+ 
+     return 0;
+ }
+ 
+ 
+ 
+ 3)  b)
+ #include <stdio.h>
+ 
+ int main() {
+   
+  int n;
+     scanf("%d", &n);
+ 
+     for (int i = 1; i <= n; i++)
+     {
+ 
+         for (int j = 0; j < n-i; j++)
+         {
+             printf("  ");
+         }
+ 
+        int track = 2 *(i);
+ 
+         for (int j = 1; j < 2*i; j++)
+         {
+             if (j == 1)
+             {
+                 printf("%d ", track);
+             }
+ 
+           else  if ( j <= (2*i)/2)
+             {
+                 track+=2;
+                 printf("%d ", track);
+             }
+             else
+             {
+                 track -=2;
+                 printf("%d ", track);
+             }
+ 
+             
+         }
+        printf("\n"); 
+ 
+         
+     }
+      
+   
+     return 0;
+ }
+ 
+ 
+ 
+ 
+ 4) a) 
+ #include <stdio.h>
+ 
+ int main() {
+  int n = 100; 
+  float arr[n];
+  float sum = 0, highest_Cgpa = 0, lowest_Cgpa = 999999;
+ 
+  int grtr_than_3 = 0,   highest_Cgpa_Count = 0;
+ 
+  for (int i = 0; i < n; i++)
+  {
+     scanf("%d", &arr[i]);
+     // if Cgpa is greater than 3.00 than sum it and count it
+     if (arr[i]> 3.00)
+     {
+         sum += arr[i];
+         grtr_than_3++;
+ 
+     }
+     
+     // finding highest Cgpa
+     if (highest_Cgpa < arr[i])
+     {
+         highest_Cgpa = arr[i];
+         highest_Cgpa_Count = 1;
+     }else if (highest_Cgpa == arr[i]) // finding how many students have highest Cgpa
+     {
+         highest_Cgpa_Count++;
+     }
+ 
+     // finding lowest Cgpa
+     if (lowest_Cgpa > arr[i])
+     {
+         lowest_Cgpa = arr[i];
+     }
+     
+     
+  }
+   
+  float avg = sum / grtr_than_3;
+ 
+ 
+     return 0;
+ }
+ 
+ 
+ 
+ 5) a)
 
-    for(int i = 1; ; i++) {
-        scanf(" %c", &amp;ch);
+ //First Loop
+ i = 1   K = 17  arr[1]  = 14
+ i = 3   K = 19  arr[3]  = 16
+ i = 5   K = 21  arr[5]  = 18
+ 
+ //2nd Loop/ Nested Loop
+ i= 6    j = 10  c = 1    arr[10]= 1
+ i= 6    j = 9   c = 2    arr[9]= 2
+ i= 6    j = 8   c = 3    arr[8]= 3
+ i= 6    j = 7   c = 4    arr[7]= 4
+ i= 6    j = 6   c = 5    arr[6]= 5
+ i= 7    j = 10  c = 6    arr[10]= 6
+ i= 7    j = 9   c = 7    arr[9]= 7
+ i= 7    j = 8   c = 8    arr[8]= 8
+ i= 7    j = 7   c = 9    arr[7]= 9
+ i= 8    j = 10  c = 10   arr[10]= 10
+ i= 8    j = 9   c = 11   arr[9]= 11
+ i= 8    j = 8   c = 12   arr[8]= 12
+ i= 9    j = 10  c = 13   arr[10]= 13
+ i= 9    j = 9   c = 14   arr[9]= 14
+ 
+ //Last Loop
+ i = 0   (0 % 2 ) = TRUE     arr[0] = 22     K = 22
+ i = 2   (2 % 2 ) = TRUE     arr[2] = 23     K = 23
+ i = 4   (4 % 2 ) = TRUE     arr[4] = 24     K = 24
+ i = 6   (6 % 2 ) = TRUE     arr[6] = 25     K = 25
+ i = 8   (8 % 2 ) = TRUE     arr[8] = 26     K = 26
+ 
+ 
+ <span style="color: red; font-size: 18px; font-weight: bold;"> Q5) b) </span>
 
-        if(ch == 'A')
-            break;
-        else {
-            printf("Input %d: %c\n", count, ch);
-            count++;
-        }
-            
-    }
-}</pre>
-<h1>08</h1><pre class ="question"><img src="Loop/loop_Images/prb13.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
+ i=0,    x=t1 = 0,      y=t2 = 1,      z=t1+t2 =  1,       j=0,       t3=t1+t2 = 1,       arr[0][0] = 1,      t1=t2  = 1,      t2=t3  = 1
+ i=0,    x=t1 = 0,      y=t2 = 1,      z=t1+t2 =  1,       j=1,       t3=t1+t2 = 2,       arr[1][0] = 2,      t1=t2  = 1,      t2=t3  = 2
+ i=0,    x=t1 = 0,      y=t2 = 1,      z=t1+t2 =  1,       j=2,       t3=t1+t2 = 3,       arr[2][0] = 3,      t1=t2  = 2,      t2=t3  = 3
+ i=0,    x=t1 = 0,      y=t2 = 1,      z=t1+t2 =  1,       j=3,       t3=t1+t2 = 5,       arr[3][0] = 5,      t1=t2  = 3,      t2=t3  = 5
+ i=0,    x=t1 = 0,      y=t2 = 1,      z=t1+t2 =  1,       j=4,       t3=t1+t2 = 8,       arr[4][0] = 8,      t1=t2  = 5,      t2=t3  = 8
+ t1=y = 1, t2=z = 1
+ i=1,    x=t1 = 1,      y=t2 = 1,      z=t1+t2 =  2,       j=0,       t3=t1+t2 = 2,        arr[0][1] = 2,     t1=t2  = 1,      t2=t3  = 2
+ i=1,    x=t1 = 1,      y=t2 = 1,      z=t1+t2 =  2,       j=1,       t3=t1+t2 = 3,        arr[1][1] = 3,     t1=t2  = 2,      t2=t3  = 3
+ i=1,    x=t1 = 1,      y=t2 = 1,      z=t1+t2 =  2,       j=2,       t3=t1+t2 = 5,        arr[2][1] = 5,     t1=t2  = 3,      t2=t3  = 5
+ i=1,    x=t1 = 1,      y=t2 = 1,      z=t1+t2 =  2,       j=3,       t3=t1+t2 = 8,        arr[3][1] = 8,     t1=t2  = 5,      t2=t3  = 8
+ i=1,    x=t1 = 1,      y=t2 = 1,      z=t1+t2 =  2,       j=4,       t3=t1+t2 = 13,       arr[4][1] = 13,    t1=t2  = 8,      t2=t3  = 13
+ t1=y = 1, t2=z = 2
+ i=2,    x=t1 = 1,      y=t2 = 2,      z=t1+t2 =  3,       j=0,       t3=t1+t2 = 3,        arr[0][2] = 3,     t1=t2  = 2,      t2=t3  = 3
+ i=2,    x=t1 = 1,      y=t2 = 2,      z=t1+t2 =  3,       j=1,       t3=t1+t2 = 5,        arr[1][2] = 5,     t1=t2  = 3,      t2=t3  = 5
+ i=2,    x=t1 = 1,      y=t2 = 2,      z=t1+t2 =  3,       j=2,       t3=t1+t2 = 8,        arr[2][2] = 8,     t1=t2  = 5,      t2=t3  = 8
+ i=2,    x=t1 = 1,      y=t2 = 2,      z=t1+t2 =  3,       j=3,       t3=t1+t2 = 13,       arr[3][2] = 13,    t1=t2  = 8,      t2=t3  = 13
+ i=2,    x=t1 = 1,      y=t2 = 2,      z=t1+t2 =  3,       j=4,       t3=t1+t2 = 21,       arr[4][2] = 21,    t1=t2  = 13,     t2=t3  = 21
+ t1=y = 2, t2=z = 3
+ i=3,    x=t1 = 2,      y=t2 = 3,      z=t1+t2 =  5,       j=0,       t3=t1+t2 = 5,        arr[0][3] = 5,      t1=t2  = 3,     t2=t3  = 5
+ i=3,    x=t1 = 2,      y=t2 = 3,      z=t1+t2 =  5,       j=1,       t3=t1+t2 = 8,        arr[1][3] = 8,      t1=t2  = 5,     t2=t3  = 8
+ i=3,    x=t1 = 2,      y=t2 = 3,      z=t1+t2 =  5,       j=2,       t3=t1+t2 = 13,       arr[2][3] = 13,     t1=t2  = 8,     t2=t3  = 13
+ i=3,    x=t1 = 2,      y=t2 = 3,      z=t1+t2 =  5,       j=3,       t3=t1+t2 = 21,       arr[3][3] = 21,     t1=t2  = 13,    t2=t3  = 21
+ i=3,    x=t1 = 2,      y=t2 = 3,      z=t1+t2 =  5,       j=4,       t3=t1+t2 = 34,       arr[4][3] = 34,     t1=t2  = 21,    t2=t3  = 34
+ t1=y = 3, t2=z = 5
+ i=4,    x=t1 = 3,      y=t2 = 5,      z=t1+t2 =  8,       j=0,       t3=t1+t2 = 8,        arr[0][4] = 8,      t1=t2  = 5,     t2=t3  = 8
+ i=4,    x=t1 = 3,      y=t2 = 5,      z=t1+t2 =  8,       j=1,       t3=t1+t2 = 13,       arr[1][4] = 13,     t1=t2  = 8,     t2=t3  = 13
+ i=4,    x=t1 = 3,      y=t2 = 5,      z=t1+t2 =  8,       j=2,       t3=t1+t2 = 21,       arr[2][4] = 21,     t1=t2  = 13,    t2=t3  = 21
+ i=4,    x=t1 = 3,      y=t2 = 5,      z=t1+t2 =  8,       j=3,       t3=t1+t2 = 34,       arr[3][4] = 34,     t1=t2  = 21,    t2=t3  = 34
+ i=4,    x=t1 = 3,      y=t2 = 5,      z=t1+t2 =  8,       j=4,       t3=t1+t2 = 55,       arr[4][4] = 55,     t1=t2  = 34,    t2=t3  = 55
+ t1=y = 5, t2=z = 8
+ 
+ // printing array result
+  1   2   3   5   8
+  2   3   5   8   13
+  3   5   8   13   21
+  5   8   13   21   34
+  8   13   21   34   55
+ 
+ 
+ 
 
-void main() {
-    int num, store;
-    scanf("%d", #);
 
-    while(1) {
-        store = num % 10;
-        num = num / 10;
 
-        printf("%d", store);
+</pre>
 
-        if(num == 0)
-            break;
-    }
-}</pre>
-<h1>09</h1><pre class ="question"><img src="Loop/loop_Images/prb12.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-
-void main() {
-    float N;
-    scanf("%f", &amp;N);
-
-    for (int i = 1; i &lt;= N; i++) {
-        float A, HW, CT, MT, TF, mark;
-        scanf("%f %f %f %f %f", &amp;A, &amp;HW, &amp;CT, &amp;MT, &amp;TF);
-
-        mark = A + HW + CT + (MT*0.6) + (TF*0.4); // MT = 50 (total mark)
-						  // 50 * x = 30 (converting to 30);
-						  // x = 0.6; multiply 'x' with the obtained mark to convert to 30;
-
-    if(mark&gt;= 90 &amp;&amp; mark&lt;=100)
-        printf("Student %d: A\n", i);
-    else if(mark &gt;= 86)
-        printf("Student %d: A-\n", i);
-    else if(mark &gt;= 82)
-        printf("Student %d: B+\n", i);
-    else if(mark &gt;= 78)
-        printf("Student %d: B\n", i);
-    else if(mark &gt;= 74)
-        printf("Student %d: B-\n", i);
-    else if(mark &gt;= 70)
-        printf("Student %d: C+\n", i);
-    else if(mark &gt;= 66)
-        printf("Student %d: C\n", i);
-    else if(mark &gt;= 62)
-        printf("Student %d: C-\n", i);
-    else if(mark &gt;= 58)
-        printf("Student %d: D+\n", i);
-    else if(mark &gt;= 55)
-        printf("Student %d: D\n", i);
-    else if(mark &lt; 55)
-        printf("Student %d: F\n", i);
-
-    }
-        
-}</pre>
-<h1>10</h1><pre class ="question"><img src="Loop/loop_Images/prb11.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-
-void main() {
-    int term,number, sum=0;
-    scanf("%d", &amp;term);
-    
-
-    for (int i=1; i&lt;=term ;i++) {
-        if(i%2 != 0)
-            number = i;
-        else
-            number = -i;
-
-        sum = sum + number;
-    }
-    printf("Result: %d", sum);
-}</pre>
-<h1>11</h1><pre class ="question"><img src="Loop/loop_Images/prb10.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-#include&lt;math.h&gt;
-
-void main() {
-    int term, sum=0, series;
-    scanf("%d", &amp;term);
-
-    for (int i = 1; i &lt;= term; i++) {
-        series = pow(i,2)*(i+1);
-
-        sum = sum + series;
-    }
-    printf("Result: %d", sum);
-    
-}</pre>
-<h1>12</h1><pre class ="question"><img src="Loop/loop_Images/prb9.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-
-void main() {
-    int n;
-    scanf("%d", &amp;n);
-
-    int a = 1;   // 1st term
-    int b = 3;   // 2nd term
-
-    for (int i = 1; i &lt;= n; i++)
-    {
-        printf("%d, ", a);
-        int result = a+b;   // 3rd term
-        a = b;
-        b = result;
-    }
-    
-}</pre>
-<h1>13</h1><pre class ="question"><img src="Loop/loop_Images/prb8.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-
-void main() {
-    int n, fact = 1;
-    scanf("%d", &amp;n);
-    printf("%d! = ", n);
-
-    for (int i = n; ; i--) {
-        fact = fact * i;
-        printf("%d ", i);
-
-        if(i==1)
-            break;
-
-        printf("X ");
-    }
-    printf("= %d", fact);
-}</pre>
-<h1>14</h1><pre class ="question"><img src="Loop/loop_Images/prb7.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-
-void main() {
-    int n, r, fact1=1, fact2=1, fact3=1;
-    scanf("%d %d", &amp;n, &amp;r);
-
-    if(n&gt;=r) {
-        for (int i = 1; i &lt;= n; i++) {
-            fact1 = fact1*i;
-        }
-        for (int i = 1; i &lt;= r; i++) {
-            fact2 = fact2*i;
-        }
-        for (int i = 1; i &lt;= (n-r); i++) {
-            fact3 = fact3*i;
-        }
-        printf("%d", fact1/(fact2 * fact3));
-    }
-}</pre>
-<h1>15</h1><pre class ="question"><img src="Loop/loop_Images/prb6.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-#include&lt;math.h&gt;
-
-void main() {
-    float x,y;
-    scanf("%f %f", &amp;x, &amp;y);
-    
-    float result = pow(x,y);
-    printf("%0.0f", result);
-}</pre>
-<h1>16</h1><pre class ="question"><img src="Loop/loop_Images/prb5.png" alt=""></pre>
-<pre class="answer">
-#include&lt;stdio.h&gt;
-
-void main() {
-    int num1, num2, GCD, LCM;
-    scanf("%d %d", &amp;num1, &amp;num2);
-
-    int max = (num1 &gt; num2) ? num1 : num2;
-    
-    for (int i = max; ; i++) {
-        if ((i%num1 == 0) &amp;&amp; (i%num2 ==0)) {
-            LCM = i;
-            break;
-        }
-        
-    }
-    GCD = (num1 * num2) / LCM;
-    printf("GCD: %d\n", GCD);
-    printf("LCM: %d\n", LCM);
-    
-}</pre>
-<h1>17</h1><pre class ="question"><img src="Loop/loop_Images/prb4.png" alt=""></pre>
-<pre class="answer">
-#include &lt;stdio.h&gt;
-
-void main() {
-
-  int n, flag = 1;  // 1 -&gt; true, 0 -&gt; false, flag = 1 (prime)
-
-  printf("n: ");
-  scanf("%d", &amp;n);
-
-  // 0 and 1 are not prime numbers
-  // change flag to 0 for non-prime number
-  if (n == 0 || n == 1)
-     flag = 0;
-
-  for (int i = 2; i &lt; n ; i++)
-    {
-     // if n is divisible by i, then n is not prime
-     // change flag to 0 for non-prime number
-     if (n % i == 0) {
-          flag = 0;
-          break;
-        }
-    }
-
-  // flag is 1 for prime numbers
-  if (flag == 1)
-    printf("Prime");
-  else
-    printf("Not prime");
-}</pre>
-<h1>18</h1><pre class ="question"><img src="Loop/loop_Images/prb3.png" alt=""></pre>
-<pre class="answer">
-#include &lt;stdio.h&gt;
-
-void main() {
-    int num, org_num, last_num, reversed_num = 0;
-
-    scanf("%d", #);
-    org_num = num;
-
-    while (num != 0) { // Reverse the number
-        last_num = num % 10;
-        reversed_num = reversed_num * 10 + last_num;
-        num /= 10;
-    }
-
-    if (org_num == reversed_num) {
-        printf("Yes");
-    } else {
-        printf("No");
-    }
-}</pre>
-<h1>19</h1><pre class ="question"><img src="Loop/loop_Images/prb2.png" alt=""></pre>
-<pre class="answer">
-    #include <stdio.h>
-
-        int main() {
-            double result = 0;
-            int sign = 1;
-            double x;
-        
-            scanf("%lf", &amp;x);
-        
-        
-        
-            for (int i = 1; i &lt;= 20; i += 2) {
-                double term = 1;
-                long long fact = 1;
-        
-                for (int j = 1; j &lt;= i; j++) {
-                    term *= x;  // Calculate x raised to the power of i
-                }
-        
-                for (int j = 1; j &lt;= i; j++) {
-                    fact *= j;  // Calculate factorial of i
-                }
-        
-                result += sign * (term / fact);
-                sign = -sign;  // Change the sign for the next term
-            }
-        
-            printf("%.3lf\n", result);
-        
-            return 0;
-        }
-        
-</stdio.h></pre>
-<h1>20</h1><pre class ="question"><img src="Loop/loop_Images/prb1.png" alt=""><img src="Loop/loop_Images/prb1.png" alt=""></pre>
-<pre class="answer">
-#include &lt;stdio.h&gt;
-
-void main() {
-    int n;
-    int num = 0;
-    int sum = 0;
-
-    scanf("%d", &amp;n);
-
-    for (int i = 1; i &lt;= n; i++) {
-        num = num * 10 + i;
-        sum += num;
-    }
-
-    printf("%d\n",sum);
-}</pre>
-<script src="script.js"></script>
 </body>
 </html>
