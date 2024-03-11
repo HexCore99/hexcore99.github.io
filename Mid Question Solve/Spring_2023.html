@@ -218,7 +218,56 @@
        }
 </pre>
  
+
+    <h2>OR,</h2>
+
+<pre class = "answer"> 
+
+    #include &lt;stdio.h&gt;
  
+        int main() {
+          
+         int n;
+            scanf("%d", &n);
+        
+            for (int i = 1; i <= n; i++)
+            {
+        
+                for (int j = 0; j < n-i; j++)
+                {
+                    printf("  ");
+                }
+        
+               int track = 2 *(i) -2;
+        
+                for (int j = 1; j < 2*i; j++)
+                {
+       
+                 if ( j <=2*i/2)
+                    {
+                         track+=2;
+                         printf("%d ", track);
+                       
+                       
+                    }
+                    else
+                    {
+                        track -=2;
+                        printf("%d ", track);
+                    }
+        
+                    
+                }
+               printf("\n"); 
+        
+                
+            }
+             
+          
+            return 0;
+              }
+
+</pre>
  
  
  <span style="color: red; font-size: 18px; font-weight: bold;"> Q4) a) </span>
