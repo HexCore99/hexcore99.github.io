@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Manual Trace Table</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <th>i</th>
+      <th>j</th>
+      <th>arr[i] == arr[j]</th>
+      <th>k</th>
+      <th>size</th>
+      <th>j</th>
+      <th>arr[k] = arr[k + 1]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>false</td>
+      <td>-</td>
+      <td>5</td>
+      <td>1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>2</td>
+      <td>true</td>
+      <td>2</td>
+      <td>4</td>
+      <td>1</td>
+      <td>arr[2] = arr[3] </td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>3</td>
+      <td>true</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>arr[3] = arr[4] </td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>4</td>
+      <td>false</td>
+      <td>-</td>
+      <td>3</td>
+      <td>4</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>false</td>
+      <td>-</td>
+      <td>3</td>
+      <td>2</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3</td>
+      <td>false</td>
+      <td>-</td>
+      <td>3</td>
+      <td>3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>4</td>
+      <td>false</td>
+      <td>-</td>
+      <td>3</td>
+      <td>4</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

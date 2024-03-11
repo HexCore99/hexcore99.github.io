@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Trace</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Manual Trace Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>i</th>
+                <th>start++</th>
+                <th>(end%2)</th>
+                <th>end--</th>
+                <th>count</th>
+                <th>end+2</th>
+                <th>start+1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>112</td>
+                <td>105</td>
+                <td>FALSE</td> 
+                <td>111</td>
+                <td>0</td>
+                <td>113</td>
+                <td>106</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>106</td>
+                <td>TRUE</td> 
+                <td>111</td>
+                <td>1</td>
+                <td>113</td>
+                <td>107</td>
+            </tr>
+            <tr>
+                <td>110</td>
+                <td>107</td>
+                <td>TRUE</td> 
+                <td>111</td>
+                <td>2</td>
+                <td>113</td>
+                <td>108</td>
+            </tr>
+            <tr>
+                <td>109</td>
+                <td>108</td>
+                <td>TRUE</td> 
+                <td>111</td>
+                <td>3</td>
+                <td>113</td>
+                <td>109</td>
+            </tr>
+            <tr>
+                <td>108</td>
+                <td>109</td>
+                <td>TRUE</td> 
+                <td>111</td>
+                <td>4</td>
+                <td>113</td>
+                <td>110</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

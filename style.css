@@ -5,6 +5,9 @@
 body{
     font-family: "Madimi One";
 }
+pre{
+    white-space: pre-wrap;
+}
 .index-content{
     /* border: 3px solid darkgoldenrod; */
     max-width: 50%;
@@ -38,7 +41,7 @@ text-align: center;
     font-size: larger;
     color: firebrick;
   }
-pre {
+.answer {
     font-family: "Madimi One", monospace;
     border: 3px solid paleturquoise;
     padding-top: 15px;
@@ -52,6 +55,21 @@ pre {
     max-width: 70%;
     border-radius: 10px;
 }
+.question{
+    font-family: "Madimi One";
+    border: 2px groove burlywood;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    white-space: pre-wrap;
+    overflow-x:auto;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    max-width: 70%;
+}
+
 .highlight{
     color: orange;
 }
@@ -85,7 +103,7 @@ pre {
     color: chocolate;
 }
 .preprocessor{
-    color: cornflowerblue;
+    color: magenta;
 }
 .header{
     color: brown;

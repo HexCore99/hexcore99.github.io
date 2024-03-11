@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring 2023</title>
+</head>
+<body>
+    
+<h1 class = "topHeading">Spring 2023 Midterm Question Solve</h1>
+
+<pre >
+
+
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q1) a) </span>
+    i, iii,iv, v
+
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q51) b) </span>
+    a= 3, b =12.000000, c= 2, d = 1.000000;
+ 
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q1) c) </span>
+    for b = 10		for b = 2
+      -------------	   -----------------------
+ 
+     SPL				Spring
+     Spring
+ 
+ 
+ 
+     <span style="color: red; font-size: 18px; font-weight: bold;"> Q2) a) </span>
+
+ <pre class = "answer">
+#include &lt;stdio.h&gt;
+ 
+ int main() {
+     int n, a;
+     scanf("%d %d", &n, &a);
+ 
+     int diff = n - a;
+ 
+     switch (n > a) {
+         case 1:
+             switch (diff > 5) {
+                 case 1:
+                     printf("Difference is greater than 5 \n");
+                     break;
+                 case 0:
+                     printf("Difference is less than or equal to 5 \n");
+                     break;
+             }
+             break;
+         case 0:
+             printf("Please give a larger value of n \n");
+             break;
+     }
+ 
+     return 0;
+       }
+</pre>
+ 
+ <span style="color: red; font-size: 18px; font-weight: bold;"> Q2) b) </span>
+
+ 
+ <!-- i = 20, j = 8 result = 7,  x = 2,  y = 3
+ i = 24, j = 7 result = 10, x = 3,  y = 4
+ i = 20, j = 6 result = 14, x = 5,  y = 5
+ i = 14, j = 5 result = 19, x = 8,  y = 6
+ i = 9,  j = 4 result = 25, x = 12, y = 7
+ 
+  -->
+ <table>
+    <thead>
+        <tr>
+            <th>Iteration</th>
+            <th>j</th>
+            <th>i</th>
+            <th>result</th>
+            <th>x</th>
+            <th>y</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Initialization</td>
+            <td>-</td>
+            <td>-</td>
+            <td>5</td>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>8</td>
+            <td>20</td>
+            <td>7</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>7</td>
+            <td>24</td>
+            <td>10</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>6</td>
+            <td>20</td>
+            <td>14</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>14</td>
+            <td>19</td>
+            <td>8</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>4</td>
+            <td>9</td>
+            <td>25</td>
+            <td>12</td>
+            <td>7</td>
+        </tr>
+    </tbody>
+</table>
+
+
+ 
+ <span style="color: red; font-size: 18px; font-weight: bold;"> Q3) a) </span>
+ 
+<pre class = "answer">
+#include &lt;stdio.h&gt;
+ 
+ int main() {
+     int weeks = 2, days_in_week = 7;
+     int i = 1;
+ 
+     do {
+         printf("Week: %d\n", i);
+ 
+         int j = 1;
+         do {
+             if (i % 2 == 0) {
+                 if (j % 2 == 0)
+                     printf("  Day: %d\n", j);
+             } else {
+                 if (j % 2 != 0)
+                     printf("  Day: %d\n", j);
+             }
+             j++;
+         } while (j <= days_in_week);
+ 
+         i++;
+     } while (i <= weeks);
+ 
+     return 0;
+       }
+</pre>
+ 
+ 
+ 
+ <span style="color: red; font-size: 18px; font-weight: bold;"> Q3) b) </span>
+
+<pre class = "answer">
+#include &lt;stdio.h&gt;
+ 
+ int main() {
+   
+  int n;
+     scanf("%d", &n);
+ 
+     for (int i = 1; i <= n; i++)
+     {
+ 
+         for (int j = 0; j < n-i; j++)
+         {
+             printf("  ");
+         }
+ 
+        int track = 2 *(i);
+ 
+         for (int j = 1; j < 2*i; j++)
+         {
+             if (j == 1)
+             {
+                 printf("%d ", track);
+             }
+ 
+           else  if ( j <= (2*i)/2)
+             {
+                 track+=2;
+                 printf("%d ", track);
+             }
+             else
+             {
+                 track -=2;
+                 printf("%d ", track);
+             }
+ 
+             
+         }
+        printf("\n"); 
+ 
+         
+     }
+      
+   
+     return 0;
+       }
+</pre>
+ 
+ 
+ 
+ 
+ <span style="color: red; font-size: 18px; font-weight: bold;"> Q4) a) </span>
+
+<pre class = "answer">
+#include &lt;stdio.h&gt;
+ 
+ int main() {
+  int n = 100; 
+  float arr[n];
+  float sum = 0, highest_Cgpa = 0, lowest_Cgpa = 999999;
+ 
+  int grtr_than_3 = 0,   highest_Cgpa_Count = 0;
+ 
+  for (int i = 0; i < n; i++)
+  {
+     scanf("%d", &arr[i]);
+     // if Cgpa is greater than 3.00 than sum it and count it
+     if (arr[i]> 3.00)
+     {
+         sum += arr[i];
+         grtr_than_3++;
+ 
+     }
+     
+     // finding highest Cgpa
+     if (highest_Cgpa < arr[i])
+     {
+         highest_Cgpa = arr[i];
+         highest_Cgpa_Count = 1;
+     }else if (highest_Cgpa == arr[i]) // finding how many students have highest Cgpa
+     {
+         highest_Cgpa_Count++;
+     }
+ 
+     // finding lowest Cgpa
+     if (lowest_Cgpa > arr[i])
+     {
+         lowest_Cgpa = arr[i];
+     }
+     
+     
+  }
+   
+  float avg = sum / grtr_than_3;
+ 
+ 
+     return 0;
+       }
+</pre>
+ 
+ 
+ 
+ <span style="color: red; font-size: 18px; font-weight: bold;"> Q5) a) </span>
+ <h2>Manual Tracing For 1st Loop</h2>
+
+
+ <table>
+    <colgroup>
+    <col />
+    <col />
+    <col />
+    <col />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td >i</td>
+    <td >K</td>
+    <td >arr[i]</td>
+    <td >&#xa0;</td>
+    </tr>
+    <tr>
+    <td >1</td>
+    <td >17</td>
+    <td >14</td>
+    <td >&#xa0;</td>
+    </tr>
+    <tr>
+    <td >3</td>
+    <td >19</td>
+    <td >16</td>
+    <td >&#xa0;</td>
+    </tr>
+    <tr>
+    <td >5</td>
+    <td >21</td>
+    <td >18</td>
+    <td >&#xa0;</td>
+    </tr>
+    </tbody>
+    </table>
+
+    
+    <h2>Manual Tracing For 2nd Loop/ Nested Loop</h2>
+
+    <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+    
+    <colgroup>
+    <col />
+    <col />
+    <col />
+    <col />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td >i</td>
+    <td >j</td>
+    <td >c</td>
+    <td >arr[i]</td>
+    </tr>
+    <tr>
+    <td >&#xa0;</td>
+    <td >&#xa0;</td>
+    <td >&#xa0;</td>
+    <td >&#xa0;</td>
+    </tr>
+    <tr>
+    <td >6</td>
+    <td >9</td>
+    <td >1</td>
+    <td >9</td>
+    </tr>
+    <tr>
+    <td >6</td>
+    <td >8</td>
+    <td >2</td>
+    <td >8</td>
+    </tr>
+    <tr>
+    <td >6</td>
+    <td >7</td>
+    <td >3</td>
+    <td >7</td>
+    </tr>
+    <tr>
+    <td >6</td>
+    <td >6</td>
+    <td >4</td>
+    <td >6</td>
+    </tr>
+    <tr>
+    <td >7</td>
+    <td >9</td>
+    <td >5</td>
+    <td >9</td>
+    </tr>
+    <tr>
+    <td >7</td>
+    <td >8</td>
+    <td >6</td>
+    <td >8</td>
+    </tr>
+    <tr>
+    <td >7</td>
+    <td >7</td>
+    <td >7</td>
+    <td >7</td>
+    </tr>
+    <tr>
+    <td >8</td>
+    <td >9</td>
+    <td >8</td>
+    <td >9</td>
+    </tr>
+    <tr>
+    <td >8</td>
+    <td >8</td>
+    <td >9</td>
+    <td >8</td>
+    </tr>
+    <tr>
+    <td >9</td>
+    <td >9</td>
+    <td >10</td>
+    <td >9</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <h2>Manual Tracing For last Loop</h2>
+    <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+    
+    <colgroup>
+    <col />
+    <col />
+    <col />
+    <col />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td >i</td>
+    <td >(i % 2)</td>
+    <td >arr[i]</td>
+    <td >K</td>
+    </tr>
+    <tr>
+    <td >0</td>
+    <td >TRUE</td>
+    <td >0</td>
+    <td >0</td>
+    </tr>
+    <tr>
+    <td >1</td>
+    <td >FALSE</td>
+    <td >1</td>
+    <td >1</td>
+    </tr>
+    <tr>
+    <td >2</td>
+    <td >TRUE</td>
+    <td >2</td>
+    <td >2</td>
+    </tr>
+    <tr>
+    <td >3</td>
+    <td >FALSE</td>
+    <td >3</td>
+    <td >3</td>
+    </tr>
+    <tr>
+    <td >4</td>
+    <td >TRUE</td>
+    <td >4</td>
+    <td >4</td>
+    </tr>
+    <tr>
+    <td >5</td>
+    <td >FALSE</td>
+    <td >5</td>
+    <td >5</td>
+    </tr>
+    <tr>
+    <td >6</td>
+    <td >TRUE</td>
+    <td >6</td>
+    <td >6</td>
+    </tr>
+    <tr>
+    <td >7</td>
+    <td >FALSE</td>
+    <td >7</td>
+    <td >7</td>
+    </tr>
+    <tr>
+    <td >8</td>
+    <td >TRUE</td>
+    <td >8</td>
+    <td >8</td>
+    </tr>
+    <tr>
+    <td >9</td>
+    <td >FALSE</td>
+    <td >9</td>
+    <td >9</td>
+    </tr>
+    </tbody>
+    </table>
+ 
+ <span style="color: red; font-size: 18px; font-weight: bold;"> Q5) b) </span>
+ <h1>Manual Tracing</h1>
+ <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+    <colgroup>
+    <col/>
+    <col/>
+    <col/>
+    <col/>
+    <col/>
+    <col/>
+    <col/>
+    <col/>
+    <col/>
+    </colgroup>
+    <tbody>
+    <tr>
+    <td>i</td>
+    <td>x=t1</td>
+    <td>y=t2</td>
+    <td>z=t1+t2</td>
+    <td>j</td>
+    <td>t3=t1+t2</td>
+    <td>arr[i][j]</td>
+    <td>t1=t2</td>
+    <td>t2=t3</td>
+    </tr>
+    <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    </tr>
+    <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td>2</td>
+    </tr>
+    <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>2</td>
+    <td>0</td>
+    <td>3</td>
+    </tr>
+    <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>3</td>
+    <td>5</td>
+    <td>3</td>
+    <td>0</td>
+    <td>5</td>
+    </tr>
+    <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>4</td>
+    <td>8</td>
+    <td>4</td>
+    <td>0</td>
+    <td>8</td>
+    </tr>
+    <tr>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>1</td>
+    <td>1</td>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+    <td>0</td>
+    <td>2</td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+    <td>1</td>
+    <td>3</td>
+    <td>1</td>
+    <td>1</td>
+    <td>3</td>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+    <td>2</td>
+    <td>5</td>
+    <td>2</td>
+    <td>1</td>
+    <td>5</td>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>8</td>
+    <td>3</td>
+    <td>1</td>
+    <td>8</td>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+    <td>4</td>
+    <td>13</td>
+    <td>4</td>
+    <td>1</td>
+    <td>13</td>
+    </tr>
+    <tr>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>1</td>
+    <td>2</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>0</td>
+    <td>3</td>
+    <td>0</td>
+    <td>2</td>
+    <td>3</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>1</td>
+    <td>5</td>
+    <td>1</td>
+    <td>2</td>
+    <td>5</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>2</td>
+    <td>8</td>
+    <td>2</td>
+    <td>2</td>
+    <td>8</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>3</td>
+    <td>13</td>
+    <td>3</td>
+    <td>2</td>
+    <td>13</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>21</td>
+    <td>4</td>
+    <td>2</td>
+    <td>21</td>
+    </tr>
+    <tr>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>2</td>
+    <td>3</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>2</td>
+    <td>3</td>
+    <td>5</td>
+    <td>0</td>
+    <td>5</td>
+    <td>0</td>
+    <td>3</td>
+    <td>5</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>2</td>
+    <td>3</td>
+    <td>5</td>
+    <td>1</td>
+    <td>8</td>
+    <td>1</td>
+    <td>3</td>
+    <td>8</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>2</td>
+    <td>3</td>
+    <td>5</td>
+    <td>2</td>
+    <td>13</td>
+    <td>2</td>
+    <td>3</td>
+    <td>13</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>2</td>
+    <td>3</td>
+    <td>5</td>
+    <td>3</td>
+    <td>21</td>
+    <td>3</td>
+    <td>3</td>
+    <td>21</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>2</td>
+    <td>3</td>
+    <td>5</td>
+    <td>4</td>
+    <td>34</td>
+    <td>4</td>
+    <td>3</td>
+    <td>34</td>
+    </tr>
+    <tr>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>2</td>
+    <td>5</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>3</td>
+    <td>5</td>
+    <td>8</td>
+    <td>0</td>
+    <td>8</td>
+    <td>0</td>
+    <td>4</td>
+    <td>8</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>3</td>
+    <td>5</td>
+    <td>8</td>
+    <td>1</td>
+    <td>13</td>
+    <td>1</td>
+    <td>4</td>
+    <td>13</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>3</td>
+    <td>5</td>
+    <td>8</td>
+    <td>2</td>
+    <td>21</td>
+    <td>2</td>
+    <td>4</td>
+    <td>21</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>3</td>
+    <td>5</td>
+    <td>8</td>
+    <td>3</td>
+    <td>34</td>
+    <td>3</td>
+    <td>4</td>
+    <td>34</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>3</td>
+    <td>5</td>
+    <td>8</td>
+    <td>4</td>
+    <td>55</td>
+    <td>4</td>
+    <td>4</td>
+    <td>55</td>
+    </tr>
+    <tr>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>&#xa0;</td>
+    <td>5</td>
+    <td>8</td>
+    </tr>
+
+    </tbody>
+    </table>
+ // printing array result
+  1   2   3   5   8
+  2   3   5   8   13
+  3   5   8   13   21
+  5   8   13   21   34
+  8   13   21   34   55
+ 
+
+
+<script src="script.js"></script>
+</body>
+</html>

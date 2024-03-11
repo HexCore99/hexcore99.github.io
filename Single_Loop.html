@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>01</h1><pre class ="question"><img src="Loop/loop_Images/prb20.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i&lt;=n; i++) {
+        printf("%d, ", i);
+    }
+}</pre>
+<h1>02</h1><pre class ="question"><img src="Loop/loop_Images/prb19.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int n, term;
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i&lt;=n; i++) {
+        term = 2*(i-1)+1;
+        printf("%d, ", term);
+    }
+}</pre>
+<h1>03</h1><pre class ="question"><img src="Loop/loop_Images/prb18.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    for(int i = 1; i&lt;=n; i++) {
+        if(i%2 != 0) 
+            printf("1, ");
+        else
+            printf("0, ");
+    }
+}</pre>
+<h1>04</h1><pre class ="question"><img src="Loop/loop_Images/prb17.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    float n, term, sum=0;
+    scanf("%f", &amp;n);
+
+    for(int i = 1; i&lt;=n; i++) {
+        scanf("%f", &amp;term);
+        sum = sum + term;
+    }
+    printf("AVG of %.0f inputs: %f", n,(sum/n));
+}</pre>
+<h1>05</h1><pre class ="question"><img src="Loop/loop_Images/prb16.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+
+void main() {
+    int x, y;
+    scanf("%d %d", &amp;x, &amp;y);
+
+    int i = 1;
+    while (1) {
+        
+        float sq = pow(x,2);
+        //int sq = x*x;
+
+        if(x<y) ",="" else="" if(x="" printf("%f,="" sq);="" x++;="" {="" }="">y) {
+            printf("%f, ", sq);
+            x--;
+        }
+        else if(x==y) {
+            printf("Reached!");
+            break;
+        }
+    }
+    
+}</y)></pre>
+<h1>06</h1><pre class ="question"><img src="Loop/loop_Images/prb15.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int X, N, n;
+    scanf("%d %d", &amp;X, &amp;N); // X = player1, N = tries, n = player2
+
+    for (int i = 1; ; i++) {
+        scanf("%d", &amp;n);
+
+        if(n != X) {
+            N--;
+            printf("Wrong, %d choices left!\n", N);
+        }
+        else if(n == X) {
+            printf("Right, Player-2 wins!\n");
+            break;
+        }
+        if(N == 0) {
+            printf("Player-1 wins!\n");
+            break;
+        }
+    }
+}</pre>
+<h1>07</h1><pre class ="question"><img src="Loop/loop_Images/prb14png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    char ch;
+    int count=1;
+
+    for(int i = 1; ; i++) {
+        scanf(" %c", &amp;ch);
+
+        if(ch == 'A')
+            break;
+        else {
+            printf("Input %d: %c\n", count, ch);
+            count++;
+        }
+            
+    }
+}</pre>
+<h1>08</h1><pre class ="question"><img src="Loop/loop_Images/prb13.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int num, store;
+    scanf("%d", #);
+
+    while(1) {
+        store = num % 10;
+        num = num / 10;
+
+        printf("%d", store);
+
+        if(num == 0)
+            break;
+    }
+}</pre>
+<h1>09</h1><pre class ="question"><img src="Loop/loop_Images/prb12.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    float N;
+    scanf("%f", &amp;N);
+
+    for (int i = 1; i &lt;= N; i++) {
+        float A, HW, CT, MT, TF, mark;
+        scanf("%f %f %f %f %f", &amp;A, &amp;HW, &amp;CT, &amp;MT, &amp;TF);
+
+        mark = A + HW + CT + (MT*0.6) + (TF*0.4); // MT = 50 (total mark)
+						  // 50 * x = 30 (converting to 30);
+						  // x = 0.6; multiply 'x' with the obtained mark to convert to 30;
+
+    if(mark&gt;= 90 &amp;&amp; mark&lt;=100)
+        printf("Student %d: A\n", i);
+    else if(mark &gt;= 86)
+        printf("Student %d: A-\n", i);
+    else if(mark &gt;= 82)
+        printf("Student %d: B+\n", i);
+    else if(mark &gt;= 78)
+        printf("Student %d: B\n", i);
+    else if(mark &gt;= 74)
+        printf("Student %d: B-\n", i);
+    else if(mark &gt;= 70)
+        printf("Student %d: C+\n", i);
+    else if(mark &gt;= 66)
+        printf("Student %d: C\n", i);
+    else if(mark &gt;= 62)
+        printf("Student %d: C-\n", i);
+    else if(mark &gt;= 58)
+        printf("Student %d: D+\n", i);
+    else if(mark &gt;= 55)
+        printf("Student %d: D\n", i);
+    else if(mark &lt; 55)
+        printf("Student %d: F\n", i);
+
+    }
+        
+}</pre>
+<h1>10</h1><pre class ="question"><img src="Loop/loop_Images/prb11.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int term,number, sum=0;
+    scanf("%d", &amp;term);
+    
+
+    for (int i=1; i&lt;=term ;i++) {
+        if(i%2 != 0)
+            number = i;
+        else
+            number = -i;
+
+        sum = sum + number;
+    }
+    printf("Result: %d", sum);
+}</pre>
+<h1>11</h1><pre class ="question"><img src="Loop/loop_Images/prb10.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+
+void main() {
+    int term, sum=0, series;
+    scanf("%d", &amp;term);
+
+    for (int i = 1; i &lt;= term; i++) {
+        series = pow(i,2)*(i+1);
+
+        sum = sum + series;
+    }
+    printf("Result: %d", sum);
+    
+}</pre>
+<h1>12</h1><pre class ="question"><img src="Loop/loop_Images/prb9.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int n;
+    scanf("%d", &amp;n);
+
+    int a = 1;   // 1st term
+    int b = 3;   // 2nd term
+
+    for (int i = 1; i &lt;= n; i++)
+    {
+        printf("%d, ", a);
+        int result = a+b;   // 3rd term
+        a = b;
+        b = result;
+    }
+    
+}</pre>
+<h1>13</h1><pre class ="question"><img src="Loop/loop_Images/prb8.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int n, fact = 1;
+    scanf("%d", &amp;n);
+    printf("%d! = ", n);
+
+    for (int i = n; ; i--) {
+        fact = fact * i;
+        printf("%d ", i);
+
+        if(i==1)
+            break;
+
+        printf("X ");
+    }
+    printf("= %d", fact);
+}</pre>
+<h1>14</h1><pre class ="question"><img src="Loop/loop_Images/prb7.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int n, r, fact1=1, fact2=1, fact3=1;
+    scanf("%d %d", &amp;n, &amp;r);
+
+    if(n&gt;=r) {
+        for (int i = 1; i &lt;= n; i++) {
+            fact1 = fact1*i;
+        }
+        for (int i = 1; i &lt;= r; i++) {
+            fact2 = fact2*i;
+        }
+        for (int i = 1; i &lt;= (n-r); i++) {
+            fact3 = fact3*i;
+        }
+        printf("%d", fact1/(fact2 * fact3));
+    }
+}</pre>
+<h1>15</h1><pre class ="question"><img src="Loop/loop_Images/prb6.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+
+void main() {
+    float x,y;
+    scanf("%f %f", &amp;x, &amp;y);
+    
+    float result = pow(x,y);
+    printf("%0.0f", result);
+}</pre>
+<h1>16</h1><pre class ="question"><img src="Loop/loop_Images/prb5.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+
+void main() {
+    int num1, num2, GCD, LCM;
+    scanf("%d %d", &amp;num1, &amp;num2);
+
+    int max = (num1 &gt; num2) ? num1 : num2;
+    
+    for (int i = max; ; i++) {
+        if ((i%num1 == 0) &amp;&amp; (i%num2 ==0)) {
+            LCM = i;
+            break;
+        }
+        
+    }
+    GCD = (num1 * num2) / LCM;
+    printf("GCD: %d\n", GCD);
+    printf("LCM: %d\n", LCM);
+    
+}</pre>
+<h1>17</h1><pre class ="question"><img src="Loop/loop_Images/prb4.png" alt=""></pre>
+<pre class="answer">
+#include &lt;stdio.h&gt;
+
+void main() {
+
+  int n, flag = 1;  // 1 -&gt; true, 0 -&gt; false, flag = 1 (prime)
+
+  printf("n: ");
+  scanf("%d", &amp;n);
+
+  // 0 and 1 are not prime numbers
+  // change flag to 0 for non-prime number
+  if (n == 0 || n == 1)
+     flag = 0;
+
+  for (int i = 2; i &lt; n ; i++)
+    {
+     // if n is divisible by i, then n is not prime
+     // change flag to 0 for non-prime number
+     if (n % i == 0) {
+          flag = 0;
+          break;
+        }
+    }
+
+  // flag is 1 for prime numbers
+  if (flag == 1)
+    printf("Prime");
+  else
+    printf("Not prime");
+}</pre>
+<h1>18</h1><pre class ="question"><img src="Loop/loop_Images/prb3.png" alt=""></pre>
+<pre class="answer">
+#include &lt;stdio.h&gt;
+
+void main() {
+    int num, org_num, last_num, reversed_num = 0;
+
+    scanf("%d", #);
+    org_num = num;
+
+    while (num != 0) { // Reverse the number
+        last_num = num % 10;
+        reversed_num = reversed_num * 10 + last_num;
+        num /= 10;
+    }
+
+    if (org_num == reversed_num) {
+        printf("Yes");
+    } else {
+        printf("No");
+    }
+}</pre>
+<h1>19</h1><pre class ="question"><img src="Loop/loop_Images/prb2.png" alt=""></pre>
+<pre class="answer">
+    #include <stdio.h>
+
+        int main() {
+            double result = 0;
+            int sign = 1;
+            double x;
+        
+            scanf("%lf", &amp;x);
+        
+        
+        
+            for (int i = 1; i &lt;= 20; i += 2) {
+                double term = 1;
+                long long fact = 1;
+        
+                for (int j = 1; j &lt;= i; j++) {
+                    term *= x;  // Calculate x raised to the power of i
+                }
+        
+                for (int j = 1; j &lt;= i; j++) {
+                    fact *= j;  // Calculate factorial of i
+                }
+        
+                result += sign * (term / fact);
+                sign = -sign;  // Change the sign for the next term
+            }
+        
+            printf("%.3lf\n", result);
+        
+            return 0;
+        }
+        
+</stdio.h></pre>
+<h1>20</h1><pre class ="question"><img src="Loop/loop_Images/prb1.png" alt=""><img src="Loop/loop_Images/prb1.png" alt=""></pre>
+<pre class="answer">
+#include &lt;stdio.h&gt;
+
+void main() {
+    int n;
+    int num = 0;
+    int sum = 0;
+
+    scanf("%d", &amp;n);
+
+    for (int i = 1; i &lt;= n; i++) {
+        num = num * 10 + i;
+        sum += num;
+    }
+
+    printf("%d\n",sum);
+}</pre>
+<script src="script.js"></script>
+</body>
+</html>

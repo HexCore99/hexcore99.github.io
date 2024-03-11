@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Summer 2022</title>
+</head>
+<body>
+    
+<h1>Summer 22</h1>
+<pre>
+
+
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q1) a) </span>
+
+   <pre class = "answer">
+#include &lt;stdio.h&gt;
+    
+    int main()
+    {
+    
+        int num1 = 5;
+        float num2;
+        char chr = 'q';
+        scanf("%f", &num2);
+        printf("%d\n", 'a');
+        num1 = (int)num2 % chr;
+    
+        printf("Result is = %d", num1);
+     return 0;
+       }
+</pre>
+    
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q1) b) </span>
+    
+    largest_val  = Valid
+    smallest-val = Invalid (no special character allowed except underscore)
+           while = invalid (Reserved Keyword)
+          2ndNum = Invalid (variable can't start with numbers)
+        !New = Invalid (Operators are not allowed)
+       avg marks = Invalid (space not allowed)
+         val9 = Valid.
+    
+    
+         <span style="color: red; font-size: 18px; font-weight: bold;"> Q1) c) </span>
+    
+        float a = 10.000000
+        int b = 10
+        float c = 12.500000
+        int d = 12
+    
+    
+    
+    
+        <span style="color: red; font-size: 18px; font-weight: bold;"> Q2) a) </span>
+    
+    Output:
+    for num = 1           for num = 3
+    12  5  12		0  0  0
+    
+    
+    
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q2) b) </span>
+
+
+
+    <table>
+        <tr>
+          <th>Step</th>
+          <th>i</th>
+          <th>sum</th>
+          <th>b</th>
+          <th>a</th>
+          <th>y</th>
+          <th>x</th>
+        </tr>
+        <tr>
+          <td>Init</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td> 
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>7</td> 
+          <td>8</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2</td>
+          <td>9</td>
+          <td>19</td> 
+          <td>27</td>
+          <td>3</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>3</td>
+          <td>36</td>
+          <td>37</td> 
+          <td>64</td>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>4</td>
+          <td>100</td>
+          <td>61</td> 
+          <td>125</td>
+          <td>5</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>5</td>
+          <td>225</td>
+          <td>91</td> 
+          <td>216</td>
+          <td>6</td>
+          <td>21</td>
+        </tr>
+      </table>
+      
+
+    
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q3) a) </span>
+    
+   <pre class = "answer">
+#include &lt;stdio.h&gt;
+    
+    int main()
+    {
+    
+        int n = 3, i, j, sum = 0;
+    
+        i = 0;
+        do
+        {
+            j = 0;
+            do
+            {
+                if (i == j)
+                {
+                    sum += i + j;
+                }
+                else if (i > j)
+                {
+                    sum += i + n;
+                }
+                else
+                {
+                    sum += n - j;
+                }
+    
+                j++;
+            } while (j <= i);
+    
+            i++;
+        } while (i < n);
+    
+        printf("%d\n", sum);
+    
+     return 0;
+       }
+</pre>
+    
+    
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q3) b) </span>
+    
+    
+   <pre class = "answer">
+#include &lt;stdio.h&gt;
+    
+    int main()
+    {
+    
+        float sum = 0;
+        int pos_Count = 0;
+    
+        while (1)
+        {
+            int input;
+            scanf("%d", &input);
+    
+            if (input == 0)
+            {
+                break;
+            }
+            else if (input > 0)
+            {
+                sum += input;
+                pos_Count++;
+            }
+        }
+    
+        float avg = sum / pos_Count;
+    
+        //  printf("Average = %.2f", avg);
+     return 0;
+       }
+</pre>
+    
+    
+    
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q4) a) </span>
+    
+    i        F[i]= n+i       (F[i] % 2 == 0)         F[i] *= 2
+    ---------------------------------------------------
+    0         3               FALSE                         3
+    1         4               TRUE                          8
+    2         5               FALSE                         5
+    3         6               TRUE                          12
+    4         7               FALSE                         7
+    5         8               TRUE                          16
+
+    <h1>OR,</h1>
+    
+    <table>
+        <tr>
+          <th>Step</th>
+          <th>i</th>
+          <th>n</th>
+          <th>F[0]</th>
+          <th>F[1]</th>
+          <th>F[2]</th>
+          <th>F[3]</th>
+          <th>F[4]</th>
+          <th>F[5]</th> 
+        </tr>
+        <tr>
+          <td>Init</td>
+          <td>0</td>
+          <td>3</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>3</td>
+          <td>3</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>1</td>
+          <td>3</td>
+          <td>3</td>
+          <td>8</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>2</td>
+          <td>3</td>
+          <td>3</td>
+          <td>8</td>
+          <td>5</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>3</td>
+          <td>3</td>
+          <td>3</td>
+          <td>8</td>
+          <td>5</td>
+          <td>12</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>4</td>
+          <td>3</td>
+          <td>3</td>
+          <td>8</td>
+          <td>5</td>
+          <td>12</td>
+          <td>7</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>5</td>
+          <td>3</td>
+          <td>3</td>
+          <td>8</td>
+          <td>5</td>
+          <td>12</td>
+          <td>7</td>
+          <td>16</td>
+        </tr>
+      </table>
+       
+    
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q4) b) </span>
+    
+   <pre class = "answer">
+#include &lt;stdio.h&gt;
+    
+    int main()
+    {
+    
+        int arr[100];
+        int n;
+        scanf("%d", &n);
+    
+        float sum_Of_Odd_index = 0;
+        int count_Odd_index = 0;
+    
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d", &arr[i]);
+            if (i % 2 != 0)
+            {
+                sum_Of_Odd_index += arr[i];
+                count_Odd_index++;
+            }
+        }
+    
+        printf("index\t Value\n");
+        printf("-----\t -----\n");
+    
+        for (int i = 0; i < n; i++)
+        {
+            printf(" %d\t    %d\n", i, arr[i]);
+        }
+    
+        float avg = sum_Of_Odd_index / count_Odd_index;
+    
+        printf("Average of odd index = %.2f", avg);
+     return 0;
+       }
+</pre>
+    
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q5) a) </span>
+    
+    
+    
+    
+    
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q5) b) </span>
+    
+   <pre class = "answer">
+#include &lt;stdio.h&gt;
+    
+    int main()
+    {
+    
+        int n;
+        scanf("%d", &n);
+    
+        for (int i = n; i >= 1; i--)
+        {
+            for (int j = i; j >= 1; j--)
+            {
+                printf("%d\t", j * 2);
+            }
+            printf("\n");
+        }
+    
+     return 0;
+       }
+</pre>
+    
+
+<script src="script.js"></script>
+</body>
+</html>
