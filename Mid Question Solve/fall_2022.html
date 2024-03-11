@@ -276,24 +276,120 @@
        
        But if k was declared then Manual Trace would be as below:
        
-       i=0     j=1     (j< size) = TRUE        (arr[i] == arr[j]) = FALSE
-       i=0     j=2     (j< size) = TRUE        (arr[i] == arr[j]) = TRUE       k=2     (k< size-1) = TRUE      arr[2] = 10     ize= 5  j=2
-       i=0     j=2     (j< size) = TRUE        (arr[i] == arr[j]) = TRUE       k=3     (k< size-1) = TRUE      arr[3] = 100    ize= 5  j=2
-       i=0     j=1     (j< size) = TRUE        (arr[i] == arr[j]) = TRUE       k=4     (k< size-1) = FALSE     arr[4] = 100    size= 4 j=1
-       
-       i=0     j=2     (j< size) = TRUE        (arr[i] == arr[j]) = TRUE       k=2     (k< size-1) = TRUE      arr[2] = 100    ize= 4  j=2
-       i=0     j=1     (j< size) = TRUE        (arr[i] == arr[j]) = TRUE       k=3     (k< size-1) = FALSE     arr[3] = 100    size= 3 j=1
-       
-       i=0     j=2     (j< size) = TRUE        (arr[i] == arr[j]) = FALSE
-       i=0     j=3     (j< size) = FALSE
-       
-       
-       i=1     j=2     (j< size) = TRUE        (arr[i] == arr[j]) = FALSE
-       i=1     j=3     (j< size) = FALSE
-       
-       
-       i=2     j=3     (j< size) = FALSE
-
+       <table>
+        <thead>
+          <tr>
+            <th>i</th>
+            <th>j</th>
+            <th>arr[i] == arr[j]</th>
+            <th>k</th>
+            <th>size</th>
+            <!-- <th>j</th> -->
+            <th>arr[k] = arr[k + 1]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>false</td>
+            <td>-</td>
+            <td>5</td>
+            <!-- <td>1</td> -->
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>2</td>
+            <td>true</td>
+            <td>2</td>
+            <td>4</td>
+            <!-- <td>1</td> -->
+            <td>10 </td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>3</td>
+            <td>true</td>
+            <td>3</td>
+            <td>3</td>
+            <!-- <td>0</td> -->
+            <td>100 </td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>4</td>
+            <td>false</td>
+            <td>-</td>
+            <td>3</td>
+            <!-- <td>4</td> -->
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>false</td>
+            <td>-</td>
+            <td>3</td>
+            <!-- <td>2</td> -->
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>3</td>
+            <td>false</td>
+            <td>-</td>
+            <td>3</td>
+            <!-- <td>3</td> -->
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>4</td>
+            <td>false</td>
+            <td>-</td>
+            <td>3</td>
+            <!-- <td>4</td> -->
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>false</td>
+            <td>-</td>
+            <td>3</td>
+            <!-- <td>4</td> -->
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>4</td>
+            <td>false</td>
+            <td>-</td>
+            <td>3</td>
+            <!-- <td>4</td> -->
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>false</td>
+            <td>-</td>
+            <td>3</td>
+            <!-- <td>4</td> -->
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <!-- <td>-</td> -->
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
 
        
        <span style="color: red; font-size: 18px; font-weight: bold;"> Q4) b) </span>
