@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="C:\Users\siyam\Documents\GitHub\siyam.github.io\style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Spring 2023 Midterm Question Solve</h1>
+
+<pre class="container">
+
+
+    1. a) i, iii,iv, v
+
+    b) a= 3, b =12.000000, c= 2, d = 1.000000;
+ 
+    c) for b = 10		for b = 2
+      -------------	   -----------------------
+ 
+     SPL				Spring
+     Spring
+ 
+ 
+ 
+ 2. a)
+ #include <stdio.h>
+ 
+ int main() {
+     int n, a;
+     scanf("%d %d", &n, &a);
+ 
+     int diff = n - a;
+ 
+     switch (n > a) {
+         case 1:
+             switch (diff > 5) {
+                 case 1:
+                     printf("Difference is greater than 5 \n");
+                     break;
+                 case 0:
+                     printf("Difference is less than or equal to 5 \n");
+                     break;
+             }
+             break;
+         case 0:
+             printf("Please give a larger value of n \n");
+             break;
+     }
+ 
+     return 0;
+ }
+ 
+ 2. b) 
+ 
+ i = 20, j = 8 result = 7,  x = 2,  y = 3
+ i = 24, j = 7 result = 10, x = 3,  y = 4
+ i = 20, j = 6 result = 14, x = 5,  y = 5
+ i = 14, j = 5 result = 19, x = 8,  y = 6
+ i = 9,  j = 4 result = 25, x = 12, y = 7
+ 
+ 
+ 
+ 3) a) 
+ #include <stdio.h>
+ 
+ int main() {
+     int weeks = 2, days_in_week = 7;
+     int i = 1;
+ 
+     do {
+         printf("Week: %d\n", i);
+ 
+         int j = 1;
+         do {
+             if (i % 2 == 0) {
+                 if (j % 2 == 0)
+                     printf("  Day: %d\n", j);
+             } else {
+                 if (j % 2 != 0)
+                     printf("  Day: %d\n", j);
+             }
+             j++;
+         } while (j <= days_in_week);
+ 
+         i++;
+     } while (i <= weeks);
+ 
+     return 0;
+ }
+ 
+ 
+ 
+ 3)  b)
+ #include <stdio.h>
+ 
+ int main() {
+   
+  int n;
+     scanf("%d", &n);
+ 
+     for (int i = 1; i <= n; i++)
+     {
+ 
+         for (int j = 0; j < n-i; j++)
+         {
+             printf("  ");
+         }
+ 
+        int track = 2 *(i);
+ 
+         for (int j = 1; j < 2*i; j++)
+         {
+             if (j == 1)
+             {
+                 printf("%d ", track);
+             }
+ 
+           else  if ( j <= (2*i)/2)
+             {
+                 track+=2;
+                 printf("%d ", track);
+             }
+             else
+             {
+                 track -=2;
+                 printf("%d ", track);
+             }
+ 
+             
+         }
+        printf("\n"); 
+ 
+         
+     }
+      
+   
+     return 0;
+ }
+ 
+ 
+ 
+ 
+ 4) a) 
+ #include <stdio.h>
+ 
+ int main() {
+  int n = 100; 
+  float arr[n];
+  float sum = 0, highest_Cgpa = 0, lowest_Cgpa = 999999;
+ 
+  int grtr_than_3 = 0,   highest_Cgpa_Count = 0;
+ 
+  for (int i = 0; i < n; i++)
+  {
+     scanf("%d", &arr[i]);
+     // if Cgpa is greater than 3.00 than sum it and count it
+     if (arr[i]> 3.00)
+     {
+         sum += arr[i];
+         grtr_than_3++;
+ 
+     }
+     
+     // finding highest Cgpa
+     if (highest_Cgpa < arr[i])
+     {
+         highest_Cgpa = arr[i];
+         highest_Cgpa_Count = 1;
+     }else if (highest_Cgpa == arr[i]) // finding how many students have highest Cgpa
+     {
+         highest_Cgpa_Count++;
+     }
+ 
+     // finding lowest Cgpa
+     if (lowest_Cgpa > arr[i])
+     {
+         lowest_Cgpa = arr[i];
+     }
+     
+     
+  }
+   
+  float avg = sum / grtr_than_3;
+ 
+ 
+     return 0;
+ }
+ 
+ 
+ 
+ 5) a)
+ //First Loop
+ i = 1 K = 17  arr[1] = 14
+ i = 3 K = 19  arr[3] = 16
+ i = 5 K = 21  arr[5] = 18
+ 
+ //2nd Loop / Nested Loop
+ i= 6  j = 10  c = 1 arr[10] = 1
+ i= 6  j = 9  c = 2 arr[9] = 2
+ i= 6  j = 8  c = 3 arr[8] = 3
+ i= 6  j = 7  c = 4 arr[7] = 4
+ i= 6  j = 6  c = 5 arr[6] = 5
+ i= 7  j = 10  c = 6 arr[10] = 6
+ i= 7  j = 9  c = 7 arr[9] = 7
+ i= 7  j = 8  c = 8 arr[8] = 8
+ i= 7  j = 7  c = 9 arr[7] = 9
+ i= 8  j = 10  c = 10 arr[10] = 10
+ i= 8  j = 9  c = 11 arr[9] = 11
+ i= 8  j = 8  c = 12 arr[8] = 12
+ i= 9  j = 10  c = 13 arr[10] = 13
+ i= 9  j = 9  c = 14 arr[9] = 14
+ 
+ //Last Loop
+ i = 0  (0 ) = TRUE  arr[0] = 22  K = 22
+ i = 2  (2 ) = TRUE  arr[2] = 23  K = 23
+ i = 4  (4 ) = TRUE  arr[4] = 24  K = 24
+ i = 6  (6 ) = TRUE  arr[6] = 25  K = 25
+ i = 8  (8 ) = TRUE  arr[8] = 26  K = 26
+ 
+ 
+ 5) b) 
+ 
+  i=0, x=t1 = 0  y=t2 = 1  z=t1+t2 =  1  j=0  t3=t1+t2 = 1   arr[0][0] = 1   t1=t2  = 1   t2=t3  = 1
+  i=0, x=t1 = 0  y=t2 = 1  z=t1+t2 =  1  j=1  t3=t1+t2 = 2   arr[1][0] = 2   t1=t2  = 1   t2=t3  = 2
+  i=0, x=t1 = 0  y=t2 = 1  z=t1+t2 =  1  j=2  t3=t1+t2 = 3   arr[2][0] = 3   t1=t2  = 2   t2=t3  = 3
+  i=0, x=t1 = 0  y=t2 = 1  z=t1+t2 =  1  j=3  t3=t1+t2 = 5   arr[3][0] = 5   t1=t2  = 3   t2=t3  = 5
+  i=0, x=t1 = 0  y=t2 = 1  z=t1+t2 =  1  j=4  t3=t1+t2 = 8   arr[4][0] = 8   t1=t2  = 5   t2=t3  = 8
+  t1=y = 1, t2=z = 1
+ 
+  i=1, x=t1 = 1  y=t2 = 1  z=t1+t2 =  2  j=0  t3=t1+t2 = 2   arr[0][1] = 2   t1=t2  = 1   t2=t3  = 2
+  i=1, x=t1 = 1  y=t2 = 1  z=t1+t2 =  2  j=1  t3=t1+t2 = 3   arr[1][1] = 3   t1=t2  = 2   t2=t3  = 3
+  i=1, x=t1 = 1  y=t2 = 1  z=t1+t2 =  2  j=2  t3=t1+t2 = 5   arr[2][1] = 5   t1=t2  = 3   t2=t3  = 5
+  i=1, x=t1 = 1  y=t2 = 1  z=t1+t2 =  2  j=3  t3=t1+t2 = 8   arr[3][1] = 8   t1=t2  = 5   t2=t3  = 8
+  i=1, x=t1 = 1  y=t2 = 1  z=t1+t2 =  2  j=4  t3=t1+t2 = 13  arr[4][1] = 13  t1=t2  = 8   t2=t3  = 13
+  t1=y = 1, t2=z = 2
+ 
+  i=2, x=t1 = 1  y=t2 = 2  z=t1+t2 =  3  j=0  t3=t1+t2 = 3   arr[0][2] = 3   t1=t2  = 2   t2=t3  = 3
+  i=2, x=t1 = 1  y=t2 = 2  z=t1+t2 =  3  j=1  t3=t1+t2 = 5   arr[1][2] = 5   t1=t2  = 3   t2=t3  = 5
+  i=2, x=t1 = 1  y=t2 = 2  z=t1+t2 =  3  j=2  t3=t1+t2 = 8   arr[2][2] = 8   t1=t2  = 5   t2=t3  = 8
+  i=2, x=t1 = 1  y=t2 = 2  z=t1+t2 =  3  j=3  t3=t1+t2 = 13  arr[3][2] = 13  t1=t2  = 8   t2=t3  = 13
+  i=2, x=t1 = 1  y=t2 = 2  z=t1+t2 =  3  j=4  t3=t1+t2 = 21  arr[4][2] = 21  t1=t2  = 13  t2=t3  = 21
+  t1=y = 2, t2=z = 3
+ 
+  i=3, x=t1 = 2  y=t2 = 3  z=t1+t2 =  5  j=0  t3=t1+t2 = 5   arr[0][3] = 5   t1=t2  = 3   t2=t3  = 5
+  i=3, x=t1 = 2  y=t2 = 3  z=t1+t2 =  5  j=1  t3=t1+t2 = 8   arr[1][3] = 8   t1=t2  = 5   t2=t3  = 8
+  i=3, x=t1 = 2  y=t2 = 3  z=t1+t2 =  5  j=2  t3=t1+t2 = 13  arr[2][3] = 13  t1=t2  = 8   t2=t3  = 13
+  i=3, x=t1 = 2  y=t2 = 3  z=t1+t2 =  5  j=3  t3=t1+t2 = 21  arr[3][3] = 21  t1=t2  = 13  t2=t3  = 21
+  i=3, x=t1 = 2  y=t2 = 3  z=t1+t2 =  5  j=4  t3=t1+t2 = 34  arr[4][3] = 34  t1=t2  = 21  t2=t3  = 34
+  t1=y = 3, t2=z = 5
+ 
+  i=4, x=t1 = 3  y=t2 = 5  z=t1+t2 =  8  j=0  t3=t1+t2 = 8   arr[0][4] = 8   t1=t2  = 5   t2=t3  = 8
+  i=4, x=t1 = 3  y=t2 = 5  z=t1+t2 =  8  j=1  t3=t1+t2 = 13  arr[1][4] = 13  t1=t2  = 8   t2=t3  = 13
+  i=4, x=t1 = 3  y=t2 = 5  z=t1+t2 =  8  j=2  t3=t1+t2 = 21  arr[2][4] = 21  t1=t2  = 13  t2=t3  = 21
+  i=4, x=t1 = 3  y=t2 = 5  z=t1+t2 =  8  j=3  t3=t1+t2 = 34  arr[3][4] = 34  t1=t2  = 21  t2=t3  = 34
+  i=4, x=t1 = 3  y=t2 = 5  z=t1+t2 =  8  j=4  t3=t1+t2 = 55  arr[4][4] = 55  t1=t2  = 34  t2=t3  = 55
+  t1=y = 5, t2=z = 8
+ 
+ // printing array result
+  1   2   3   5   8
+  2   3   5   8   13
+  3   5   8   13   21
+  5   8   13   21   34
+  8   13   21   34   55
+ 
+ 
+ 
+
+
+
+</pre>
+
+</body>
+</html>
