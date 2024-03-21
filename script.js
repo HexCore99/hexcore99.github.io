@@ -55,6 +55,9 @@ text = text.replace(/\{/g, '<span class="curly-braces">{</span>')
   // Handling 'string' and 'vector' is trickier (see notes below)
   text = text.replace(/\bwhile\b/g, '<span class="highlight">while</span>'); 
   text = text.replace(/\breturn\b/g, '<span class="return-type">return</span>'); 
+  text = text.replace(/\bif\b/g, '<span class="return-type">if</span>'); 
+  text = text.replace(/\belse\b/g, '<span class="return-type">else</span>'); 
+  // text = text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const modifiedText = text.replace(/\bfor\b/g, '<span class="highlight">for</span>');
   
   answerElements[i].innerHTML = modifiedText;

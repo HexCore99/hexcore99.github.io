@@ -5,781 +5,454 @@
 <meta charset="utf-8"/>
 <link href="style.css" rel="stylesheet"/>
 </head>
-<body class="content">
+<body>
 <h1>01</h1>
-<pre class="question"><img src="/Functions/Function_Images/19.jpg" alt="">
-</pre>
+<pre class ="question"><img src="/Strings/string_Images/12.jpg" alt=""></pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
-void print_func()
-{
 
-    printf("This is a function\n");
-}
 int main()
 {
+    char s;
+    scanf(" %c", &amp;s);
+    if (s &gt;= 'A' &amp;&amp; s &lt;= 'Z')
+        printf("%c", s + 32);
 
-    print_func();
-
+    else
+    {
+        printf("Wrong input");
+    }
     return 0;
 }</pre>
 <h1>02</h1>
-<pre class="question"><img src="/Functions/Function_Images/18.jpg" alt="">
-
-
-</pre>
+<pre class="question"><img src="/Strings/string_Images/11.jpg" alt=""></pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
-void print_value(char input)
-{
 
-    printf("Value received from main: %c\n", input);
-}
 int main()
 {
 
-    char input;
-    scanf(" %c", &amp;input);
+    char s;
+    scanf(" %c", &amp;s);
+    if (s &gt;= 'A' &amp;&amp; s &lt;= 'Z')
+        printf("%c", s + 32);
+    else if (s &gt;= 'a' &amp;&amp; s &lt;= 'z')
+        printf("%c", s - 32);
+    else
+    {
+        printf("Wrong input");
+    }
 
-    print_value(input);
     return 0;
 }</pre>
 <h1>03</h1>
-<pre class="question"><img src="/Functions/Function_Images/17.jpg" alt=""></pre>
+<pre class="question"><img src="/Strings/string_Images/10.jpg" alt=""></pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
 
-int calculateSum(int n)
-{
-    int sum = 0;
-    int num;
-
-    for (int i = 0; i &lt; n; i++)
-    {
-        scanf("%d",num );
-        sum += num;
-    }
-
-    printf("Sum In Function: %d\n", sum);
-    return sum;
-}
-
 int main()
 {
-    int n;
-    scanf("%d", &amp;n);
+    char input;
 
-    int sumInFunction = calculateSum(n);
-    printf("Sum In Main: %d\n", sumInFunction);
+    scanf("%c", &amp;input);
+
+    if (input &gt;= '0' &amp;&amp; input &lt;= '9')
+    {
+        int value = input - '0';
+        printf("%d\n", value);
+    }
+    else
+    {
+        printf("Wrong input\n");
+    }
 
     return 0;
 }</pre>
 <h1>04</h1>
-<pre class="question"><img src="/Functions/Function_Images/16.jpg" alt=""></pre>
+<pre class="question"><img src="/Strings/string_Images/09.jpg" alt=""></pre>
 
 <pre class="answer">
 #include &lt;stdio.h&gt;
-int sum_Func(int arr[], int n)
-{
-    int sum = 0;
-    for (int i = 0; i &lt; n; i++)
-    {
-        sum += arr[i];
-    }
-    printf("Sum In Function: %d\n", sum);
-    return sum;
-}
+
 int main()
 {
+    char input[100];
+    int length = 0;
+    char c;
 
-    int n;
-    scanf("%d", &amp;n);
-    int arr[n];
-
-    for (int i = 0; i &lt; n; i++)
+    int i = 0;
+    while ((c = getchar()) != '\n' &amp;&amp; i &lt; 99)
     {
-        scanf("%d", &amp;arr[i]);
+        input[i++] = c;
+        length++;
     }
+    input[i] = '\0';
 
-    int sum = sum_Func(arr, n);
-    printf("Sum In Main: %d\n", sum);
+    printf("Length of the string: %d\n", length);
+
     return 0;
 }</pre>
 <h1>05</h1>
-<pre class="question"><img src="/Functions/Function_Images/15.jpg" alt=""></pre>
+<pre class="question"><img src="/Strings/string_Images/08.jpg" alt=""></pre>
 
 <pre class="answer">
-#include &lt;stdio.h&gt;
+#include&lt;stdio.h&gt;
+int main(){
 
-void swap(int a, int b)
-{
-    int temp = a;
-    a = b;
-    b = temp;
-    printf("Value in func: %d %d\n", a, b);
+
+char string[100];
+int string_length = 0;
+
+while(1){
+scanf("%c", &amp;string[string_length]);
+
+if(string[string_length] == '\n')  break;
+
+
+if(string[string_length] &gt;='A' &amp;&amp; string[string_length] &lt;= 'Z'){
+	string[string_length] = string[string_length] + 32;
 }
 
-int main()
-{
-    int num1, num2;
-    scanf("%d %d", &amp;num1, &amp;num2);
-    swap(num1, num2);
-    printf("Value in main: %d %d\n", num1, num2);
-    return 0;
-}</pre>
+
+string_length++;
+
+}
+
+for(int i = 0; i&lt; string_length; i++){
+
+printf("%c",string[i]);
+}
+	return 0;
+}
+</pre>
 <h1>06</h1>
-<pre class="question"><img src="/Functions/Function_Images/14.jpg" alt=""></pre>
+<pre class="question"><img src="/Strings/string_Images/07.jpg" alt=""></pre>
 
 <pre class="answer">
-#include &lt;stdio.h&gt;
-void swap(int *ptr1, int *ptr2)
-{
-    int temp = *ptr1;
-    *ptr1 = *ptr2;
-    *ptr2 = temp;
-    printf("Value in func: %d %d\n", *ptr1, *ptr2);
+
+#include&lt;stdio.h&gt;
+int main(){
+
+
+char string[100];
+int string_length = 0;
+
+while(1){
+scanf("%c", &amp;string[string_length]);
+
+if(string[string_length] == '\n')  break;
+
+
+if((string[string_length] &gt;='A' &amp;&amp; string[string_length] &lt;= 'Z')){
+	string[string_length] = string[string_length] + 32;
+}else if((string[string_length]&gt;='a' &amp;&amp; string[string_length] &lt;= 'z')){
+
+	string[string_length] = string[string_length] - 32;
 }
-int main()
-{
 
-    int m, n;
-    scanf("%d %d", &amp;m, &amp;n);
-    swap(&amp;m, &amp;n);
 
-    printf("Value in main: %d %d\n", m, n);
+string_length++;
 
-    return 0;
-}</pre>
+}
+
+for(int i = 0; i&lt; string_length; i++){
+
+printf("%c",string[i]);
+}
+	return 0;
+}
+</pre>
 <h1>07</h1>
-<pre class="question"><img src="/Functions/Function_Images/13.jpg" alt=""></pre>
+<pre class="question"><img src="/Strings/string_Images/06.jpg" alt=""></pre>
 
 <pre class="answer">
-#include &lt;stdio.h&gt;
-int det_even(int check_Num)
-{
-    if (check_Num % 2 == 0)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+
+#include&lt;stdio.h&gt;
+int main(){
+
+
+char string[100];
+int string_length = 0;
+
+while(1){
+scanf("%c", &amp;string[string_length]);
+
+if(string[string_length] == '\n')  break;
+
+string_length++;
+
 }
-int main()
-{
-    int n;
 
-    scanf("%d", &amp;n);
+int flag = 1;
 
-    int arr[n];
-    for (int i = 0; i &lt; n; i++)
-    {
-        scanf("%d", &amp;arr[i]);
-    }
 
-    for (int i = 0; i &lt; n; i++)
-    {
-        if (det_even(arr[i]))
-        {
-            printf("%d ", arr[i]);
-        }
-    }
+for(int i = 0; i&lt; string_length; i++){
 
-    return 0;
-}</pre>
+	if(string[i] != string[string_length-i-1]) {
+		flag = 0;
+		break;
+	}
+}
+
+if(flag) {
+	printf("Palindrome\n");
+}
+else{
+	
+	printf("Not Palindrome\n");
+}
+	return 0;
+}
+</pre>
 <h1>08</h1>
-<pre class="question"><img src="/Functions/Function_Images/12.jpg" alt=""></pre>
+<pre class="question"><img src="/Strings/string_Images/05.jpg" alt=""></pre>
 
 <pre class="answer">
-#include &lt;stdio.h&gt;
-int find_Minimum(int arr[], int n)
-{
-    int min = arr[0];
-    for (int i = 1; i &lt; n; i++)
-    {
-        if (min &gt; arr[i])
-        {
-            min = arr[i];
-        }
-    }
+#include&lt;stdio.h&gt;
+int main(){
 
-    return min;
+char str1[100], str2[100];
+
+int str1_lngth = 0, str2_lngth = 0;
+
+
+while(1){
+scanf("%c",&amp;str1[str1_lngth]);
+
+if(str1[str1_lngth] == '\n') break;
+
+str1_lngth++;
 }
-int main()
-{
-    int n;
 
-    scanf("%d", &amp;n);
 
-    int arr[n];
-    for (int i = 0; i &lt; n; i++)
-    {
-        scanf("%d", &amp;arr[i]);
-    }
+while(1){
+scanf("%c",&amp;str2[str2_lngth]);
 
-    printf("Minimum Value: %d\n", find_Minimum(arr, n));
-    return 0;
-}</pre>
+if(str2[str2_lngth] == '\n') break;
+
+str2_lngth++;
+}
+
+
+int min = (str1_lngth&lt;=str2_lngth)? str1_lngth: str2_lngth;
+
+int flag= 2;
+
+for(int i = 0; i&lt; min; i++){
+if(str1[i]&lt; str2[i]){
+
+	flag = 1;
+	break;
+}
+
+else  if(str2[i]&lt; str1[i]){
+
+	flag = 0;
+	break;
+}
+}
+
+if(flag == 1) {
+	for(int i = 0; i&lt; str1_lngth; i++){
+		printf("%c",str1[i]);
+	}
+}
+else if(flag == 0) {
+	for(int i = 0; i&lt; str2_lngth; i++){
+		printf("%c",str2[i]);
+	}
+}else if(str1_lngth == str2_lngth){
+
+printf("Both equal\n");
+
+}else {
+	if(str1_lngth&gt;str2_lngth){
+
+	for(int i = 0; i&lt; str2_lngth; i++){
+		printf("%c",str2[i]);
+	}
+
+	}else {
+
+	for(int i = 0; i&lt; str1_lngth; i++){
+		printf("%c",str1[i]);
+	}
+	}
+
+}
+	return 0;
+}
+</pre>
 <h1>09</h1>
-<pre class="question"><img src="/Functions/Function_Images/11.jpg" alt=""></pre>
+<pre class="question"><img src="/Strings/string_Images/04.jpg" alt=""></pre>
 
 <pre class="answer">
-#include &lt;stdio.h&gt;
-void multiply_By_2(int arr[], int n)
-{
-    for (int i = 0; i &lt; n; i++)
-    {
-        arr[i] *= 2;
-    }
+
+#include&lt;stdio.h&gt;
+int main(){
+
+char str1[100], str2[100];
+
+int str1_lngth = 0, str2_lngth = 0;
+
+
+while(1){
+scanf("%c",&amp;str1[str1_lngth]);
+
+if(str1[str1_lngth] == '\n') break;
+
+str1_lngth++;
 }
 
-int main()
-{
-    int n;
 
-    scanf("%d", &amp;n);
+for(int i =0; i&lt;=str1_lngth; i++){
 
-    int arr[n];
-    for (int i = 0; i &lt; n; i++)
-    {
-        scanf("%d", &amp;arr[i]);
-    }
+str2[i] = str1[i];
 
-    multiply_By_2(arr, n);
+}
 
-    for (int i = 0; i &lt; n; i++)
-    {
-        printf("%d ", arr[i]);
-    }
+for(int i = 0; i&lt;=str1_lngth;i++){
+	printf("%c",str2[i]);
+}
 
-    return 0;
-}</pre>
+	return 0;
+}
+</pre>
 <h1>10</h1>
-<pre class="question"><img src="/Functions/Function_Images/10.jpg" alt=""></pre>
+<pre class="question"><img src="/Strings/string_Images/03.jpg" alt=""></pre>
 
 <pre class="answer">
-#include &lt;stdio.h&gt;
-void sort_Array(int arr[], int size)
-{
-    for (int i = 0; i &lt; size; i++)
-    {
-        for (int j = i + 1; j &lt; size; j++)
-        {
-            if (arr[i] &gt; arr[j])
-            {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-    }
+#include&lt;stdio.h&gt;
+int main(){
+
+char str1[100], str2[100];
+
+int str1_lngth = 0, str2_lngth= 0;
+
+while(1){
+scanf("%c",&amp;str1[str1_lngth]);
+
+if(str1[str1_lngth] == '\n') break;
+
+str1_lngth++;
 }
-int main()
-{
-    int n;
 
-    scanf("%d", &amp;n);
 
-    int arr[n];
-    for (int i = 0; i &lt; n; i++)
-    {
-        scanf("%d", &amp;arr[i]);
-    }
-    sort_Array(arr, n);
+while(1){
+scanf("%c",&amp;str2[str2_lngth]);
 
-    for (int i = 0; i &lt; n; i++)
-    {
-        printf("%d ", arr[i]);
-    }
+if(str2[str2_lngth] == '\n') break;
 
-    return 0;
-}</pre>
+str2_lngth++;
+}
+
+for(int i=0; i&lt; str2_lngth; i++){
+str1[str1_lngth + i]=str2[i];
+}
+
+for(int i=0; i&lt; str1_lngth+str2_lngth; i++){
+	printf("%c",str1[i]);
+}
+	return 0;
+}
+</pre>
 <h1>11</h1>
-<pre class="question"><img src="/Functions/Function_Images/09.jpg" alt=""></pre>
+<pre class="question">
+	<span style="font-weight: bold;  font-size: large;">Program that will take as input two strings str1 and str2, and find out if str2 is a substring of
+	str1.</span>
+
+	<img src="/Strings/string_Images/02.jpg" alt=""></pre>
 
 <pre class="answer">
-#include &lt;stdio.h&gt;
-int isPrime(int value)
-{
-    for (int i = 2; i * i &lt;= value; i++)
-    {
-        if (value % i == 0)
-        {
-            return 0;
-            break;
-        }
-    }
 
-    return 1;
+#include&lt;stdio.h&gt;
+int main(){
+
+char str[100], sub_Str[100];
+int lngth = 0, sub_lngth = 0;
+int flag = 0;
+
+while(1){
+scanf("%c",&amp;str[lngth]);
+
+if(str[lngth] == '\n') break;
+
+
+lngth++;
+
 }
-int main()
-{
 
-    int n;
-    scanf("%d", &amp;n);
 
-    if (n != 1 &amp;&amp; isPrime(n))
-    {
-        printf("Prime\n");
-    }
-    else
-    {
-        printf("Not Prime\n");
-    }
+while(1){
+scanf("%c",&sub_Str[sub_lngth]);
 
-    return 0;
-}</pre>
+if(sub_Str[sub_lngth] == '\n') break;
+
+
+sub_lngth++;
+
+}
+
+for(int i = 0; i&lt; lngth; i++){
+	int track = 0, count = 0;
+
+if(str[i] == sub_Str[0]){
+	track = i;	
+	for(int j=0; j&lt; sub_lngth; j++){
+	
+		if(str[track] == sub_Str[j]){
+			count++;
+		}else break;
+
+
+			track++;
+	}
+}
+if(count == sub_lngth){
+	flag = 1;
+	break;
+}
+
+
+}
+ if(flag) printf("Substring\n");
+ else printf("Not substring\n");
+	return 0;
+}
+</pre>
 <h1>12</h1>
-<pre class="question"><img src="/Functions/Function_Images/08.jpg" alt=""></pre>
+<pre class="question"><img src="/Strings/string_Images/01.jpg" alt=""></pre>
 
 <pre class="answer">
-#include &lt;stdio.h&gt;
-int isPrime(int value)
-{
-    for (int i = 2; i * i &lt;= value; i++)
-    {
-        if (value % i == 0)
-        {
-            return 0;
-            break;
-        }
-    }
+#include&lt;stdio.h&gt;
+int main(){
 
-    return 1;
+char string[100];
+int lngth = 0;
+
+while(1){
+scanf("%c",&amp;string[lngth]);
+
+if(string[lngth] == '\n') break;
+else if(string[lngth] == ' '){
+	string[lngth] = '\n';
 }
-void generatePrime(int num)
-{
-    int count = 0;
-    for (int i = 2; i &lt; num; i++)
-    {
-        if (isPrime(i))
-        {
-            if (count &gt; 0)
-                printf(",");
-            printf(" %d", i);
-            count++;
-        }
-    }
-}
-int main()
-{
+lngth++;
 
-    int n;
-    scanf("%d", &amp;n);
-
-    printf("Prime less than %d: ", n);
-    generatePrime(n);
-    return 0;
-}</pre>
-<h1>13</h1>
-<pre class="question"><img src="/Functions/Function_Images/07.jpg" alt=""></pre>
-
-<pre class="answer">
-#include &lt;stdio.h&gt;
-int isPrime(int value)
-{
-    for (int i = 2; i * i &lt;= value; i++)
-    {
-        if (value % i == 0)
-        {
-            return 0;
-            break;
-        }
-    }
-
-    return 1;
-}
-void genNthPrime(int nth_Prime)
-{
-    int count = 0;
-    for (int i = 2;; i++)
-    {
-        if (isPrime(i))
-        {
-            ++count;
-            if (count == nth_Prime)
-            {
-                printf(" %d \n", i);
-                break;
-            }
-        }
-    }
-}
-int main()
-{
-
-    int n;
-    scanf("%d", &amp;n);
-
-    printf("%dth Prime:", n);
-    genNthPrime(n);
-    return 0;
-}</pre>
-<h1>15</h1>
-<pre class="question"><img src="/Functions/Function_Images/06.jpg" alt=""></pre>
-
-<pre class="answer">
-#include &lt;stdio.h&gt;
-int check_Sub_String(char str[], int str_lngth, char sub_Str[], int sub_str_lngth)
-{
-    int flag = 0;
-    for (int i = 0; i &lt; str_lngth; i++)
-    {
-        int track = 0, count = 0;
-
-        if (str[i] == sub_Str[0])
-        {
-            track = i;
-            for (int j = 0; j &lt; sub_str_lngth; j++)
-            {
-
-                if (str[track] == sub_Str[j])
-                {
-                    count++;
-                }
-                else
-                    break;
-
-                track++;
-            }
-        }
-        if (count == sub_str_lngth)
-        {
-            return 1;
-            break;
-        }
-    }
-    return -1;
-}
-int main()
-{
-    char str[100], sub_Str[100];
-    int lngth = 0, sub_lngth = 0;
-    int flag = 0;
-
-    while (1)
-    {
-        scanf("%c", &amp;str[lngth]);
-
-        if (str[lngth] == '\n')
-            break;
-
-        lngth++;
-    }
-
-    while (1)
-    {
-        scanf("%c", ⊂_Str[sub_lngth]);
-
-        if (sub_Str[sub_lngth] == '\n')
-            break;
-
-        sub_lngth++;
-    }
-    printf("%d\n", check_Sub_String(str, lngth, sub_Str, sub_lngth));
-    return 0;
-}</pre>
-<h1>16</h1>
-<pre class="question"><img src="/Functions/Function_Images/05.jpg" alt=""></pre>
-
-<pre class="answer">
-#include &lt;stdio.h&gt;
-int find_substr(char str[], int str_lngth, char sub_Str[], int sub_str_lngth)
-{
-    int flag = 0;
-    for (int i = 0; i &lt; str_lngth; i++)
-    {
-        int track = 0, count = 0;
-
-        if (str[i] == sub_Str[0])
-        {
-            track = i;
-            for (int j = 0; j &lt; sub_str_lngth; j++)
-            {
-
-                if (str[track] == sub_Str[j])
-                {
-                    count++;
-                }
-                else
-                    break;
-
-                track++;
-            }
-        }
-        if (count == sub_str_lngth)
-        {
-            return 1;
-            break;
-        }
-    }
-    return -1;
-}
-int str_length(char str[])
-{
-    int length = 0;
-    while (str[length] != '\n')
-    {
-        length++;
-    }
-    return length;
-}
-int main()
-{
-    char str[100], sub_Str[100];
-    int lngth = 0, sub_lngth = 0;
-    int check_return = 0;
-
-    while (1)
-    {
-        scanf("%c", &amp;str[lngth]);
-
-        if (str[lngth] == '\n')
-        {
-            break;
-        }
-
-        lngth++;
-    }
-    int str_lngth = str_length(str);
-    while (1)
-    {
-        scanf("%c", ⊂_Str[sub_lngth]);
-
-        if (sub_Str[sub_lngth] == '\n')
-        {
-            break;
-        }
-
-        sub_lngth++;
-    }
-
-    int sub_str_lngth = str_length(sub_Str);
-
-    if (sub_str_lngth &gt; str_lngth)
-    {
-        check_return = find_substr(sub_Str, sub_str_lngth, str, str_lngth);
-    }
-    else
-    {
-        check_return = find_substr(str, str_lngth, sub_Str, sub_str_lngth);
-    }
-    if (check_return == 1)
-    {
-        printf("%d\n", 1);
-    }
-    else
-    {
-        printf("%d\n", 0);
-    }
-
-    return 0;
-}</pre>
-<h1>17</h1>
-<pre class="question"><img src="/Functions/Function_Images/04.jpg" alt=""></pre>
-
-<pre class="answer">
-#include &lt;stdio.h&gt;
-int gcd(int num1, int num2)
-{
-    while (num2 != 0)
-    {
-        int rem = num1 % num2;
-        num1 = num2;
-        num2 = rem;
-    }
-    return num1;
-}
-int lcm(int num1, int num2)
-{
-    return num1 * num2 / gcd(num1, num2);
-}
-int main()
-{
-    while (1)
-    {
-
-        int a, b;
-
-        scanf("%d %d", &amp;a, &amp;b);
-        printf("GCD: %d\n", gcd(a, b));
-        printf("LCM: %d\n", lcm(a, b));
-    }
-
-    return 0;
-}</pre>
-<h1>18</h1>
-<pre class="question"><img src="/Functions/Function_Images/03.jpg" alt=""></pre>
-
-<pre class="answer">
-#include &lt;stdio.h&gt;
-
-void scalar_Multiply(int Row, int Col, int mat[][Col], int mult_Value)
-{
-    printf("\n\nMultiplied by %d:\n", mult_Value);
-
-    for (int i = 0; i &lt; Row; i++)
-    {
-        for (int j = 0; j &lt; Col; j++)
-        {
-            mat[i][j] *= mult_Value;
-            printf("%d\t", mat[i][j]);
-        }
-        printf("\n");
-    }
 }
 
-void show_Matrix(int Row, int Col, int mat[][Col])
-{
-    printf("Orginal:\n");
-    for (int i = 0; i &lt; Row; i++)
-    {
-        for (int j = 0; j &lt; Col; j++)
-        {
-            printf("%d\t", mat[i][j]);
-        }
-        printf("\n");
-    }
-}
-int input_Matrix(int Row, int Col, int mat[][Col])
-{
-
-    for (int i = 0; i &lt; Row; i++)
-    {
-        for (int j = 0; j &lt; Col; j++)
-        {
-            scanf("%d", &amp;mat[i][j]);
-        }
-    }
-
-    int multiple_Value;
-    scanf("%d", &amp;multiple_Value);
-    return multiple_Value;
+for(int i= 0; i&lt; lngth; i++){
+	
+	printf("%c",string[i]);
 }
 
-int main()
-{
-    int Row = 3, Col = 5;
-    int mat[Row][Col];
-    int mult_Value = input_Matrix(Col, Row, mat);
-    show_Matrix(Col, Row, mat);
-    scalar_Multiply(Row, Col, mat, mult_Value);
-    return 0;
-}</pre>
-<h1>19</h1>
-<pre class="question"><img src="/Functions/Function_Images/02.jpg" alt=""></pre>
 
-<pre class="answer">
-#include &lt;stdio.h&gt;
-
-void scalar_Multiply(int Row, int Col, int mat[][Col], int mult_Value)
-{
-    printf("\n\nMultiplied by %d:\n", mult_Value);
-
-    for (int i = 0; i &lt; Row; i++)
-    {
-        for (int j = 0; j &lt; Col; j++)
-        {
-            mat[i][j] *= mult_Value;
-            printf("%d\t", mat[i][j]);
-        }
-        printf("\n");
-    }
+	return 0;
 }
-
-void show_Matrix(int Row, int Col, int mat[][Col])
-{
-    printf("Orginal:\n");
-    for (int i = 0; i &lt; Row; i++)
-    {
-        for (int j = 0; j &lt; Col; j++)
-        {
-            printf("%d\t", mat[i][j]);
-        }
-        printf("\n");
-    }
-}
-int input_Matrix(int Row, int Col, int mat[][Col])
-{
-
-    for (int i = 0; i &lt; Row; i++)
-    {
-        for (int j = 0; j &lt; Col; j++)
-        {
-            scanf("%d", &amp;mat[i][j]);
-        }
-    }
-
-    int multiple_Value;
-    scanf("%d", &amp;multiple_Value);
-
-    return multiple_Value;
-}
-
-int main()
-{
-    int Row, Col;
-    scanf("%d %d", &amp;Row, &amp;Col);
-    int mat[Row][Col];
-    int mult_Value = input_Matrix(Row, Col, mat);
-    show_Matrix(Row, Col, mat);
-    scalar_Multiply(Row, Col, mat, mult_Value);
-    return 0;
-}</pre>
-<h1>20</h1>
-<pre class="question"><img src="/Functions/Function_Images/01.jpg" alt=""></pre>
-
-<pre class="answer">
-#include &lt;stdio.h&gt;
-void Get_Number_And_Base(int *num, int *base)
-{
-    scanf("%d %d", num, base);
-}
-
-int convert_Num(char str[], int size, int num, int base)
-{
-
-    int iteration = 0;
-
-    char alphabet[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
-
-    while (num &gt; 0)
-    {
-        int reminder = num % base;
-
-        str[iteration++] = alphabet[reminder];
-
-        num /= base;
-    }
-
-    return iteration - 1;
-}
-void show_Converted_Number(char str[], int size)
-{
-    for (int i = size; i &gt;= 0; i--)
-    {
-        printf("%c", str[i]);
-    }
-}
-int main()
-{
-    int num, base;
-    char str[1000];
-    Get_Number_And_Base(#, &amp;base);
-    if (base &lt; 1 || base &gt; 16)
-    {
-        printf("Base not within proper range!\n");
-        return 0;
-    }
-
-    int str_Size = convert_Num(str, 1000, num, base);
-    show_Converted_Number(str, str_Size);
-    return 0;
-}</pre>
+</pre>
 <script src="script.js"></script>
 </body>
 </html>

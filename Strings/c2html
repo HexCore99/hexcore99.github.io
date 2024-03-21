@@ -1,0 +1,17 @@
+#! /usr/bin/bash
+
+echo '<!DOCTYPE html>'
+echo '<html>'
+echo '<head>'
+echo '</head>'
+echo '<body>'
+for f in *.c
+do
+    echo '<h1>'$(basename $f .c)'</h1>'
+    echo '<pre>'
+    cat $f
+    echo '</pre>'
+    echo 
+done
+echo '</body>'
+echo '</html>'

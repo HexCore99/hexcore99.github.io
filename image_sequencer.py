@@ -85,11 +85,11 @@ import os
 images_folder = "images"  # Replace 'images' with the actual name of your folder
 
 count = 1
-for filename in os.listdir( r"C:\Users\siyam\Documents\GitHub\siyam.github.io\Functions\Function_Images" ):
+for filename in os.listdir( r"C:\Users\siyam\Documents\GitHub\siyam.github.io\Strings\string_Images" ):
     if filename.endswith('.jpg') or filename.endswith('.png') or filename.endswith('.jpeg'):  # Modify for other image extensions
-        src = os.path.join( r"C:\Users\siyam\Documents\GitHub\siyam.github.io\Functions\Function_Images" , filename)
+        src = os.path.join( r"C:\Users\siyam\Documents\GitHub\siyam.github.io\Strings\string_Images" , filename)
         new_filename = f"{str(count).zfill(2)}.jpg"  # Change '.jpg' to your desired extension
-        dst = os.path.join( r"C:\Users\siyam\Documents\GitHub\siyam.github.io\Functions\Function_Images" , new_filename)
+        dst = os.path.join( r"C:\Users\siyam\Documents\GitHub\siyam.github.io\Strings\string_Images" , new_filename)
         os.rename(src, dst)
         count += 1
 
