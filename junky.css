@@ -1,0 +1,51 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* Reset default margins */
+    padding: 20px;
+    background-color: #f8f8f8; /* Light background for contrast */
+}
+
+header, footer {
+    text-align: center;
+    background-color: #eee;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px; /* Spacing between links */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; 
+}
+
+nav a:hover {
+    color: #007bff; /* Example hover color */
+}
+
+footer {
+    position: absolute; /* Make it stick to the bottom */
+    bottom: 0;
+    width: 100%; 
+}
+
+main {
+    width: 400px;  /* Adjust width as needed */
+    margin: 20px auto; /* Centers the box */
+    padding: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul li {
+    display: inline-block;  /* Make list items display as blocks */
+    margin-bottom: 10px; /* Add spacing between items */
+}

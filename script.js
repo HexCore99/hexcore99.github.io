@@ -57,6 +57,8 @@ text = text.replace(/\{/g, '<span class="curly-braces">{</span>')
   text = text.replace(/\breturn\b/g, '<span class="return-type">return</span>'); 
   text = text.replace(/\bif\b/g, '<span class="return-type">if</span>'); 
   text = text.replace(/\belse\b/g, '<span class="return-type">else</span>'); 
+  text = text.replace(/\bprintf\b/g, '<span style="color:green;">printf</span>'); 
+  text = text.replace(/\bscanf\b/g, '<span style="color:green;">scanf</span>'); 
   // text = text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const modifiedText = text.replace(/\bfor\b/g, '<span class="highlight">for</span>');
   
