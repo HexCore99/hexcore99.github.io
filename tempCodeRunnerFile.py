@@ -1,35 +1,19 @@
-import os
+from bs4 import BeautifulSoup
 
-def rename_images(folder_path, base_name="prb", sort_by="name"):
-    """
-    Renames images in a folder with the given base name in ascending order.
+def insert_pre_after_h1(html_content):
+    soup = BeautifulSoup(html_content, 'html.parser')
 
-    Args:
-        folder_path (str): The path to the folder containing images.
-        base_name (str, optional): The base name for the renamed files. Defaults to 'prb'.
-        sort_by (str, optional): How to sort images before renaming.
-                                 Can be 'name', 'created', or 'modified'. 
-                                 Defaults to 'name'.
-    """
+    for h1_tag in soup.find_all('h1'):
+        new_pre_tag = soup.new_tag('pre', class_='question')
+        h1_tag.insert_after(new_pre_tag)
 
-    files = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
+    return str(soup)
 
-    if sort_by == "created":
-        files.sort(key=lambda f: os.path.getctime(os.path.join(folder_path, f)))
-    elif sort_by == "modified":
-        files.sort(key=lambda f: os.path.getmtime(os.path.join(folder_path, f)))
-    else:  # Sort by name
-        files.sort()
+# Example usage
+with open('junk.html', 'r') as f:
+    html_content = f.read()
 
-    for i, filename in enumerate(files):
-        old_filepath = os.path.join(folder_path, filename)
-        new_filename = f"{base_name}{i + 1}{os.path.splitext(filename)[1]}"
-        new_filepath = os.path.join(folder_path, new_filename)
-        os.rename(old_filepath, new_filepath)
+new_html_content = insert_pre_after_h1(html_content)
 
-# Example usage:
-folder_path = r"C:\Users\siyam\Documents\GitHub\New folder\siyam.github.io\Loop\loop_Images" 
-
-base_name = "prb" 
-sort_by = "created"  
-rename_images(folder_path, base_name, sort_by)
+with open('junk.html', 'w') as f:
+    f.write(new_html_content)
