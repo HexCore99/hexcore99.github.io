@@ -419,6 +419,62 @@ int main()
     genNthPrime(n);
     return 0;
 }</pre>
+
+<h1>14</h1>
+<pre class="question"><img src="/Functions/Function_Images/_14.png" alt=""></pre>
+<pre class="answer">
+#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+    void takeInput(int arr[], int size)
+    {
+    
+        for (int i = 0; i &lt; size; i++)
+        {
+            scanf("%d", &arr[i]);
+        }
+    }
+    
+    double Calc_Mean(int arr[], int size)
+    {
+    
+        double sum = 0.0;
+        for (int i = 0; i &lt; size; i++)
+        {
+            sum += arr[i];
+        }
+        return sum / size;
+    }
+    
+    double Calc_Std_deviation(int arr[], int num_of_elem)
+    {
+        double mean = Calc_Mean(arr, num_of_elem);
+        double sum = 0;
+        double diff = 0.00;
+    
+        for (int i = 0; i &lt; num_of_elem; i++)
+        {
+            diff = arr[i] - mean;
+            sum += diff * diff;
+        }
+        return sqrt(sum / num_of_elem);
+    }
+    int main()
+    {
+    
+        int n;
+        scanf("%d", &n);
+        int arr[n];
+    
+        takeInput(arr, n);
+        double mean = Calc_Mean(arr, n);
+    
+        double std_dev = Calc_Std_deviation(arr, n);
+    
+        printf("%.2lf", std_dev);
+        return 0;
+    }</pre>
+    
+
 <h1>15</h1>
 <pre class="question"><img src="/Functions/Function_Images/06.jpg" alt=""></pre>
 
@@ -533,29 +589,17 @@ int main()
     char str[100], sub_Str[100];
     int lngth = 0, sub_lngth = 0;
     int check_return = 0;
+    char c;
 
-    while (1)
+    while ((c = getchar())!= '\n')
     {
-        scanf("%c", &amp;str[lngth]);
+    str[lngth++] =c;
 
-        if (str[lngth] == '\n')
-        {
-            break;
-        }
-
-        lngth++;
     }
     int str_lngth = str_length(str);
-    while (1)
+    while ((c = getchar())!= '\n')
     {
-        scanf("%c", ⊂_Str[sub_lngth]);
-
-        if (sub_Str[sub_lngth] == '\n')
-        {
-            break;
-        }
-
-        sub_lngth++;
+    sub_Str[sub_lngth++] = c;
     }
 
     int sub_str_lngth = str_length(sub_Str);

@@ -1,458 +1,53 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-<meta charset="utf-8"/>
-<link href="style.css" rel="stylesheet"/>
-</head>
-<body>
-<h1>01</h1>
-<pre class ="question"><img src="/Strings/string_Images/12.jpg" alt=""></pre>
-
+<pre class="question"></pre>
 <pre class="answer">
-#include &lt;stdio.h&gt;
-
-int main()
-{
-    char s;
-    scanf(" %c", &amp;s);
-    if (s &gt;= 'A' &amp;&amp; s &lt;= 'Z')
-        printf("%c", s + 32);
-
-    else
+#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+    void takeInput(int arr[], int size)
     {
-        printf("Wrong input");
+    
+        for (int i = 0; i &lt; size; i++)
+        {
+            scanf("%d", &arr[i]);
+        }
     }
-    return 0;
-}</pre>
-<h1>02</h1>
-<pre class="question"><img src="/Strings/string_Images/11.jpg" alt=""></pre>
-
-<pre class="answer">
-#include &lt;stdio.h&gt;
-
-int main()
-{
-
-    char s;
-    scanf(" %c", &amp;s);
-    if (s &gt;= 'A' &amp;&amp; s &lt;= 'Z')
-        printf("%c", s + 32);
-    else if (s &gt;= 'a' &amp;&amp; s &lt;= 'z')
-        printf("%c", s - 32);
-    else
+    
+    double Calc_Mean(int arr[], int size)
     {
-        printf("Wrong input");
+    
+        double sum = 0.0;
+        for (int i = 0; i &lt; size; i++)
+        {
+            sum += arr[i];
+        }
+        return sum / size;
     }
-
-    return 0;
-}</pre>
-<h1>03</h1>
-<pre class="question"><img src="/Strings/string_Images/10.jpg" alt=""></pre>
-
-<pre class="answer">
-#include &lt;stdio.h&gt;
-
-int main()
-{
-    char input;
-
-    scanf("%c", &amp;input);
-
-    if (input &gt;= '0' &amp;&amp; input &lt;= '9')
+    
+    double Calc_Std_deviation(int arr[], int num_of_elem)
     {
-        int value = input - '0';
-        printf("%d\n", value);
+        double mean = Calc_Mean(arr, num_of_elem);
+        double sum = 0;
+        double diff = 0.00;
+    
+        for (int i = 0; i &lt; num_of_elem; i++)
+        {
+            diff = arr[i] - mean;
+            sum += diff * diff;
+        }
+        return sqrt(sum / num_of_elem);
     }
-    else
+    int main()
     {
-        printf("Wrong input\n");
-    }
-
-    return 0;
-}</pre>
-<h1>04</h1>
-<pre class="question"><img src="/Strings/string_Images/09.jpg" alt=""></pre>
-
-<pre class="answer">
-#include &lt;stdio.h&gt;
-
-int main()
-{
-    char input[100];
-    int length = 0;
-    char c;
-
-    int i = 0;
-    while ((c = getchar()) != '\n' &amp;&amp; i &lt; 99)
-    {
-        input[i++] = c;
-        length++;
-    }
-    input[i] = '\0';
-
-    printf("Length of the string: %d\n", length);
-
-    return 0;
-}</pre>
-<h1>05</h1>
-<pre class="question"><img src="/Strings/string_Images/08.jpg" alt=""></pre>
-
-<pre class="answer">
-#include&lt;stdio.h&gt;
-int main(){
-
-
-char string[100];
-int string_length = 0;
-
-while(1){
-scanf("%c", &amp;string[string_length]);
-
-if(string[string_length] == '\n')  break;
-
-
-if(string[string_length] &gt;='A' &amp;&amp; string[string_length] &lt;= 'Z'){
-	string[string_length] = string[string_length] + 32;
-}
-
-
-string_length++;
-
-}
-
-for(int i = 0; i&lt; string_length; i++){
-
-printf("%c",string[i]);
-}
-	return 0;
-}
-</pre>
-<h1>06</h1>
-<pre class="question"><img src="/Strings/string_Images/07.jpg" alt=""></pre>
-
-<pre class="answer">
-
-#include&lt;stdio.h&gt;
-int main(){
-
-
-char string[100];
-int string_length = 0;
-
-while(1){
-scanf("%c", &amp;string[string_length]);
-
-if(string[string_length] == '\n')  break;
-
-
-if((string[string_length] &gt;='A' &amp;&amp; string[string_length] &lt;= 'Z')){
-	string[string_length] = string[string_length] + 32;
-}else if((string[string_length]&gt;='a' &amp;&amp; string[string_length] &lt;= 'z')){
-
-	string[string_length] = string[string_length] - 32;
-}
-
-
-string_length++;
-
-}
-
-for(int i = 0; i&lt; string_length; i++){
-
-printf("%c",string[i]);
-}
-	return 0;
-}
-</pre>
-<h1>07</h1>
-<pre class="question"><img src="/Strings/string_Images/06.jpg" alt=""></pre>
-
-<pre class="answer">
-
-#include&lt;stdio.h&gt;
-int main(){
-
-
-char string[100];
-int string_length = 0;
-
-while(1){
-scanf("%c", &amp;string[string_length]);
-
-if(string[string_length] == '\n')  break;
-
-string_length++;
-
-}
-
-int flag = 1;
-
-
-for(int i = 0; i&lt; string_length; i++){
-
-	if(string[i] != string[string_length-i-1]) {
-		flag = 0;
-		break;
-	}
-}
-
-if(flag) {
-	printf("Palindrome\n");
-}
-else{
-	
-	printf("Not Palindrome\n");
-}
-	return 0;
-}
-</pre>
-<h1>08</h1>
-<pre class="question"><img src="/Strings/string_Images/05.jpg" alt=""></pre>
-
-<pre class="answer">
-#include&lt;stdio.h&gt;
-int main(){
-
-char str1[100], str2[100];
-
-int str1_lngth = 0, str2_lngth = 0;
-
-
-while(1){
-scanf("%c",&amp;str1[str1_lngth]);
-
-if(str1[str1_lngth] == '\n') break;
-
-str1_lngth++;
-}
-
-
-while(1){
-scanf("%c",&amp;str2[str2_lngth]);
-
-if(str2[str2_lngth] == '\n') break;
-
-str2_lngth++;
-}
-
-
-int min = (str1_lngth&lt;=str2_lngth)? str1_lngth: str2_lngth;
-
-int flag= 2;
-
-for(int i = 0; i&lt; min; i++){
-if(str1[i]&lt; str2[i]){
-
-	flag = 1;
-	break;
-}
-
-else  if(str2[i]&lt; str1[i]){
-
-	flag = 0;
-	break;
-}
-}
-
-if(flag == 1) {
-	for(int i = 0; i&lt; str1_lngth; i++){
-		printf("%c",str1[i]);
-	}
-}
-else if(flag == 0) {
-	for(int i = 0; i&lt; str2_lngth; i++){
-		printf("%c",str2[i]);
-	}
-}else if(str1_lngth == str2_lngth){
-
-printf("Both equal\n");
-
-}else {
-	if(str1_lngth&gt;str2_lngth){
-
-	for(int i = 0; i&lt; str2_lngth; i++){
-		printf("%c",str2[i]);
-	}
-
-	}else {
-
-	for(int i = 0; i&lt; str1_lngth; i++){
-		printf("%c",str1[i]);
-	}
-	}
-
-}
-	return 0;
-}
-</pre>
-<h1>09</h1>
-<pre class="question"><img src="/Strings/string_Images/04.jpg" alt=""></pre>
-
-<pre class="answer">
-
-#include&lt;stdio.h&gt;
-int main(){
-
-char str1[100], str2[100];
-
-int str1_lngth = 0, str2_lngth = 0;
-
-
-while(1){
-scanf("%c",&amp;str1[str1_lngth]);
-
-if(str1[str1_lngth] == '\n') break;
-
-str1_lngth++;
-}
-
-
-for(int i =0; i&lt;=str1_lngth; i++){
-
-str2[i] = str1[i];
-
-}
-
-for(int i = 0; i&lt;=str1_lngth;i++){
-	printf("%c",str2[i]);
-}
-
-	return 0;
-}
-</pre>
-<h1>10</h1>
-<pre class="question"><img src="/Strings/string_Images/03.jpg" alt=""></pre>
-
-<pre class="answer">
-#include&lt;stdio.h&gt;
-int main(){
-
-char str1[100], str2[100];
-
-int str1_lngth = 0, str2_lngth= 0;
-
-while(1){
-scanf("%c",&amp;str1[str1_lngth]);
-
-if(str1[str1_lngth] == '\n') break;
-
-str1_lngth++;
-}
-
-
-while(1){
-scanf("%c",&amp;str2[str2_lngth]);
-
-if(str2[str2_lngth] == '\n') break;
-
-str2_lngth++;
-}
-
-for(int i=0; i&lt; str2_lngth; i++){
-str1[str1_lngth + i]=str2[i];
-}
-
-for(int i=0; i&lt; str1_lngth+str2_lngth; i++){
-	printf("%c",str1[i]);
-}
-	return 0;
-}
-</pre>
-<h1>11</h1>
-<pre class="question">
-	<span style="font-weight: bold;  font-size: large;">Program that will take as input two strings str1 and str2, and find out if str2 is a substring of
-	str1.</span>
-
-	<img src="/Strings/string_Images/02.jpg" alt=""></pre>
-
-<pre class="answer">
-
-#include&lt;stdio.h&gt;
-int main(){
-
-char str[100], sub_Str[100];
-int lngth = 0, sub_lngth = 0;
-int flag = 0;
-
-while(1){
-scanf("%c",&amp;str[lngth]);
-
-if(str[lngth] == '\n') break;
-
-
-lngth++;
-
-}
-
-
-while(1){
-scanf("%c",&sub_Str[sub_lngth]);
-
-if(sub_Str[sub_lngth] == '\n') break;
-
-
-sub_lngth++;
-
-}
-
-for(int i = 0; i&lt; lngth; i++){
-	int track = 0, count = 0;
-
-if(str[i] == sub_Str[0]){
-	track = i;	
-	for(int j=0; j&lt; sub_lngth; j++){
-	
-		if(str[track] == sub_Str[j]){
-			count++;
-		}else break;
-
-
-			track++;
-	}
-}
-if(count == sub_lngth){
-	flag = 1;
-	break;
-}
-
-
-}
- if(flag) printf("Substring\n");
- else printf("Not substring\n");
-	return 0;
-}
-</pre>
-<h1>12</h1>
-<pre class="question"><img src="/Strings/string_Images/01.jpg" alt=""></pre>
-
-<pre class="answer">
-#include&lt;stdio.h&gt;
-int main(){
-
-char string[100];
-int lngth = 0;
-
-while(1){
-scanf("%c",&amp;string[lngth]);
-
-if(string[lngth] == '\n') break;
-else if(string[lngth] == ' '){
-	string[lngth] = '\n';
-}
-lngth++;
-
-}
-
-for(int i= 0; i&lt; lngth; i++){
-	
-	printf("%c",string[i]);
-}
-
-
-	return 0;
-}
-</pre>
-<script src="script.js"></script>
-</body>
-</html>
+    
+        int n;
+        scanf("%d", &n);
+        int arr[n];
+    
+        takeInput(arr, n);
+        double mean = Calc_Mean(arr, n);
+    
+        double std_dev = Calc_Std_deviation(arr, n);
+    
+        printf("%.2lf", std_dev);
+        return 0;
+    }</pre>
+    
