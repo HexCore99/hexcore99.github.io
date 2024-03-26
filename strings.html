@@ -139,11 +139,9 @@ int main(){
 
 char string[100];
 int string_length = 0;
-
-while(1){
-scanf("%c", &amp;string[string_length]);
-
-if(string[string_length] == '\n')  break;
+char c;
+while((c =  getchar()) != '\n'){
+string[string_length] = c;
 
 
 if((string[string_length] &gt;='A' &amp;&amp; string[string_length] &lt;= 'Z')){
@@ -176,14 +174,9 @@ int main(){
 
 char string[100];
 int string_length = 0;
-
-while(1){
-scanf("%c", &amp;string[string_length]);
-
-if(string[string_length] == '\n')  break;
-
-string_length++;
-
+char c;
+while((c = getchar()) != '\n'){
+string[string_length++] = c;
 }
 
 int flag = 1;
@@ -218,22 +211,14 @@ char str1[100], str2[100];
 
 int str1_lngth = 0, str2_lngth = 0;
 
-
-while(1){
-scanf("%c",&amp;str1[str1_lngth]);
-
-if(str1[str1_lngth] == '\n') break;
-
-str1_lngth++;
+char c;
+while((c = gechar()) != '\n'){
+str1[str1_lngth++] = c;
 }
 
 
-while(1){
-scanf("%c",&amp;str2[str2_lngth]);
-
-if(str2[str2_lngth] == '\n') break;
-
-str2_lngth++;
+while((c = gechar()) != '\n'){
+str2[str2_lngth++] = c;
 }
 
 
@@ -298,13 +283,9 @@ char str1[100], str2[100];
 
 int str1_lngth = 0, str2_lngth = 0;
 
-
-while(1){
-scanf("%c",&amp;str1[str1_lngth]);
-
-if(str1[str1_lngth] == '\n') break;
-
-str1_lngth++;
+char c;
+while((c = gechar()) != '\n'){
+str1[str1_lngth++] = c;
 }
 
 
@@ -331,22 +312,14 @@ int main(){
 char str1[100], str2[100];
 
 int str1_lngth = 0, str2_lngth= 0;
-
-while(1){
-scanf("%c",&amp;str1[str1_lngth]);
-
-if(str1[str1_lngth] == '\n') break;
-
-str1_lngth++;
+char c;
+while((c = getchar()) != '\n'){
+	str1[str1_lngth++] = c;
 }
 
 
-while(1){
-scanf("%c",&amp;str2[str2_lngth]);
-
-if(str2[str2_lngth] == '\n') break;
-
-str2_lngth++;
+while((c = getchar()) != '\n'){
+	str2[str2_lngth++] = c;
 }
 
 for(int i=0; i&lt; str2_lngth; i++){
@@ -374,26 +347,14 @@ int main(){
 char str[100], sub_Str[100];
 int lngth = 0, sub_lngth = 0;
 int flag = 0;
-
-while(1){
-scanf("%c",&amp;str[lngth]);
-
-if(str[lngth] == '\n') break;
-
-
-lngth++;
-
+char c;
+while((c= gechar()) != '\n'){
+str[lngth++] = c;
 }
 
 
-while(1){
-scanf("%c",&sub_Str[sub_lngth]);
-
-if(sub_Str[sub_lngth] == '\n') break;
-
-
-sub_lngth++;
-
+while((c= gechar()) != '\n'){
+sub_Str[sub_lngth++] = c;
 }
 
 for(int i = 0; i&lt; lngth; i++){
@@ -432,16 +393,9 @@ int main(){
 
 char string[100];
 int lngth = 0;
-
-while(1){
-scanf("%c",&amp;string[lngth]);
-
-if(string[lngth] == '\n') break;
-else if(string[lngth] == ' '){
-	string[lngth] = '\n';
-}
-lngth++;
-
+char c;
+while((c = getchar())!= '\n'){
+	string[lngth++] = c;
 }
 
 for(int i= 0; i&lt; lngth; i++){

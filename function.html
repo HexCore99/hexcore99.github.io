@@ -516,26 +516,19 @@ int main()
     char str[100], sub_Str[100];
     int lngth = 0, sub_lngth = 0;
     int flag = 0;
+    char c;
 
-    while (1)
+    while ((c = getchar())!= '\n')
     {
-        scanf("%c", &amp;str[lngth]);
+    str[lngth++] =c;
 
-        if (str[lngth] == '\n')
-            break;
-
-        lngth++;
+    }
+    int str_lngth = str_length(str);
+    while ((c = getchar())!= '\n')
+    {
+    sub_Str[sub_lngth++] = c;
     }
 
-    while (1)
-    {
-        scanf("%c", ⊂_Str[sub_lngth]);
-
-        if (sub_Str[sub_lngth] == '\n')
-            break;
-
-        sub_lngth++;
-    }
     printf("%d\n", check_Sub_String(str, lngth, sub_Str, sub_lngth));
     return 0;
 }</pre>
