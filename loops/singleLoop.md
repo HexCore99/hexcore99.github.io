@@ -227,7 +227,7 @@ void main() {
 ```
  ## 10
 
-![Question Image](images/prb11.png)
+![Question Image](Images/prb11.png)
 ```c
 #include<stdio.h>
 
@@ -294,7 +294,7 @@ void main() {
 
  ## 13
 
-![Question Image](images/prb8.png)
+![Question Image](Images/prb8.png)
 ```c
 #include<stdio.h>
 
