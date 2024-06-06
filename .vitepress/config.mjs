@@ -2,16 +2,16 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
   //title: 'Loop Examples',
-  themeConfig: {
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: '01', link: '/01' },
-      { text: '02', link: '/02' },
-      // Add all other links
-      { text: '20', link: '/20' }
-    ]
+  // themeConfig: {
+  //   nav: [
+  //     { text: 'Home', link: '/' },
+  //     { text: '01', link: '/01' },
+  //     { text: '02', link: '/02' },
+  //     // Add all other links
+  //     { text: '20', link: '/20' }
+  //   ]
 
-  },
+  // },
 
 
   themeConfig: {
