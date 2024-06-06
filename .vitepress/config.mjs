@@ -29,6 +29,9 @@ export default defineConfig({
               {text:'2D Array', link:'/2DArray/2DArray'},
               {text:'Strings', link:'/Strings/Strings'},
               {text:'Function', link:'/Functions/functions'},
+              {text:'Pointers', link:'/Pointers/pointers'},
+              {text:'Structure', link:'/Structures/structures'},
+              {text:'Recursion', link:'/Recursion/recursion'},
             ]
           }
         ],
