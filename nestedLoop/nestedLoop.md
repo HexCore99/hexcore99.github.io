@@ -318,7 +318,7 @@ void main() {
 
  ## 13
 
-![Question Image](images/prb6.png)
+![Question Image](Images/prb6.png)
 ```c
 #include<stdio.h>
 /*
