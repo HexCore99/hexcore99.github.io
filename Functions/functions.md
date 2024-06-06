@@ -2,7 +2,6 @@
 ## 01
 
 ![Question Image](Images/19.jpg)
-
 ```c
 #include <stdio.h>
 void print_func()
@@ -20,7 +19,6 @@ int main()
 ```
 
 ## 02
-
 ![Question Image](Images/18.jpg)
 ```c
 #include <stdio.h>
@@ -198,6 +196,7 @@ int main()
  ## 08
 
 ![Question Image](Images/13.jpg)
+
 ```c
 #include <stdio.h>
 int find_Minimum(int arr[], int n)
@@ -233,6 +232,7 @@ int main()
  ## 09
 
 ![Question Image](Images/12.jpg)
+
 ```c
 #include <stdio.h>
 void multiply_By_2(int arr[], int n)
@@ -268,6 +268,7 @@ int main()
  ## 10
 
 ![Question Image](Images/11.jpg)
+
 ```c
 #include <stdio.h>
 void sort_Array(int arr[], int size)
