@@ -267,7 +267,7 @@ int main()
 ```
  ## 10
 
-![Question Image](images/11.jpg)
+![Question Image](Images/11.jpg)
 ```c
 #include <stdio.h>
 void sort_Array(int arr[], int size)
@@ -389,7 +389,7 @@ int main()
 
  ## 13
 
-![Question Image](images/08.jpg)
+![Question Image](Images/08.jpg)
 ```c
 #include <stdio.h>
 int isPrime(int value)
