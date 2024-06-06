@@ -20,6 +20,7 @@ int main()
 
 ## 02
 ![Question Image](Images/18.jpg)
+
 ```c
 #include <stdio.h>
 void print_value(char input)
@@ -41,6 +42,7 @@ int main()
  ## 03
 
 ![Question Image](Images/17.jpg)
+
 ```c
 #include <stdio.h>
 
@@ -74,6 +76,7 @@ int main()
 ## 04
 
 ![Question Image](Images/16.jpg)
+
 ```c
 #include <stdio.h>
 int sum_Func(int arr[], int n)
