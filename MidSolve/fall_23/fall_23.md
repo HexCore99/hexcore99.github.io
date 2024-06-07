@@ -1,4 +1,8 @@
-## Fall 23 Solve
+---
+title: Fall 23
+---
+
+# Fall 23 Solve
 
 
 ## Q1. a

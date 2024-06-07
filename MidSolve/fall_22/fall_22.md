@@ -1,4 +1,7 @@
-## Fall 22 Questions Solve
+---
+title: Fall 22
+---
+# Fall 22 Questions Solve
 
 ## Q1. a
 ```c

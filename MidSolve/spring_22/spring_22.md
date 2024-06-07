@@ -1,4 +1,8 @@
-## Spring 22
+---
+title: Spring 22
+---
+
+# Spring 22
 
 ## Q.1 a
 
