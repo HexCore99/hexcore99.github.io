@@ -1,0 +1,210 @@
+1.  a) 
+ #include <stdio.h>
+
+int main()
+{
+
+    int a, b;
+    float sum;
+    scanf("%d", &a);
+    a, b = 10;
+    sum = a + b;
+    printf("%f", sum);
+    return 0;
+}
+
+1. b)
+sum_of_digit = valid 
+switch =  invalid (switch is a reserved keyword)
+calculate sum = invalid (Variable can't have space)
+_value_ =  valid
+Sum =  valid 
+calculate-sum =  invalid (variable can't have any special character except underscore(_) )
+1st_Sum = invalid (variable name can't start with number)
+
+
+1) c)
+ int a= 15 
+ float b =3.000000
+ float c= 3.000000
+ int d = 1
+
+
+
+Q.2. a) 
+
+Output:
+16 , 8 , 1
+
+
+Q2 b)
+
+#include <stdio.h>
+
+int main() {
+  
+    int num = 3, sum = 10, i = 7, j = 2;
+
+    if (num == 1 || num == 2) {
+        sum += --j * 2;
+        i--;
+    } else if (num == 3) {
+        sum = ++i * j--;
+    } else if (num == 4) {          
+        sum *= i++ / j--;
+         i = i % j;
+    } else {
+        
+    }
+
+    printf("%d %d %d", sum, i, j);
+    return 0;
+}
+
+
+
+Q3) a) 
+
+#include <stdio.h>
+
+int main()
+{
+
+    int n;
+    scanf("%d", &n);
+
+    int sum = 0;
+    int sequence = 0;
+    int track = 5;
+
+    printf("0, ");
+    for (int i = 1; i < n; i++)
+    {
+        sequence += track;
+        printf("%d, ", sequence);
+
+        track += 8;
+        sum += sequence;
+    }
+
+    printf("Sum = %d", sum);
+    return 0;
+}
+
+
+Q3) b) 
+
+i = 1   j = 1   (j<=n-i)=TRUE   (count<= n-1 ) = TRUE   count = 1
+i = 1   j = 2   (j<=n-i)=TRUE   (count<= n-1 ) = TRUE   count = 2
+i = 1   j = 3   (j<=n-i)=TRUE   (count<= n-1 ) = TRUE   count = 3
+i = 1   j = 4   (j<=n-i)=FALSE                          count = 0
+
+i = 2   j = 1   (j<=n-i)=TRUE   (count<= n-1 ) = TRUE   count = 1
+i = 2   j = 2   (j<=n-i)=TRUE   (count<= n-1 ) = TRUE   count = 2
+i = 2   j = 3   (j<=n-i)=FALSE                          count = 0
+
+i = 3   j = 1   (j<=n-i)=TRUE   (count<= n-1 ) = TRUE   count = 1
+i = 3   j = 2   (j<=n-i)=FALSE                          count = 0
+
+i = 4   j = 1   (j<=n-i)=FALSE                          count = 0
+
+
+
+Q4 ) a)  
+
+i=0     j=1     (j< size) = TRUE        (arr[i] == arr[j]) = FALSE
+i=0     j=2     (j< size) = TRUE        (arr[i] == arr[j]) = TRUE       k=2     (k< size-1) = TRUE      arr[2] = 10     ize= 5  j=2
+i=0     j=2     (j< size) = TRUE        (arr[i] == arr[j]) = TRUE       k=3     (k< size-1) = TRUE      arr[3] = 100    ize= 5  j=2
+i=0     j=1     (j< size) = TRUE        (arr[i] == arr[j]) = TRUE       k=4     (k< size-1) = FALSE     arr[4] = 100    size= 4 j=1
+
+i=0     j=2     (j< size) = TRUE        (arr[i] == arr[j]) = TRUE       k=2     (k< size-1) = TRUE      arr[2] = 100    ize= 4  j=2
+i=0     j=1     (j< size) = TRUE        (arr[i] == arr[j]) = TRUE       k=3     (k< size-1) = FALSE     arr[3] = 100    size= 3 j=1
+
+i=0     j=2     (j< size) = TRUE        (arr[i] == arr[j]) = FALSE
+i=0     j=3     (j< size) = FALSE
+
+
+i=1     j=2     (j< size) = TRUE        (arr[i] == arr[j]) = FALSE
+i=1     j=3     (j< size) = FALSE
+
+
+i=2     j=3     (j< size) = FALSE
+
+
+Q4) b)
+
+#include <stdio.h>
+
+int main()
+{
+
+    int n;
+    int marks[100];
+    scanf("%d", &n);
+
+    int max_even = 0;
+    int max_evn_index = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &marks[i]);
+
+            if (marks[i] % 2 == 0 && (marks[i] > max_even))
+            {
+
+                max_even = marks[i];
+                max_evn_index = i;
+            }
+        
+    }
+
+    printf("Maximum of even numbers = %d, at index %d.", max_even, max_evn_index);
+
+    return 0;
+}
+
+
+Q5) a)
+
+
+
+
+
+
+
+
+
+
+Q5) b)
+
+#include <stdio.h>
+
+int main()
+{
+
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            if ((i <= n / 2 )&& (i == j || j == n - i + 1))
+            {
+                printf("* ");
+            }
+            else if ((i>n/2) && (j == n / 2 + 1))
+            {
+                printf("* ");
+            }
+            else
+            {
+                printf("  ");
+            }
+            
+        }
+        printf("\n");
+    }
+        return 0;
+    }
+
