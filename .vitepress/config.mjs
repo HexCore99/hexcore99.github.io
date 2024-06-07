@@ -44,6 +44,7 @@ export default defineConfig({
               {text:'Spring 22', link:'/MidSolve/spring_22/spring_22'},
               {text:'Spring 23', link:'/MidSolve/spring_23/spring_23'},
               {text:'Summer 22', link:'/MidSolve/summer_22/summer_22'},
+              {text:'Spring 24', link:'/MidSolve/spring_24/spring_24'},
             ]
           }
       
