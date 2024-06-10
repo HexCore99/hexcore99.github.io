@@ -4,12 +4,10 @@ layout: home
 
 hero:
   name: "!Everything"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  tagline: See what’s next
   actions:
     - theme: alt
       text: Enter
-      link: /loops/singleLoop.md
-
+      link: /interMediate 
 ---
 

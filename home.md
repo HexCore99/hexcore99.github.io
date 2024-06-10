@@ -9,5 +9,6 @@ hero:
   actions:
     - theme: brand
       text: Single Loop Exercises
-      link: /loops/singleLoop.md
+      # link: /loops/singleLoop.md
+     link: /interMediatePage
 ---
