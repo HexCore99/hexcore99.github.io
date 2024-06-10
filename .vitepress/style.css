@@ -37,10 +37,11 @@ body {
   /* Navigation link styles */
   nav a {
     color: #007acc;
+    color: #2599b6;
     text-decoration: none;
   }
   
   nav a:hover {
-    text-decoration: underline;
+    text-decoration:none;
   }
   
