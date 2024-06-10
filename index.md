@@ -7,5 +7,5 @@ hero:
   actions:
     - theme: alt
       text: Enter
-      link: /interMediate 
+      link: / interMediate 
 ---
