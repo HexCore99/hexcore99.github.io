@@ -427,7 +427,7 @@ void main() {
 void main() {
     int num, org_num, last_num, reversed_num = 0;
 
-    scanf("%d", #);
+    scanf("%d", num);
     org_num = num;
 
     while (num != 0) { // Reverse the number
