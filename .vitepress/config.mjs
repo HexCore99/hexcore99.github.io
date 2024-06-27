@@ -62,7 +62,7 @@ description:  "Solve Bank",
               items: [
                 { text: 'Fall 23', link: '/FinalSolve/Fall23/fall23F' },
                 { text: 'Spring 23', link: '/FinalSolve/Summer23/summer23F' },
-              
+                { text: 'Spring 24', link: '/FinalSolve/Spring24/sprng24F.md' },
               ]
             }, //3rd  Item End
 
