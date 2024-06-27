@@ -2,15 +2,13 @@
 
 ## Question: 1
 
-    Create an Address Book application, where a user can create a new record, update record,
-    delete record.
-    
-  ---
+ Create an Address Book application, where a user can create a new record, update record,
+ delete record.
 
-<span style="font-size: 20px; color: #FFB1B1;">AdressBook.java</span>
+ ::: code-group
 
 
-  ```java
+  ```java [AddressBook.java]
 
 
 public class AddressBook {
@@ -32,10 +30,10 @@ public class AddressBook {
 }
 
 ```
----
-<span style="font-size: 20px; color: #FFB1B1;">Main.java</span>
 
-```java
+<!-- <span style="font-size: 20px; color: #FFB1B1;">Main.java</span> -->
+
+```java [Main.Java]
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -146,16 +144,16 @@ public class Main {
 }
 
 ```
+:::
 
 ## Question 2
 
 
     Create a Banking Application, where a user can create a new account, deposit money,
     withdraw money and check the balance.
----
-<span style="font-size: 20px; color: #FFB1B1;">BankingApplication.java</span>
+ ::: code-group
 
- ```java
+ ```java [Banking Application.java]
 
 
 public class BankingApplication {
@@ -208,10 +206,8 @@ public class BankingApplication {
 
  ```
 
----
-<span style="font-size: 20px; color: #FFB1B1;">Main.java</span>
 
-```java
+```java [Main.java]
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -334,5 +330,5 @@ public static void withdrawMoney(ArrayList<BankingApplication> userList){
 }
 
 ```
-
+ :::
 
