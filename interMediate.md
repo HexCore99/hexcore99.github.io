@@ -2,58 +2,64 @@
 layout: home
 sidebar: false
 ---
+
 <div class="button-container">
   <div class="top-buttons">
-    <a href="/MyProjects/MyProject" class="button">My Project</a>
-    <a href="/loops/singleLoop" class="button">Problem Sets</a>
+    <!-- <button class="button-5" role="button">My Project</button> -->
+    <!-- <button class="button-5" role="button">Problem Sets</button> -->
+    <a href="/loops/singleLoop"> <button class="button-5" role="button">Problem Sets</button></a> 
   </div>
   <div class="bottom-button">
-    <a href="/about" class="button">About</a>
+    <button class="button-5" role="button">About</button>
   </div>
 </div>
 
 <style>
-.button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
+/* Existing styles for button-container, top-buttons, bottom-button... */
 
-.top-buttons {
-  display: flex;
-  flex-direction: row;
+/* New button-5 styles */
+.button-5 {
   align-items: center;
-  justify-content: center;
-  margin-bottom: 80px; /* Space between top buttons and bottom button */
-}
-
-.button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
-  background-color:#2599b6;
-  border: none;
-  border-radius: 5px;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
   cursor: pointer;
-  text-align: center;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 10px; /* Added margin for spacing */
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
   text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
 }
 
-.button:hover {
-  background-color: lightgray;
+.button-5:hover,
+.button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
-/* Remove underline from links */
-.button a {
-  text-decoration: none;
-  color: inherit; /* Ensure the color is inherited from the parent */
+.button-5:hover {
+  transform: translateY(-1px);
 }
 
-.button a:hover {
-  text-decoration: none;
-  color: inherit;
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
 }
 </style>
