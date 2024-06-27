@@ -5,61 +5,85 @@ sidebar: false
 
 <div class="button-container">
   <div class="top-buttons">
-    <!-- <button class="button-5" role="button">My Project</button> -->
-    <!-- <button class="button-5" role="button">Problem Sets</button> -->
-    <a href="/loops/singleLoop"> <button class="button-5" role="button">Problem Sets</button></a> 
+    <!-- <button class="button-85" role="button">My Project</button> -->
+    <a href="/loops/singleLoop"> <button class="button-85" role="button">Problem Sets</button></a> 
   </div>
   <div class="bottom-button">
-    <button class="button-5" role="button">About</button>
+    <button class="button-85" role="button">About</button>
   </div>
 </div>
 
 <style>
 /* Existing styles for button-container, top-buttons, bottom-button... */
 
-/* New button-5 styles */
-.button-5 {
-  align-items: center;
-  background-clip: padding-box;
-  background-color: #fa6400;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-  color: #fff;
+/* New button-85 styles */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
   cursor: pointer;
-  display: inline-flex;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 1.25;
-  margin: 10px; /* Added margin for spacing */
-  min-height: 3rem;
-  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
   position: relative;
-  text-decoration: none;
-  transition: all 250ms;
+  z-index: 0;
+  border-radius: 10px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  vertical-align: baseline;
-  width: auto;
 }
 
-.button-5:hover,
-.button-5:focus {
-  background-color: #fb8332;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+.button-85:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
-.button-5:hover {
-  transform: translateY(-1px);
+@keyframes glowing-button-85 {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }
 
-.button-5:active {
-  background-color: #c85000;
-  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-  transform: translateY(0);
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222; /* Dark background */
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
+
+/* Button Container Styling */
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 90vh; /* Full viewport height */
+}
+
+/* Top Buttons Spacing */
+.top-buttons {
+  display: flex;
+  gap: 40px; /* Increased gap for more spacing */
+  
+}
+.bottom-button {
+  margin-top: 80px; /* Adjust the value as needed */
+}
+
 </style>
