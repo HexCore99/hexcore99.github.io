@@ -91,7 +91,8 @@ description:  "Solve Bank",
       text: "MID SOLVE",
       collapsed: true,
       items:[
-      { text: 'SPRING 24', link: '/OOP/MidSolve/midSolve.md' },
+      { text: 'SPRING 24', link: '/OOP/MidSolve/Spring24.md' },
+      { text: 'FALL 23', link: '/OOP/MidSolve/Fall23.md' },
 
       ]
     }, // OOP MID SECTION END
