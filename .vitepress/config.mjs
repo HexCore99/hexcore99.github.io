@@ -23,15 +23,15 @@ description:  "Solve Bank",
             text: 'PROBLEM SET',
             collapsed: true,
             items: [
-              { text: 'Loop', link: '/loops/singleLoop' },
-              { text: 'Nested Loop', link: '/nestedLoop/nestedLoop' },
-              { text: '1D Array', link: '/1DArray/1DArray' },
-              { text: '2D Array', link: '/2DArray/2DArray' },
-              { text: 'Strings', link: '/Strings/Strings' },
-              { text: 'Function', link: '/Functions/functions' },
-              { text: 'Pointers', link: '/Pointers/pointers' },
-              { text: 'Structure', link: '/Structures/structures' },
-              { text: 'Recursion', link: '/Recursion/recursion' },
+              { text: 'Loop', link: '/SPL/loops/singleLoop' },
+              { text: 'Nested Loop', link: '/SPL/nestedLoop/nestedLoop' },
+              { text: '1D Array', link: '/SPL/1DArray/1DArray' },
+              { text: '2D Array', link: '/SPL/2DArray/2DArray' },
+              { text: 'Strings', link: '/SPL/Strings/Strings' },
+              { text: 'Function', link: '/SPL/Functions/functions' },
+              { text: 'Pointers', link: '/SPL/Pointers/pointers' },
+              { text: 'Structure', link: '/SPL/Structures/structures' },
+              { text: 'Recursion', link: '/SPL/Recursion/recursion' },
             ]
           }, // 1st ITEM   END
           
@@ -46,12 +46,12 @@ description:  "Solve Bank",
               text: 'MID SOLVE',
               collapsed: true,
               items: [
-                { text: 'Spring 22', link: '/MidSolve/spring_22/spring_22' },
-                { text: 'Summer 22', link: '/MidSolve/summer_22/summer_22' },
-                { text: 'Fall 22', link: '/MidSolve/fall_22/fall_22' },
-                { text: 'Fall 23', link: '/MidSolve/fall_23/fall_23' },
-                { text: 'Spring 23', link: '/MidSolve/spring_23/spring_23' },
-                { text: 'Spring 24', link: '/MidSolve/spring_24/spring_24' },
+                { text: 'Spring 22', link: '/SPL/MidSolve/spring_22/spring_22' },
+                { text: 'Summer 22', link: '/SPL/MidSolve/summer_22/summer_22' },
+                { text: 'Fall 22', link: '/SPL/MidSolve/fall_22/fall_22' },
+                { text: 'Fall 23', link: '/SPL/MidSolve/fall_23/fall_23' },
+                { text: 'Spring 23', link: '/SPL/MidSolve/spring_23/spring_23' },
+                { text: 'Spring 24', link: '/SPL/MidSolve/spring_24/spring_24' },
               ]
             }, //5th Item End
 
@@ -60,9 +60,9 @@ description:  "Solve Bank",
               text: 'FINAL SOLVE',
               collapsed: true,
               items: [
-                { text: 'Fall 23', link: '/FinalSolve/Fall23/fall23F' },
-                { text: 'Spring 23', link: '/FinalSolve/Summer23/summer23F' },
-                { text: 'Spring 24', link: '/FinalSolve/Spring24/sprng24F.md' },
+                { text: 'Fall 23', link: '/SPL/FinalSolve/Fall23/fall23F' },
+                { text: 'Spring 23', link: '/SPL/FinalSolve/Summer23/summer23F' },
+                { text: 'Spring 24', link: '/SPL/FinalSolve/Spring24/sprng24F.md' },
               ]
             }, //3rd  Item End
 
@@ -94,24 +94,25 @@ description:  "Solve Bank",
     },
     
 
-    // MID SECTION
+    // OOP MID SECTION
     {
 
       text: "MID SOLVE",
       collapsed: true,
       items:[
+      { text: 'SPRING 24', link: '/OOP/MidSolve/midSolve.md' },
 
       ]
-    }, // MID SECTION END
+    }, // OOP MID SECTION END
 
-    // FINAL SECTION
+    // OOP FINAL SECTION
     {
       text: "FINAL SOLVE",
       collapsed: true,
       items:[
 
       ]
-    }, // FINAL SECTION END
+    }, // OOP FINAL SECTION END
     
     {
       // Append other section with **********************OOP****************

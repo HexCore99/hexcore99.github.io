@@ -6,7 +6,7 @@ sidebar: false
 <div class="button-container">
   <div class="top-buttons">
     <!-- <button class="button-85" role="button">My Project</button> -->
-    <a href="/loops/singleLoop"> <button class="button-85" role="button">Problem Sets</button></a> 
+    <a href="SPL/loops/singleLoop"> <button class="button-85" role="button">Problem Sets</button></a> 
   </div>
   <div class="bottom-button">
     <button class="button-85" role="button">About</button>
