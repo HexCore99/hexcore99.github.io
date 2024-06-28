@@ -215,6 +215,7 @@ public class Main{
 public class Ride {
     final static int speedLimit = 80;
 }
+
 ```
 
 ```java [Bike.java]
@@ -227,12 +228,15 @@ public class Bike extends Ride{
         return  (speedLimit - initial_speed)/acceleration;
     }
     double calculateFine(int hour) {
-        if (getHighestAccelerationTime()> hour) {
+        double temp = hour - getHighestAccelerationTime();
+        if (temp>0) {
             return 50 + (hour - getHighestAccelerationTime() * 100);
         }
         else return 0;
     }
 }
+
+
 ```
 
 ```java [Car.java]
@@ -246,8 +250,9 @@ public class Car extends Ride{
     }
 
     double calculateFine(int hour) {
-        if (getHighestAccelerationTime()> hour) {
-            return 100 + (hour - getHighestAccelerationTime() * 150);
+        double temp = hour - getHighestAccelerationTime();
+        if (temp>0) {
+            return 100 +(temp * 150);
         }
         else return 0;
     }
@@ -266,12 +271,15 @@ public class Microbus extends Ride{
     }
 
     double calculateFine(int hour) {
-        if (getHighestAccelerationTime()> hour) {
+        double temp = hour - getHighestAccelerationTime();
+        if (temp>0) {
             return 3000;
         }
         else return 0;
     }
 }
+
+
 
 ```
 
@@ -282,6 +290,7 @@ public class Uthao{
         System.out.println(((Car)car).calculateFine(10));
     }
 }
+
 ```
 :::
 
