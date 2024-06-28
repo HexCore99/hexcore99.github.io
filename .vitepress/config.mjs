@@ -84,15 +84,6 @@ description:  "Solve Bank",
   text: 'OOP',
   
   items: [
-    
-    {
-      text: "Random Question Solve",
-      collapsed: true,
-      items:[
-        {text: "Random", link: '/OOP/randomProblem'},
-      ]
-    },
-    
 
     // OOP MID SECTION
     {
@@ -113,7 +104,16 @@ description:  "Solve Bank",
 
       ]
     }, // OOP FINAL SECTION END
-    
+        
+
+    {
+      text: "Random Question Solve",
+      collapsed: true,
+      items:[
+        {text: "Random", link: '/OOP/randomProblem'},
+      ]
+    },
+
     {
       // Append other section with **********************OOP****************
     }
