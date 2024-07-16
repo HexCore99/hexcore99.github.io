@@ -1,0 +1,47 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Header styles */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Code block styles */
+  pre[class*="language-"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1em;
+    background: #f9f9f9;
+    margin-bottom: 1em;
+    overflow: auto;
+  }
+  
+  code {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Image styles */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5em 0;
+  }
+  
+  /* Navigation link styles */
+  nav a {
+    color: #007acc;
+    color: #2599b6;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration:none;
+  }
+  

@@ -1,0 +1,420 @@
+     <span style="color: red; font-size: 18px; font-weight: bold;"> Q1) a) </span>
+
+     i) int_a    = valid
+     ii)_num     = valid
+     iii) 99p    = invalid (can't start with number)
+     iv)"my_val" = Invalid (Special Character not allowed)
+
+
+     <span style="color: red; font-size: 18px; font-weight: bold;"> Q1) b) </span>
+    i)  14.000000
+   ii)  3.000000
+   iii) 0.000000
+    iv) 63.000000
+
+
+
+     <span style="color: red; font-size: 18px; font-weight: bold;"> Q1) c) </span>
+
+    Output:
+    ---------
+    num = 2.3                      num = 127
+    
+    Shakib                          Mashrafe
+    Imrul                           Mahmudullah
+                                    Rubel
+                                    
+
+
+
+     <span style="color: red; font-size: 18px; font-weight: bold;"> Q2) a) </span>
+     
+     #include <stdio.h>
+
+int main()
+{
+
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+
+    int result = a-- / b++;
+
+    if (a + b == 1)
+    {
+        result *= a / c * 2;
+        b++;
+
+        result = a * c / b;
+        a++;
+    }
+    else if (a + b == 2 || a + b == 2 || a + b == 3)
+    {
+        result = a * c / b;
+        a++;
+    }
+    else if (a + b == 4)
+    {
+        }
+    else
+    {
+        result = 5;
+    }
+
+    printf("%d %d %d %d", a, b, c, result);
+
+    return 0;
+}
+
+
+
+  <span style="color: red; font-size: 18px; font-weight: bold;"> Q2) b) </span>
+
+    <h2>Manual Trace Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>i</th>
+                <th>start</th>
+                <th>(end%2)</th>
+                <th>end</th>
+                <th>count</th>
+                <th>end+2</th>
+                <th>start+1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>112</td>
+                <td>105</td>
+                <td>FALSE</td> 
+                <td>111</td>
+                <td>0</td>
+                <td>113</td>
+                <td>106</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>106</td>
+                <td>TRUE</td> 
+                <td>111</td>
+                <td>1</td>
+                <td>113</td>
+                <td>107</td>
+            </tr>
+            <tr>
+                <td>110</td>
+                <td>107</td>
+                <td>TRUE</td> 
+                <td>111</td>
+                <td>2</td>
+                <td>113</td>
+                <td>108</td>
+            </tr>
+            <tr>
+                <td>109</td>
+                <td>108</td>
+                <td>TRUE</td> 
+                <td>111</td>
+                <td>3</td>
+                <td>113</td>
+                <td>109</td>
+            </tr>
+            <tr>
+                <td>108</td>
+                <td>109</td>
+                <td>TRUE</td> 
+                <td>111</td>
+                <td>4</td>
+                <td>113</td>
+                <td>110</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+
+  <span style="color: red; font-size: 18px; font-weight: bold;"> Q3) a) </span>
+
+
+
+#include <stdio.h>
+
+int main()
+{
+
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            if ((i <= n / 2 + 1) && (j == 1 || i == j || j == n - i + 1 || j == n))
+            {
+                printf("* ");
+            }
+            else if (j == 1 || j == n)
+            {
+                printf("* ");
+            }
+            else
+            {
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q3) b) </span>
+
+
+
+    #include <stdio.h>
+
+int main()
+{
+
+    int a = 10, b = 20, count = 0;
+
+       int i = b;
+    do
+    {
+
+        int j = a;
+        do
+        {
+            printf("%d ", j);
+            j++;
+        } while (j <= b);
+
+        if (b % 2 != 0)
+        {
+            printf("%d \n", a);
+        }
+        else
+        {
+            printf("%d \n", b);
+        }
+
+        i--;
+    } while (i >= a);
+
+    return 0;
+}
+
+
+
+      <span style="color: red; font-size: 18px; font-weight: bold;"> Q4) a) </span>
+
+
+
+
+
+
+
+
+        <span style="color: red; font-size: 18px; font-weight: bold;"> Q4) b) </span>
+
+        #include <stdio.h>
+
+int main()
+{
+
+    int n;
+    scanf("%d", &n);
+    float arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%f", &arr[i]);
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] < 500.00)
+        {
+            for (int j = i; j < n - 1; j++)
+            {
+                arr[j] = arr[j + 1];
+            }
+            n--;
+            i--;
+        }
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%f ", arr[i]);
+    }
+
+    printf("\n%d", n);
+    return 0;
+}
+
+  <span style="color: red; font-size: 18px; font-weight: bold;"> Q5) a) </span>
+
+
+
+<table>
+  <tr>
+    <td>i</td>
+    <td>ara[i] (before)</td>
+    <td>ara[i] (after)</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>6</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>4</td>
+    <td>6</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>i</td>
+    <td>ara[i] (before)</td>
+    <td>ara[i] (after)</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>24</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>24</td>
+    <td>32</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>6</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>22</td>
+    <td>22</td>
+  </tr>
+</table>
+
+
+
+
+    <span style="color: red; font-size: 18px; font-weight: bold;"> Q5) b) </span>
+
+
+    <table>
+  <tr>
+    <th>row</th>
+    <th>col</th>
+    <th>A[row][col]</th>
+    <th>Condition (col > row)</th>
+    <th>sum (current)</th>
+    <th>sum (updated)</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>False</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>True</td>
+    <td>0</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>2</td>
+    <td>3</td>
+    <td>True</td>
+    <td>2</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>11</td>
+    <td>False</td>
+    <td>5</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>5</td>
+    <td>False</td>
+    <td>5</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>6</td>
+    <td>True</td>
+    <td>5</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>2</td> 
+    <td>0</td>
+    <td>12</td>
+    <td>False</td>
+    <td>11</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>2</td> 
+    <td>1</td>
+    <td>7</td>
+    <td>False</td>
+    <td>11</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>2</td> 
+    <td>2</td>
+    <td>9</td>
+    <td>False</td>
+    <td>11</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>3</td> 
+    <td>0</td>
+    <td>8</td>
+    <td>False</td>
+    <td>11</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>3</td> 
+    <td>1</td>
+    <td>13</td>
+    <td>True</td>
+    <td>11</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td>3</td> 
+    <td>2</td>
+    <td>4</td>
+    <td>False</td>
+    <td>24</td>
+    <td>24</td>
+  </tr>
+</table>
