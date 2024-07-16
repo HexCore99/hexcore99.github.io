@@ -95,6 +95,7 @@ description:  "Solve Bank",
       { text: 'FALL 23', link: '/OOP/MidSolve/Fall23.md' },
       { text: 'SUMMER 23', link: '/OOP/MidSolve/Summer23.md' },
       { text: 'FALL 22', link: '/OOP/MidSolve/Fall22.md' },
+      { text: 'Spring 23', link: '/OOP/MidSolve/Spring23.md' },
 
       ]
     }, // OOP MID SECTION END
