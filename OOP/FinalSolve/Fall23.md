@@ -155,7 +155,14 @@ public class file {
 
 }
 ```
-
+## Q2 b (ii)
+```java
+output:
+b
+d
+e
+f
+```
 
 ## Q4
 ::: code-group
