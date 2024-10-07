@@ -157,6 +157,7 @@ public class file {
 ```
 ## Q2 b (ii)
 ```java
+
 output:
 b
 d
