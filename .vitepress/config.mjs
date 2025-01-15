@@ -125,9 +125,15 @@ description:  "Solve Bank",
     }
     
   ]
-}// OOP SECTION END --------------------
+},// OOP SECTION END --------------------
 
-
+{
+  text: 'TOC',
+  collapsed: true,
+  items:[
+    {text: 'CFG', link: '/TOC/CFG/CFG.md'},
+  ]
+}
 
 
 
@@ -135,10 +141,15 @@ description:  "Solve Bank",
   },
 
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    math:true
   },
 
   head: [
-    ['link', { rel: 'stylesheet', href: '/style.css' }]
+    ['link', { rel: 'stylesheet', href: '/style.css',
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css',
+      integrity: 'sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV',
+      crossorigin: 'anonymous'
+     }]
   ]
 });
