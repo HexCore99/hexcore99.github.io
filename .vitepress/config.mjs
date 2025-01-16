@@ -127,15 +127,20 @@ description:  "Solve Bank",
   ]
 },// OOP SECTION END --------------------
 
+// TOC SECTION
 {
-  text: 'TOC',
-  collapsed: true,
+text: 'TOC',
+items:[
+
+{
   items:[
-    {text: 'CFG', link: '/TOC/CFG/CFG.md'},
+  { text:"CFG TO CNF", link: '/TOC/CFG_TO_CNF/CFG_TO_CNF_UPDATED.md' },
   ]
+  
 }
 
-
+]
+},
 
     ] // Side Bar END 
   },
