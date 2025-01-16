@@ -23,6 +23,8 @@ A,B,C Represent Variables. a represents terminal
 ## CNF Conversion:
 ---------------
 
+## EXAMPLE: 1
+
 ```
 S→ ASA|aB
 A→ B  | S
