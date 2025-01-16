@@ -257,3 +257,13 @@ Even number of 0's and 1's
 S -> 0S1S | 1S0S| ε | ZZ
 
 ```
+
+## Question 21
+
+>**W is a Palindrome**  
+
+```text
+
+S-> 0S0 | 1S1 | ε | 1 | 0
+
+```
