@@ -245,3 +245,15 @@ Y -> E0E | Y0E | E0Y
 Z -> E1E | Z1E | E1 | Z1Z
 E -> 1E0E | 0E1E | ε
 ```
+
+## Question 20
+
+>**EX: Number of 0's and 1's are ODD;**
+
+```text
+Z -> S0S1S | S1S0S
+
+Even number of 0's and 1's
+S -> 0S1S | 1S0S| ε | ZZ
+
+```
