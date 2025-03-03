@@ -2,10 +2,10 @@
 layout: home
 
 hero:
-  name: "!Everything"
+  name: '<span class="hexcore">!Everything</span>'
   tagline: See what’s next
   actions:
     - theme: alt
       text: Enter
-      link: /interMediate
+      link: /gifu
 ---

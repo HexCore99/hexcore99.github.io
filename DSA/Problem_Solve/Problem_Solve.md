@@ -1,7 +1,7 @@
 # Problem 1
 ## Find the First Occurence & Last Occurence of an Element in a Sorted Array
 ::: code-group
-```c++ [BinarySearch Approach]
+```c++ [BinarySearch Approach] {23-32,35-44}
 // clang-format off
 #include <bits/stdc++.h>
 using namespace std;

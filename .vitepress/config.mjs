@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 
+
 export default defineConfig({
   //title: 'Loop Examples',
   // themeConfig: {
@@ -11,7 +12,7 @@ export default defineConfig({
   //     { text: '20', link: '/20' }
   //   ]
   // },
-title: 'Siabul Hassan Siyam',
+title: 'heXcore',
 description:  "Solve Bank",
   themeConfig: {
     sidebar: [

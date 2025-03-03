@@ -1,7 +1,7 @@
 ## Q1 a
 ::: code-group
 
-```java[Transaction.java]
+```java [Transaction.java]
 public interface Transaction {
     public void give();
     public void receive();
@@ -9,7 +9,7 @@ public interface Transaction {
 
 ```
 
-```java[Payment.java]
+```java [Payment.java]
 public abstract class Payment implements Transaction{
     double amount;
     String currency = "BDT";
@@ -31,7 +31,7 @@ public abstract class Payment implements Transaction{
 
 ```
 
-```java[CashPay.java]
+```java [CashPay.java]
 public class CashPay extends Payment{
 
     CashPay(double amount){
@@ -43,7 +43,7 @@ public class CashPay extends Payment{
     }
 }
 ```
-```java[CheckPay.java]
+```java [CheckPay.java]
 public class CheckPay extends Payment{
     CheckPay(double amount){
         this.amount = amount;
@@ -54,7 +54,7 @@ public class CheckPay extends Payment{
     }
 }
 ```
-```java[CreditCardPay.java]
+```java [CreditCardPay.java]
 public class CreditCardPay extends  Payment{
     CreditCardPay(double amount){
         this.amount = amount;
@@ -70,7 +70,7 @@ public class CreditCardPay extends  Payment{
 ## Q1 b
 
 ::: code-group
-```java[ShapeTest.java]
+```java [ShapeTest.java]
 public class ShapeTest {
 public static void draw(Shape obj){
     System.out.println("drawing over "+obj.getArea()+" area");
@@ -84,12 +84,12 @@ public static void draw(Shape obj){
     }
 }
 ```
-```java[Shape.java]
+```java [Shape.java]
 public interface Shape {
     double getArea();
 }
 ```
-```java[Rectangle.java]
+```java [Rectangle.java]
 public class Rectangle implements Shape{
     private  double width, length;
     Rectangle(double width, double length){
@@ -103,7 +103,7 @@ public class Rectangle implements Shape{
 }
 ```
 
-```java[Square.java]
+```java [Square.java]
 public class Square extends Rectangle{
     private double width, length;
     Square(double side) {
@@ -119,7 +119,7 @@ public class Square extends Rectangle{
 
 ## Q2 a
 
-```java[file.java]
+```java [file.java]
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -167,7 +167,7 @@ f
 
 ## Q4
 ::: code-group
-```java[Address.java]
+```java [Address.java]
 public class Address {
     String building_number , area, city;
     int zip_code;
@@ -183,7 +183,7 @@ public class Address {
     }
 }
 ```
-```java[Test.java]
+```java [Test.java]
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -213,7 +213,7 @@ public class Test {
 
 ## Q5
 ::: code-group
-```java[MyMain.java]
+```java [MyMain.java]
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -251,7 +251,7 @@ public class MyMain {
     }
 }
 ```
-```java[MyThread.java]
+```java [MyThread.java]
 import java.util.ArrayList;
 
 public class MyThread extends Thread{
