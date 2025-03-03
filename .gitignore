@@ -1,1 +1,11 @@
+# Node dependencies
 node_modules/
+
+# VitePress build output
+.vitepress/dist/
+
+# VitePress cache
+.vitepress/.cache/
+
+# Environment variables
+.env
