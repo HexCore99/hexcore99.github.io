@@ -142,17 +142,6 @@ items:[
 
 ]
 },
-//DSA Section
-{
-  text: 'DSA',
-  items: [
-    {
-      items : [
-       {  text: "Problem slv", link: '/DSA/Problem_Solve/Problem_Solve.md' },
-      ]
-    }
-  ]
-}
 
     ] // Side Bar END 
   },
