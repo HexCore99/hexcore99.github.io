@@ -148,8 +148,11 @@ items:[
   text: 'DSA',
   items: [
     {
+      text: "Problem Solve",
+      collapsed: true,
       items : [
-       {  text: "Problem slv", link: '/DSA/Problem_Solve/Problem_Solve.md' },
+       {  text: "Sorting", link: '/DSA/Problem_Solve/Sorting.md' },
+       {  text: "Searching", link: '/DSA/Problem_Solve/Searching.md' },
       ]
     }
   ]
