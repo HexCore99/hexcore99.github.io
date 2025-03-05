@@ -5,7 +5,7 @@ prev: false
 ## problem 1
 ![Sorting](/DSA/Question_Image/Sorting/kth_Smallest.png)
 
-```c++ [Sorting Approach]
+```c++
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -56,7 +56,7 @@ int main()
 ## Problem 2
 ![Sorting](/DSA/Question_Image/Sorting/Median_Of_The_Array.png)
 
-```c++ [Sorting Approach]
+```c++
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -110,7 +110,7 @@ int main()
 ## Problem 3
 ![Sorting](/DSA/Question_Image/Sorting/Find_Smallest_Difference.png)
 
-```c++ [Sorting Approach]
+```c++
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -173,7 +173,7 @@ int main()
 ## Problem 4
 ![Sorting](/DSA/Question_Image/Sorting/Sort_By_Abs_Value.png)
 
-```c++ [Sorting Approach]
+```c++ 
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -224,7 +224,7 @@ int main()
 ## Problem 5
 ![Sorting](/DSA/Question_Image/Sorting/sort_According_Length.png)
 
-```c++ [Binary Search Approach]
+```c++ 
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -600,7 +600,7 @@ int main()
 ## Problem 10
 ![Sorting](/DSA/Question_Image/Sorting/Sort_By_Duration.png)
 
-```c++ [Binary Search Approach]
+```c++ 
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
