@@ -1054,3 +1054,92 @@ int main()
 
 
 ```
+
+
+## problem 11
+![Sorting](/DSA/Question_Image/Sorting/Sort_By_Sum_Of_Digit_Selection.png)
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+
+ll digitSum(ll digit)
+{
+    ll sum = 0;
+    while (digit > 0)
+    {
+        sum += digit % 10;
+        digit /= 10;
+    }
+    return sum;
+}
+
+void sortBySumOfDigit(vll &vec)
+{
+    unordered_map<ll, ll> oldIndex;
+    for (int i = 0; i < vec.size(); i++)
+        oldIndex[vec[i]] = i;
+
+    for (int i = 0; i < vec.size(); i++)
+    {
+        ll minIndx = i;
+        for (int j = i + 1; j < vec.size(); j++)
+        {
+            if (digitSum(vec[minIndx]) > digitSum(vec[j]))
+                minIndx = j;
+            if (digitSum(vec[minIndx]) == digitSum(vec[j]) && j> oldIndex[vec[j]])
+                swap(vec[j], vec[minIndx]);
+        }
+        swap(vec[i], vec[minIndx]);
+    }
+}
+
+int main()
+{
+
+    vll vec = {19, 28, 92, 35, 47};
+    sortBySumOfDigit(vec);
+    for (auto &x : vec)
+        cout << x << " ";
+    return 0;
+}
+
+```
+## problem 12
+
+![Sorting](/DSA/Question_Image/Sorting/Sort_Float_Bubble.png)
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+
+void sort_Float(vector<double> &vec)
+{
+    ll n = vec.size();
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (vec[j] > vec[j + 1])
+                swap(vec[j], vec[j + 1]);
+        }
+    }
+}
+int main()
+{
+    vector<double> vec = {3.14, 2.71, 1.41, 4.67, 2.98};
+    sort_Float(vec);
+    for (auto &x : vec)
+        cout << x << " ";
+    return 0;
+}
+
+```
