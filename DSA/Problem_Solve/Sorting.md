@@ -1002,3 +1002,55 @@ int main()
 ```
 
 :::
+
+## problem 10
+![Sorting](/DSA/Question_Image/Sorting/Sort_By_Length_insertion.png)
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+
+void insertionSort(vector<string> &vec)
+{
+    for (int i = 1; i < vec.size(); i++)
+    {
+        string str = vec[i];
+        ll j = i - 1;
+
+        while (j >= 0 && vec[j].length() > str.length())
+        {
+            vec[j + 1] = vec[j];
+            j--;
+        }
+        vec[j + 1] = str;
+    }
+}
+vector<string> take_Input()
+{
+    int n;
+    cin >> n;
+    vector<string> vec(n);
+    for (auto &i : vec)
+        cin >> i;
+
+    return vec;
+}
+int main()
+{
+    // vector<string> vec = take_Input();
+
+    // vector<string> vec = {"Optimus", "Primuss", "heXcore", "Knight", "Fury"};
+    vector<string> vec = {"apple", "banana", "kiwi", "grape", "orange"};
+
+    insertionSort(vec);
+    for (auto &i : vec)
+        cout << i << " ";
+
+    return 0;
+}
+
+
+```
