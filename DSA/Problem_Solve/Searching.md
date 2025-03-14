@@ -1,5 +1,5 @@
 ## Problem 1
-# Find the First Occurence & Last Occurence of an Element in a Sorted Array
+![First Occurence & Last Occurence of an Element in a Sorted Array](/DSA/Question_Image/Searching/Find_First_&_Last_Occurence_Binary.png)
 ::: code-group
 ```c++ [BinarySearch Approach] {23-32,35-44}
 // clang-format off
@@ -11,7 +11,7 @@ using namespace std;
 #define nl '\n'
 // clang-format on
 
-void firstNlastIdx(vll vec, ll key)
+pair<ll,ll> firstNlastIdx(vll vec, ll key)
 {
     ll lStart = 0;
     ll lEnd = vec.size() - 1;
@@ -48,15 +48,14 @@ void firstNlastIdx(vll vec, ll key)
             rStart = rMid + 1;
     }
 
-    cout << "Left Index = " << lMostIndex << nl;
-
-    cout << "Right Index = " << rMostIndex << nl;
+    return {lMostIndex, rMostIndex};
 }
 
 int main()
 {
     vll vec = {1, 2, 2, 2, 3, 3, 3, 3, 4, 5, 6, 7, 8, 9};
-    firstNlastIdx(vec, 3);
+    pair<ll,ll> indices =  firstNlastIdx(vec, 3);
+    cout <<"("<< indices.first << "," << indices.second << ")" << nl;
     return 0;
 }
 ```
@@ -199,7 +198,7 @@ int main()
 
 
 ## problem 4
-If the given key value is not found: Insert the value into its correct position in the already sorted array, ensuring the array remains sorted after the insertion.
+![Insert an Element in a Sorted Array](/DSA/Question_Image/Searching/Find_Inserting_Position_Binary.png)
 
 ```c++
 #include <bits/stdc++.h>
@@ -259,6 +258,341 @@ int main()
     cout << "After Insert: " << nl;
     for (auto i : vec)
         cout << i << " ";
+
+    return 0;
+}
+```
+## problem 5
+![Find the Square Root of a Number](/DSA/Question_Image/Searching/Find_First_Occurence.png)
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll arrtor<ll>
+#define nl '\n'
+
+ll findFirstOccurence(ll arr[], ll size, ll target)
+{
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] == target)
+            return i;
+    }
+    return -1;
+}
+
+int main()
+{
+    ll arr[] = {5, 3, 8, 1, 9};
+    ll target = 8;
+    ll size = sizeof(arr) / sizeof(arr[0]);
+    cout << findFirstOccurence(arr, size, target);
+
+    return 0;
+}
+
+```
+
+## problem 6
+![Find All Occurences of an Element in a Sorted Array](/DSA/Question_Image/Searching/Find_All_Occurence_Linear.png)
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+
+vll findAllOccurence(vll vec, ll target)
+{
+    vll occurence;
+    for (int i = 0; i < vec.size(); i++)
+        if (vec[i] == target)
+            occurence.emplace_back(i);
+
+    return occurence;
+}
+
+int main()
+{
+    vll vec = {4, 2, 3, 2, 4, 2};
+    ll target = 2;
+    vll occurence = findAllOccurence(vec, target);
+    for (auto i : occurence)
+        cout << i << " ";
+
+    return 0;
+}
+
+```
+
+## problem 7
+![First Greater Element](/DSA/Question_Image/Searching/Find_First_Greater_Linear.png)
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+
+ll findFirstGreater(vll vec, ll target)
+{
+    for (auto i : vec)
+        if (i > target)
+            return i;
+    return -1;
+}
+
+int main()
+{
+    vll vec = {3, 5, 7, 2, 8, 10};
+    ll target = 6;
+
+    cout << findFirstGreater(vec, target);
+
+    return 0;
+}
+```
+
+## problem 8
+![Find Target Value Binary Search](/DSA/Question_Image/Searching/Find_Target_Value_Binary.png)
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+ll binary_Search(vll vec, ll key)
+{
+
+    ll left = 0;
+    ll right = vec.size() - 1;
+    while (right >= left)
+    {
+        ll mid = left + (right - left) / 2;
+
+        if (vec[mid] == key)
+            return mid;
+        if (vec[mid] < key)
+
+            left = mid + 1;
+        else
+            right = mid - 1;
+    }
+    return -1;
+}
+
+int main()
+{
+    vll vec = {1,3,5,7,9};
+    ll target = 5;
+    cout<<binary_Search(vec, target);
+
+    return 0;
+}
+
+```
+
+## problem 9
+![Search In Descending](/DSA/Question_Image/Searching/Search_In_Descending_Binary.png)
+```c++
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+ll binary_Search(vll vec, ll key)
+{
+
+    ll left = 0;
+    ll right = vec.size() - 1;
+    while (right >= left)
+    {
+        ll mid = left + (right - left) / 2;
+
+        if (vec[mid] == key)
+            return mid;
+        if (vec[mid] > key)
+
+            left = mid + 1;
+        else
+            right = mid - 1;
+    }
+    return -1;
+}
+
+int main()
+{
+    vll vec = {9, 7, 5, 3, 1};
+    ll target = 7;
+    cout << binary_Search(vec, target);
+
+    return 0;
+}
+```
+
+## problem 10
+![Count Target Occurences](/DSA/Question_Image/Searching/Count_Target_Occurence_Binary.png)
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+ll binary_Search(vll vec, ll key)
+{
+    bool found = false;
+    ll left = 0;
+    ll right = vec.size() - 1;
+
+    ll firstOccurence = -1;
+    ll lastOccurence = -1;
+    while (right >= left)
+    {
+        ll mid = left + (right - left) / 2;
+
+        if (vec[mid] == key)
+        {
+            found = true;
+            right = mid - 1;
+            firstOccurence = mid;
+        }
+
+        else if (vec[mid] < key)
+            left = mid + 1;
+        else
+            right = mid - 1;
+    }
+
+    left = 0;
+    right = vec.size() - 1;
+
+    while (right >= left)
+    {
+        ll mid = left + (right - left) / 2;
+
+        if (vec[mid] == key)
+        {
+            found = true;
+            left = mid + 1;
+            lastOccurence = mid;
+        }
+
+        else if (vec[mid] > key)
+            right = mid - 1;
+        else
+            left = mid + 1;
+    }
+
+    if (found)
+        return lastOccurence - firstOccurence + 1;
+    else
+        return -1;
+}
+
+int main()
+{
+    vll vec = {2,4,4,4, 6, 6, 7};
+    ll target = 4;
+    cout << binary_Search(vec, target);
+
+    return 0;
+}
+```
+
+## problem 11
+![Find Cloesest Element](/DSA/Question_Image/Searching/Find_Closest_Element_Binary.png)
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+ll binary_Search(vll vec, ll key)
+{
+
+    ll left = 0;
+    ll right = vec.size() - 1;
+    ll closest = LLONG_MAX;
+    while (right >= left)
+    {
+        ll mid = left + (right - left) / 2;
+        if (abs(vec[mid] - key) < abs(closest - key))
+            closest = vec[mid];
+
+        if (abs(vec[mid - 1] - key) < abs(closest - key))
+        {
+            closest = vec[mid - 1];
+            right = mid - 1;
+        }
+        else if (abs(vec[mid + 1] - key) < abs(closest - key))
+        {
+            closest = vec[mid + 1];
+            left = mid + 1;
+        }
+        else
+            break;
+    }
+    return closest;
+}
+
+int main()
+{
+    vll vec = {1, 3, 8, 10, 15};
+    ll target = 3;
+    cout << binary_Search(vec, target);
+
+    return 0;
+}
+
+```
+## problem 12
+![Find Peak Element](/DSA/Question_Image/Searching/Find_Peak_Binary.png)
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+ll findPeak(vll vec)
+{
+    ll left = 0;
+    ll right = vec.size() - 1;
+    ll peakVal = LLONG_MIN;
+
+    while (left <= right)
+    {
+        ll mid = left + (right - left) / 2;
+
+        if (vec[mid] < vec[mid - 1])
+        {
+            right = mid - 1;
+            peakVal = max(peakVal, vec[right]);
+        }
+        else
+        {
+            left = mid + 1;
+            peakVal = max(peakVal, vec[left]);
+        }
+    }
+    return peakVal;
+}
+
+int main()
+{
+    // vll vec = {1, 3, 8, 12, 4, 2};
+    vll vec = {1, 12, 8, 4, 2};
+
+    cout << findPeak(vec);
 
     return 0;
 }
