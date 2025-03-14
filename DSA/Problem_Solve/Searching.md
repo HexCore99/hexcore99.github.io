@@ -1,5 +1,5 @@
-# Problem 1
-## Find the First Occurence & Last Occurence of an Element in a Sorted Array
+## Problem 1
+# Find the First Occurence & Last Occurence of an Element in a Sorted Array
 ::: code-group
 ```c++ [BinarySearch Approach] {23-32,35-44}
 // clang-format off
@@ -98,8 +98,8 @@ int main()
 
 
 
-# Problem 2
-## Find Perfect Square
+## Problem 2
+# Find Perfect Square
 
 ```c++ [Binary Search Approach]
 // clang-format off
@@ -135,4 +135,131 @@ int main()
     return 0;
 }
 
+```
+
+## problem 3
+If the given key value is found in the array: Delete the value from its current position and shift the remaining elements to fill the gap.
+
+```c++ 
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+
+ll binary_Search(vll vec, ll key)
+{
+
+    ll left = 0;
+    ll right = vec.size() - 1;
+    while (right >= left)
+    {
+        ll mid = left + (right - left) / 2;
+
+        if (vec[mid] == key)
+            return mid;
+        if (vec[mid] < key)
+            left = mid + 1;
+        else
+            right = mid;
+    }
+    return -1;
+}
+void deleteTheKey(vll &vec, ll indx)
+{
+    if (indx != -1)
+    {
+
+        for (int i = indx; i < vec.size() - 1; i++)
+            vec[i] = vec[i + 1];
+
+        vec.pop_back();
+    }
+}
+int main()
+{
+    vll vec = {1, 2, 3, 5, 6, 7, 8, 9};
+
+    cout << "Before Delete: " << nl;
+    for (auto i : vec)
+        cout << i << " ";
+
+    deleteTheKey(vec, binary_Search(vec, 10));
+
+    cout << nl;
+    cout << "After Delete: " << nl;
+    for (auto i : vec)
+        cout << i << " ";
+
+    return 0;
+}
+
+```
+
+
+## problem 4
+If the given key value is not found: Insert the value into its correct position in the already sorted array, ensuring the array remains sorted after the insertion.
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+
+ll binary_Search(vll vec, ll key)
+{
+
+    ll left = 0;
+    ll right = vec.size() - 1;
+    ll leftBoundary = 0;
+    while (right >= left)
+    {
+        ll mid = left + (right - left) / 2;
+
+        if (vec[mid] == key)
+            return -1;
+        if (vec[mid] < key)
+
+            leftBoundary = left = mid + 1;
+        else
+            right = mid - 1;
+    }
+    return leftBoundary;
+}
+
+void insertElement(vll &vec, ll pos, ll key)
+{
+    if (pos != -1)
+    {
+        vec.push_back(0);
+        for (int i = vec.size() - 1; i > pos; i--)
+            vec[i] = vec[i - 1];
+
+        vec[pos] = key;
+    }
+}
+int main()
+{
+    vll vec = {1, 2, 3, 5, 6, 7, 8, 9};
+
+    ll key = 4;
+
+    cout << "Before Insert: " << nl;
+    for (auto i : vec)
+        cout << i << " ";
+    cout << nl;
+
+    insertElement(vec, binary_Search(vec, key), key);
+    // OR
+    // vec.emplace(vec.begin() + binary_Search(vec, key), key);
+
+    cout << "After Insert: " << nl;
+    for (auto i : vec)
+        cout << i << " ";
+
+    return 0;
+}
 ```
