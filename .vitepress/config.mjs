@@ -15,6 +15,7 @@ export default defineConfig({
 title: 'heXcore',
 description:  "Solve Bank",
   themeConfig: {
+
     sidebar: [
 
       {
@@ -170,6 +171,14 @@ items:[
     ['link', { rel: 'stylesheet', href: 'style.css',
       integrity: 'sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV',
       crossorigin: 'anonymous'
-     }]
+     }],
+         ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-YRC742KRB8' }],
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YRC742KRB8');
+    `]
   ]
+
 });
