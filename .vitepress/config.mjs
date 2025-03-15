@@ -1,6 +1,23 @@
 import { defineConfig } from 'vitepress';
 
 
+module.exports = {
+  head: [
+    [
+      'script',
+      {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-YRC742KRB8',
+      },
+    ],
+    [
+      'script',
+      {},
+      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-YRC742KRB8');",
+    ],
+  ],
+}
+
 export default defineConfig({
   //title: 'Loop Examples',
   // themeConfig: {
@@ -172,13 +189,13 @@ items:[
       integrity: 'sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV',
       crossorigin: 'anonymous'
      }],
-         ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-YRC742KRB8' }],
-    ['script', {}, `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YRC742KRB8');
-    `]
+    //      ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-YRC742KRB8' }],
+    // ['script', {}, `
+    //   window.dataLayer = window.dataLayer || [];
+    //   function gtag(){dataLayer.push(arguments);}
+    //   gtag('js', new Date());
+    //   gtag('config', 'G-YRC742KRB8');
+    // `]
   ]
 
 });
