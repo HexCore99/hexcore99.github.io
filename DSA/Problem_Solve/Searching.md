@@ -597,3 +597,66 @@ int main()
     return 0;
 }
 ```
+
+## problem 13
+![CT Question Kodu](/DSA/Question_Image/Searching/Kodu.jpg)
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define vll vector<ll>
+#define nl '\n'
+
+void insertionSort(vll &vec)
+{
+    for (ll i = 1; i < vec.size(); i++)
+    {
+        ll key = vec[i];
+        ll j = i - 1;
+
+        while (j >= 0 && vec[j] > key)
+        {
+            vec[j + 1] = vec[j];
+            j--;
+        }
+        vec[j + 1] = key;
+    }
+}
+ll binSearch(vll vec, ll budget)
+{
+    ll left = 0;
+    ll right = vec.size();
+
+    while (left < right)
+    {
+        ll mid = left + (right - left) / 2;
+
+        if (vec[mid] <= budget)
+            left = mid + 1;
+        else
+            right = mid;
+    }
+    return left;
+}
+
+int main()
+{
+    // vll vec = {1, 3, 8, 12, 4, 2};
+    vll vec = {50, 20, 80, 40, 60, 30, 90};
+    ll budget = 10;
+
+    insertionSort(vec);
+    ll result = binSearch(vec, budget);
+
+    if (result == vec.size())
+        cout << "Kodu Is not for you!" << nl;
+    else if (budget == vec[result])
+        cout << "Kodu lover gets " << vec[result] << " taka (exact match) watermelon" << nl;
+    else
+        cout << "Kodu lover gets " << vec[result] << " taka (next available price within the budget) watermelon" << nl;
+
+    return 0;
+}
+
+```
