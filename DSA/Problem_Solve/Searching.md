@@ -518,32 +518,27 @@ using namespace std;
 #define nl '\n'
 ll binary_Search(vll vec, ll key)
 {
+    ll left = 0, right = vec.size() - 1;
+    ll closest = vec[0]; 
 
-    ll left = 0;
-    ll right = vec.size() - 1;
-    ll closest = LLONG_MAX;
-    while (right >= left)
+    while (left <= right)
     {
         ll mid = left + (right - left) / 2;
+
+        
         if (abs(vec[mid] - key) < abs(closest - key))
             closest = vec[mid];
 
-        if (abs(vec[mid - 1] - key) < abs(closest - key))
-        {
-            closest = vec[mid - 1];
-            right = mid - 1;
-        }
-        else if (abs(vec[mid + 1] - key) < abs(closest - key))
-        {
-            closest = vec[mid + 1];
-            left = mid + 1;
-        }
+        if (vec[mid] == key)
+            return vec[mid]; 
+
+        if (vec[mid] < key)
+            left = mid + 1; 
         else
-            break;
+            right = mid - 1; 
     }
     return closest;
 }
-
 int main()
 {
     vll vec = {1, 3, 8, 10, 15};
@@ -567,30 +562,23 @@ ll findPeak(vll vec)
 {
     ll left = 0;
     ll right = vec.size() - 1;
-    ll peakVal = LLONG_MIN;
 
-    while (left <= right)
+    while (left < right)
     {
         ll mid = left + (right - left) / 2;
 
-        if (vec[mid] < vec[mid - 1])
-        {
-            right = mid - 1;
-            peakVal = max(peakVal, vec[right]);
-        }
-        else
-        {
+        if (vec[mid] < vec[mid + 1])
             left = mid + 1;
-            peakVal = max(peakVal, vec[left]);
-        }
+        else
+            right = mid;
     }
-    return peakVal;
+    return vec[left];
 }
 
 int main()
 {
-    // vll vec = {1, 3, 8, 12, 4, 2};
-    vll vec = {1, 12, 8, 4, 2};
+    vll vec = {1, 3, 8, 12, 4, 2};
+    // vll vec = {1, 12, 8, 4, 2};
 
     cout << findPeak(vec);
 
