@@ -1,4 +1,4 @@
-## Doubly Linked List Funcitons
+## Linked List Funcitons
 ::: code-group
 ```c++ {20-31,33-51,53-91,93-102,104-123,125-169,171-179,181-189} [DLL]
 #include <bits/stdc++.h>
