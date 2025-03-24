@@ -1,4 +1,4 @@
-## Linked List Funcitons
+# Insertion & Deletion in Linked List
 ::: code-group
 ```c++ {20-31,33-51,53-91,93-102,104-123,125-169,171-179,181-189} [DLL]
 #include <bits/stdc++.h>
@@ -404,8 +404,827 @@ int main()
 
 ```
 
-
-
-
-
 :::
+
+# Linked List Problems
+## 1. Print Size of Linked List
+![Linked List Size](/DSA/Question_Image/Linked%20List/print_linked_list_size.png)
+
+```c++ {32-41,50}
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+void insertAtEnd(Node *&head, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        return;
+    }
+    Node *temp = head;
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
+int getSize(Node *head)
+{
+    int cnt = 0;
+    while (head)
+    {
+        cnt++;
+        head = head->next;
+    }
+    return cnt;
+}
+
+int main()
+{
+    Node *head = new Node(10);
+    insertAtEnd(head, 20);
+    insertAtEnd(head, 30);
+    insertAtEnd(head, 40);
+    insertAtEnd(head, 50);
+    cout << "Size of the linked list: " << getSize(head) << endl;
+    return 0;
+}
+
+```
+
+## 2. Print Middle Node
+![Middle Node SLL](/DSA//Question_Image//Linked%20List/print_middle_node_SLL.png)
+
+```c++ {33-50,69}
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+void insertAtEnd(Node *&head, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        return;
+    }
+    Node *temp = head;
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
+int getMidValue(Node *head)
+{
+    if (!head)
+    {
+        cout << "List is Empty!\n";
+        return -1;
+    }
+    Node *slow, *fast;
+    slow = fast = head;
+
+    while (fast->next && fast->next->next)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+
+    return slow->data;
+}
+
+void delList(Node *&head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+int main()
+{
+    Node *head = new Node(10);
+    insertAtEnd(head, 20);
+    insertAtEnd(head, 30);
+    insertAtEnd(head, 40);
+    insertAtEnd(head, 50);
+    cout << "Middle value of the linked list: " << getMidValue(head) << endl;
+
+    delList(head);
+
+    return 0;
+}
+
+```
+
+## 3. Print Nmbr of Occurences
+![Count Occurences](/DSA/Question_Image/Linked%20List/print_Occurences_SLL.png)
+
+```c++ {32-42,62-63}
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+void insertAtEnd(Node *&head, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        return;
+    }
+    Node *temp = head;
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
+int findOccurences(Node *head, int val)
+{
+    int cnt = 0;
+    while (head)
+    {
+        if (head->data == val)
+            cnt++;
+        head = head->next;
+    }
+    return cnt;
+}
+
+void delList(Node *&head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+int main()
+{
+    Node *head = new Node(10);
+    insertAtEnd(head, 20);
+    insertAtEnd(head, 10);
+    insertAtEnd(head, 10);
+    insertAtEnd(head, 50);
+
+    int k = 10;
+    cout << "Number of Occurences of " << k << ": " << findOccurences(head, k) << endl;
+
+    delList(head);
+
+    return 0;
+}
+
+```
+
+## 4. Insert In Sorted Linked List
+![Insert In Sorted List](/DSA/Question_Image/Linked%20List/insert_in_sorted_list_SLL.png)
+
+```c++ {42-51,80-81}
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+void insertAtEnd(Node *&head, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        return;
+    }
+    Node *temp = head;
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
+void printList(Node *head)
+{
+    while (head)
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+void insertInSortedList(Node *&head, int data)
+{
+
+    Node *newNode = new Node(data);
+    if (!head || head->data > data)
+    {
+        newNode->next = head;
+        head = newNode;
+        return;
+    }
+
+    Node *temp = head;
+    while (temp->next && temp->next->data < data)
+    {
+        temp = temp->next;
+    }
+    newNode->next = temp->next;
+    temp->next = newNode;
+}
+void delList(Node *&head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+int main()
+{
+    Node *head = nullptr;
+    head = new Node(10);
+    insertAtEnd(head, 20);
+    insertAtEnd(head, 30);
+    insertAtEnd(head, 40);
+    insertAtEnd(head, 50);
+
+    int key = 25;
+    insertInSortedList(head, key);
+    printList(head);
+
+    delList(head);
+
+    return 0;
+}
+
+```
+
+## 5. Delete Even Numbers
+![Delete Even Numbers](/DSA/Question_Image/Linked%20List/delete_even_numbers_SLL.png)
+
+```c++ {42-75,96}
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+void insertAtEnd(Node *&head, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        return;
+    }
+    Node *temp = head;
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
+void printList(Node *head)
+{
+    while (head)
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+void del_even_numbers(Node *&head)
+{
+    if (!head)
+    {
+        cout << "List Is Empty!\n";
+        return;
+    }
+
+    // Del all even from  start
+    while (head->data % 2 == 0)
+    {
+
+        Node *hold = head;
+        head = head->next;
+        delete hold;
+
+        if (!head)
+            return;
+    }
+
+    // Del rest of even
+    Node *temp = head;
+    while (temp->next)
+    {
+        if (temp->next->data % 2 == 0)
+        {
+            Node *hold = temp->next;
+            temp->next = temp->next->next;
+            delete hold;
+        }
+        else
+            temp = temp->next;
+    }
+}
+
+void delList(Node *&head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+int main()
+{
+    Node *head = new Node(5);
+    insertAtEnd(head, 20);
+    insertAtEnd(head, 30);
+    insertAtEnd(head, 40);
+    insertAtEnd(head, 50);
+    insertAtEnd(head, 55);
+
+    del_even_numbers(head);
+    printList(head);
+
+    delList(head);
+
+    return 0;
+}
+```
+## 6. Reverse DLL
+![Reverse DLL](/DSA/Question_Image/Linked%20List/reverse_DLL.png)
+
+```c++ {44-60,78}
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *prev;
+    Node *next;
+    Node(int data)
+    {
+        this->data = data;
+        this->prev = nullptr;
+        this->next = nullptr;
+    }
+};
+
+void insertAtEnd(Node *&head, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        return;
+    }
+    Node *temp = head;
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+    newNode->prev = temp;
+}
+void printList(Node *head)
+{
+    while (head)
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+void reverse(Node *&head)
+{
+    if (!head || !head->next)
+        return;
+
+    Node *current = head;
+    Node *next = nullptr;
+    while (current)
+    {
+        next = current->next;
+        swap(current->next, current->prev);
+        if (!next)
+            break;
+        current = next;
+    }
+    head = current;
+}
+void delList(Node *&head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+int main()
+{
+    Node *head = new Node(10);
+    insertAtEnd(head, 20);
+    insertAtEnd(head, 30);
+    insertAtEnd(head, 40);
+    insertAtEnd(head, 50);
+
+    reverse(head);
+    printList(head);
+
+    delList(head);
+    return 0;
+}
+
+```
+
+## 7. Reverse SLL
+![Reverse SLL](/DSA/Question_Image/Linked%20List/reverse_SLL.png)
+
+```c++ {42-59,79}
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+void insertAtEnd(Node *&head, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        return;
+    }
+    Node *temp = head;
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
+void printList(Node *head)
+{
+    while (head)
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+void reverse(Node *&head)
+{
+    if (!head || !head->next)
+        return;
+
+    Node *prev = nullptr;
+    Node *current = head;
+    Node *next = nullptr;
+
+    while (current)
+    {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    head = prev;
+}
+
+void delList(Node *&head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+int main()
+{
+    Node *head = new Node(10);
+    insertAtEnd(head, 20);
+    insertAtEnd(head, 30);
+    insertAtEnd(head, 40);
+    insertAtEnd(head, 50);
+
+    reverse(head);
+    printList(head);
+
+    delList(head);
+
+    return 0;
+}
+
+```
+## 8. Rotate SLL By K position
+![Rotate SLL](/DSA/Question_Image/Linked%20List/rotate_by_k_place_SLL.png)
+
+```c++ {42-76,97}
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+void insertAtEnd(Node *&head, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        return;
+    }
+    Node *temp = head;
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
+void printList(Node *head)
+{
+    while (head)
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+void rotate_by_Kth_pos(Node *&head, int k)
+{
+    if (!head || !head->next || k < 1)
+        return;
+
+    int size = 0;
+    Node *temp = head;
+    while (temp)
+    {
+        ++size;
+        temp = temp->next;
+    }
+
+    //if K>= size, No Rotation
+    if (k >= size)
+        return;
+
+    int cnt = 1;
+    Node *last = head;
+    while (last && cnt < k)
+    {
+        cnt++;
+        last = last->next;
+    }
+
+    Node *newHead = last->next;
+    Node *hold = last;
+    while (last->next)
+    {
+        last = last->next;
+    }
+    last->next = head;
+    hold->next = nullptr;
+    head = newHead;
+}
+
+void delList(Node *&head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+int main()
+{
+    Node *head = new Node(10);
+    insertAtEnd(head, 20);
+    insertAtEnd(head, 30);
+    insertAtEnd(head, 40);
+    insertAtEnd(head, 50);
+
+    printList(head);
+    rotate_by_Kth_pos(head, 3);
+    printList(head);
+
+    delList(head);
+
+    return 0;
+}
+
+```
+
+## 9. Check Palindrome
+![Check Palindrome](/DSA/Question_Image/Linked%20List/check_palindrome_SLL.png)
+
+```c++ {42-55,57-88,104}
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+void insertAtEnd(Node *&head, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        return;
+    }
+    Node *temp = head;
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
+void printList(Node *head)
+{
+    while (head)
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+Node *reverse(Node *head)
+{
+    Node *prev = nullptr;
+    Node *current = head;
+    Node *next = nullptr;
+    while (current)
+    {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    return prev;
+}
+
+void checkPalindrome(Node *&head)
+{
+    if (!head || !head->next)
+    {
+        cout << "YES\n";
+        return;
+    }
+
+    Node *slow = head, *fast = head;
+    while (fast->next && fast->next->next)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    Node *secondHalf = reverse(slow->next);
+    slow->next = nullptr;
+    Node *firstHalf = head;
+    Node *temp = secondHalf;
+    while (firstHalf && secondHalf)
+    {
+        if (firstHalf->data != secondHalf->data)
+        {
+            cout << "NO\n";
+            return;
+        }
+        firstHalf = firstHalf->next;
+        secondHalf = secondHalf->next;
+    }
+    cout << "YES\n";
+
+    slow->next = reverse(temp);
+}
+
+void delList(Node *&head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+int main()
+{
+    Node *head = new Node(10);
+    insertAtEnd(head, 20);
+    checkPalindrome(head);
+    delList(head);
+
+    return 0;
+}
+
+```
