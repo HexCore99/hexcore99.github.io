@@ -1318,3 +1318,244 @@ int main()
 }
 
 ```
+
+## 11. Print Entry Node of Loop
+
+
+```c++ {64-78,80-97,110,111}
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+
+void insertAtEnd(Node *&head, Node *&tail, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        tail = newNode;
+        return;
+    }
+    tail->next = newNode;
+    tail = tail->next;
+}
+
+void printList(Node *head)
+{
+    while (head)
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+void delList(Node *&head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+void make_circular(Node *head, Node *&tail, int pos)
+{
+    Node *temp = head;
+    int count = 1;
+    while (count < pos && temp)
+    {
+        temp = temp->next;
+        count++;
+    }
+    if (!temp)
+        return;
+    tail->next = temp;
+}
+
+Node *checkCircular(Node *head)
+{
+    Node *slow = head, *fast = head;
+
+    while (fast && fast->next)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast)
+        {
+            return fast;
+        }
+    }
+    return nullptr;
+}
+
+void printCycleEntryNode(Node *head)
+{
+
+    Node *fast = checkCircular(head);
+    if (!fast)
+    {
+        cout << "No cycle\n";
+        return;
+    }
+
+    Node *slow = head;
+    while (slow != fast)
+    {
+        slow = slow->next;
+        fast = fast->next;
+    }
+    cout << "Cycle entry node: " << slow->data << endl;
+}
+
+int main()
+{
+    Node *head = nullptr;
+    Node *tail = nullptr;
+    insertAtEnd(head, tail, 10);
+    insertAtEnd(head, tail, 20);
+    insertAtEnd(head, tail, 30);
+    insertAtEnd(head, tail, 40);
+    insertAtEnd(head, tail, 50);
+    insertAtEnd(head, tail, 60);
+    printList(head);
+    make_circular(head, tail, 2);
+    printCycleEntryNode(head);
+
+    return 0;
+}
+
+```
+
+## 12. Delete Loop
+
+```c++{80-97,111}
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+
+void insertAtEnd(Node *&head, Node *&tail, int data)
+{
+    Node *newNode = new Node(data);
+    if (!head)
+    {
+        head = newNode;
+        tail = newNode;
+        return;
+    }
+    tail->next = newNode;
+    tail = tail->next;
+}
+
+void printList(Node *head)
+{
+    while (head)
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+void delList(Node *&head)
+{
+    while (head)
+    {
+        Node *temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+void make_circular(Node *head, Node *&tail, int pos)
+{
+    Node *temp = head;
+    int count = 1;
+    while (count < pos && temp)
+    {
+        temp = temp->next;
+        count++;
+    }
+    if (!temp)
+        return;
+    tail->next = temp;
+}
+
+Node *checkCircular(Node *head)
+{
+    Node *slow = head, *fast = head;
+
+    while (fast && fast->next)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast)
+        {
+            return fast;
+        }
+    }
+    return nullptr;
+}
+
+void removeCircularity(Node *head)
+{
+
+    Node *fast = checkCircular(head);
+    if (!fast)
+    {
+        cout << "No cycle\n";
+        return;
+    }
+
+    Node *slow = head;
+    while (slow->next != fast->next)
+    {
+        slow = slow->next;
+        fast = fast->next;
+    }
+    fast->next = nullptr;
+}
+
+int main()
+{
+    Node *head = nullptr;
+    Node *tail = nullptr;
+    insertAtEnd(head, tail, 10);
+    insertAtEnd(head, tail, 20);
+    insertAtEnd(head, tail, 30);
+    insertAtEnd(head, tail, 40);
+    insertAtEnd(head, tail, 50);
+    insertAtEnd(head, tail, 60);
+    printList(head);
+    make_circular(head, tail, 2);
+    removeCircularity(head);
+    printList(head);
+    return 0;
+}
+
+```
