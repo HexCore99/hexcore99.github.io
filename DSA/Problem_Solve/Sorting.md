@@ -481,32 +481,32 @@ using namespace std;
 
 void oddDesc_evenAsc(vll &vec)
 {
-    int n = vec.size();
-
-    for (int i = 2; i < n; i++)
+    //Odd Index sort
+       for (int i = 1; i < vec.size(); i += 2)
     {
-        ll key = vec[i];
-        ll j = i - 2;
-        if (j % 2)
+        int key = vec[i];
+        int j = i - 2;
+        while (j > 0 && vec[j] < key)
         {
-            while (j >= 0 && j % 2 && vec[j] < key)
-            {
-                vec[j + 2] = vec[j];
-                j -= 2;
-            }
+            vec[j + 2] = vec[j];
+            j -= 2;
         }
-        else if (!(j % 2))
+        vec[j + 2] = key;
+    }
+    //Even Index sort
+    for (int i = 2; i < vec.size(); i += 2)
+    {
+        int key = vec[i];
+        int j = i - 2;
+        while (j >= 0 && vec[j] > key)
         {
-
-            while (j >= 0 && !(j % 2) && vec[j] > key)
-            {
-                vec[j + 2] = vec[j];
-                j -= 2;
-            }
+            vec[j + 2] = vec[j];
+            j -= 2;
         }
         vec[j + 2] = key;
     }
 }
+
 void print_me(vll vec)
 {
     for (auto &i : vec)
