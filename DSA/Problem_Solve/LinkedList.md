@@ -1375,7 +1375,7 @@ void delList(Node *&head)
 void make_circular(Node *head, Node *&tail, int pos)
 {
     Node *temp = head;
-    int count = 1;
+    int count = 0;
     while (count < pos && temp)
     {
         temp = temp->next;
@@ -1495,7 +1495,7 @@ void delList(Node *&head)
 void make_circular(Node *head, Node *&tail, int pos)
 {
     Node *temp = head;
-    int count = 1;
+    int count = 0;
     while (count < pos && temp)
     {
         temp = temp->next;
