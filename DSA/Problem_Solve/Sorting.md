@@ -757,68 +757,47 @@ int main()
 
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
 
-#define vll vector<ll>
-#define nl '\n'
-
-
-ll compare(ll x, ll y)
+vector<int> freq(7, 0);
+bool is_greater(int value, int key)
 {
-    return x - y;
+    if (freq[value] < freq[key])
+        return true;
+
+    else if (freq[value] == freq[key])
+        return value > key;
+
+    return false;
 }
 
-void insertionSort(vll &vec, ll arr[])
+void insertionSort(vector<int> &vec)
 {
-    ll n = vec.size();
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i < vec.size(); i++)
     {
-        ll key = vec[i];
-        ll j = i - 1;
-        while (j >= 0 && (compare(arr[key], arr[vec[j]]) > 0 ||
-                          (compare(arr[key], arr[vec[j]]) == 0 && vec[j] > key)))
+        int key = vec[i];
+        int j = i - 1;
+        while (j >= 0 && is_greater(vec[j], key))
         {
             vec[j + 1] = vec[j];
-
             j--;
         }
         vec[j + 1] = key;
     }
 }
 
-
-void print_me(vll vec)
-{
-    for (auto &i : vec)
-        cout << i << " ";
-    cout << nl;
-}
-vll take_Input()
-{
-    int n;
-    cin >> n;
-    vll vec(n);
-    for (auto &i : vec)
-        cin >> i;
-
-    return vec;
-}
 int main()
 {
-    // vll vec  = take_Input();
-    vll vec = {4, 3, 6, 6, 6, 6, 1, 3, 4, 4, 1, 0, 0};
-    // vll vec = {4, 3, 1, 6, 1, 3, 4, 4};
-    ll arr[vec.size() + 1] = {0};
+    vector<int> vec = {3, 4, 1, 6, 1, 3, 4, 4};
 
     for (int i = 0; i < vec.size(); i++)
-        arr[vec[i]]++;
+        freq[vec[i]]++;
+    insertionSort(vec);
 
-    insertionSort(vec, arr);
-    print_me(vec);
+    for (auto &x : vec)
+        cout << x << " ";
 
     return 0;
 }
-
 
 ```
 :::
