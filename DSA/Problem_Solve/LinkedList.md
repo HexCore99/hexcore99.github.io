@@ -1442,7 +1442,7 @@ int main()
 
 ## 12. Delete Loop
 
-```c++{80-97,111}
+```c++{80-97,113-114}
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -1482,62 +1482,63 @@ void printList(Node *head)
     cout << endl;
 }
 
-void delList(Node *&head)
-{
-    while (head)
-    {
-        Node *temp = head;
-        head = head->next;
-        delete temp;
-    }
-}
-
 void make_circular(Node *head, Node *&tail, int pos)
 {
+    if (pos <= 0)
+    {
+        cout << "position can't be less than 1\n";
+        return;
+    }
+
     Node *temp = head;
-    int count = 0;
+    int count = 1;
     while (count < pos && temp)
     {
         temp = temp->next;
         count++;
     }
     if (!temp)
+    {
+        cout << "Size Exceeded\n";
         return;
+    }
+
     tail->next = temp;
 }
-
 Node *checkCircular(Node *head)
 {
-    Node *slow = head, *fast = head;
+
+    Node *slow = head;
+    Node *fast = head;
 
     while (fast && fast->next)
     {
         slow = slow->next;
         fast = fast->next->next;
         if (slow == fast)
-        {
-            return fast;
-        }
+            break;
     }
-    return nullptr;
+    return fast;
 }
 
-void removeCircularity(Node *head)
+void removeCircular(Node *head)
 {
-
     Node *fast = checkCircular(head);
-    if (!fast)
-    {
-        cout << "No cycle\n";
-        return;
-    }
-
     Node *slow = head;
-    while (slow->next != fast->next)
+    if (!fast)
+        return;
+
+    while (slow != fast)
     {
         slow = slow->next;
         fast = fast->next;
     }
+    cout << slow->data << endl;
+    while (fast->next != slow)
+    {
+        fast = fast->next;
+    }
+
     fast->next = nullptr;
 }
 
@@ -1546,16 +1547,18 @@ int main()
     Node *head = nullptr;
     Node *tail = nullptr;
     insertAtEnd(head, tail, 10);
+
     insertAtEnd(head, tail, 20);
     insertAtEnd(head, tail, 30);
     insertAtEnd(head, tail, 40);
     insertAtEnd(head, tail, 50);
     insertAtEnd(head, tail, 60);
+
     printList(head);
-    make_circular(head, tail, 2);
-    removeCircularity(head);
+    make_circular(head, tail, 1);
+    removeCircular(head);
     printList(head);
+
     return 0;
 }
-
 ```

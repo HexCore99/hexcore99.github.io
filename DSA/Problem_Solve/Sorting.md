@@ -869,7 +869,12 @@ int main()
     // vector<pair<ll, ll>> vec;
     // take_Input(vec);
 
-    vector<pair<ll, ll>> vec = {{2, 5}, {1, 2}, {4, 6}};
+   {% raw %}
+{% highlight cpp %}
+vector<pair<ll, ll>> vec = {{2, 5}, {1, 2}, {4, 6}};
+{% endhighlight %}
+{% endraw %}
+
 
     sortByDuration(vec);
 
