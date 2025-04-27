@@ -1064,28 +1064,34 @@ ll digitSum(ll digit)
 
 void sortBySumOfDigit(vll &vec)
 {
-    unordered_map<ll, ll> oldIndex;
-    for (int i = 0; i < vec.size(); i++)
-        oldIndex[vec[i]] = i;
-
-    for (int i = 0; i < vec.size(); i++)
+    int n = vec.size();
+    for (int i = 0; i < n; ++i)
     {
-        ll minIndx = i;
-        for (int j = i + 1; j < vec.size(); j++)
+
+        int minIdx = i;
+        int minSum = digitSum(vec[i]);
+        for (int j = i + 1; j < n; ++j)
         {
-            if (digitSum(vec[minIndx]) > digitSum(vec[j]))
-                minIndx = j;
-            if (digitSum(vec[minIndx]) == digitSum(vec[j]) && j> oldIndex[vec[j]])
-                swap(vec[j], vec[minIndx]);
+            int temp = digitSum(vec[j]);
+            if (temp < minSum)
+            {
+                minSum = temp;
+                minIdx = j;
+            }
         }
-        swap(vec[i], vec[minIndx]);
+        int key = vec[minIdx];
+        for (int k = minIdx; k > i; --k)
+        {
+            vec[k] = vec[k - 1];
+        }
+        vec[i] = key;
     }
 }
 
 int main()
 {
 
-    vll vec = {19, 28, 92, 35, 47};
+    vll vec = {19, 28, 92, 35, 47, 19};
     sortBySumOfDigit(vec);
     for (auto &x : vec)
         cout << x << " ";
