@@ -1872,7 +1872,235 @@ Test Case 1:
 4x^2+3
 
 Test Case 2:
-5x^3+2x^2+3x+4
 4x^2+2
+5x^3+2x^2+3x+4
+
+Text Case 3:
+-5x^2+4x-5
+-3x^2-6x+10
 ```
 
+```c++
+#include <iostream>
+using namespace std;
+
+class Node
+{
+public:
+    int coeff;
+    int expo;
+    Node *next;
+
+    Node(int coeff, int expo)
+        : coeff(coeff),
+          expo(expo),
+          next(nullptr) {};
+};
+
+void parse_and_initialize(string str, Node *&head, Node *&tail)
+{
+    int n = str.length();
+
+    for (int i = 0; i < n;)
+    {
+        int coeff = 0, expo = 0;
+
+        int coef_sign = 1;
+        int expo_sign = 1;
+
+        if (str[i] == '+' || str[i] == '-')
+        {
+            coef_sign = ((str[i] == '+') ? 1 : -1);
+            i++;
+        }
+
+        // TODO: handle negetive Values
+
+        if (isdigit(str[i]))
+        {
+            while (i < n && isdigit(str[i]))
+            {
+                coeff = str[i] - '0' + coeff * 10;
+                i++;
+            }
+        }
+        else
+        {
+            coeff = 1;
+        }
+
+        if (i < n && str[i] == 'x')
+        {
+            i++;
+            if (i < n && str[i] == '^')
+            {
+                i++;
+                if (str[i] == '+' || str[i] == '-')
+                {
+                    expo_sign = ((str[i] == '+') ? 1 : -1);
+                    i++;
+                }
+
+                while (i < n && isdigit(str[i]))
+                {
+                    expo = str[i] - '0' + expo * 10;
+                    i++;
+                }
+            }
+            else
+            {
+                expo = 1;
+            }
+        }
+        else
+        {
+            expo = 0;
+        }
+
+        // NOTE::Apply Sign
+        coeff *= coef_sign;
+        expo *= expo_sign;
+
+        // NOTE:: creating Node with parsed Value
+        if (!head)
+        {
+            head = tail = new Node(coeff, expo);
+        }
+        else
+        {
+            tail = tail->next = new Node(coeff, expo);
+        }
+    }
+}
+
+Node *addition(Node *head1, Node *head2)
+{
+    Node *final_expr = nullptr;
+    Node *tail = nullptr;
+
+    // NOTE::Brute Force
+    while (head1)
+    {
+        Node *temp = head2;
+
+        bool flag = true;
+        while (temp)
+        {
+            if (head1->expo == temp->expo)
+            {
+                flag = false;
+
+                if (!final_expr)
+                {
+                    tail = final_expr = new Node(head1->coeff + temp->coeff, head1->expo);
+                }
+                else
+                {
+                    tail = tail->next = new Node(head1->coeff + temp->coeff, head1->expo);
+                }
+                break;
+            }
+            temp = temp->next;
+        }
+
+        if (flag) // NOTE:: if exponent does not match
+        {
+            if (!final_expr)
+            {
+                tail = final_expr = new Node(head1->coeff, head1->expo);
+            }
+            else
+            {
+                tail = tail->next = new Node(head1->coeff, head1->expo);
+            }
+        }
+
+        head1 = head1->next;
+    }
+
+    // NOTE:: add remaining nodes
+    while (head2)
+    {
+        Node *temp = final_expr;
+        bool found = false;
+        while (temp)
+        {
+            if (head2->expo == temp->expo)
+            {
+                found = true;
+                break;
+            }
+
+            temp = temp->next;
+        }
+        if (!found)
+        {
+            tail = tail->next = new Node(head2->coeff, head2->expo);
+        }
+
+        head2 = head2->next;
+    }
+
+    return final_expr;
+}
+
+void display(Node *head)
+{
+    if (!head)
+    {
+        cout << "0\n";
+        return;
+    }
+    bool first = true;
+    for (; head; head = head->next)
+    {
+        int c = head->coeff, e = head->expo;
+        // NOTE:: print sign
+        if (first)
+        {
+            if (c < 0)
+                cout << "-";
+        }
+        else
+        {
+            cout << (c < 0 ? " - " : " + ");
+        }
+
+        int absC = abs(c);
+        if (e == 0)
+        {
+            cout << absC;
+        }
+        else
+        {
+            if (absC != 1)
+                cout << absC; // NOTE:: remove 1 before x
+            cout << "x";
+            if (e != 1)
+                cout << "^" << e;
+        }
+        first = false;
+    }
+    cout << "\n";
+}
+
+int main()
+{
+    string str1;
+    string str2;
+    cin >> str1 >> str2;
+    Node *head1, *tail1;
+    Node *head2, *tail2;
+    head1 = tail1 = nullptr;
+    head2 = tail2 = nullptr;
+
+    parse_and_initialize(str1, head1, tail1);
+    parse_and_initialize(str2, head2, tail2);
+
+    Node *final_expr = addition(head1, head2);
+    display(final_expr);
+
+    return 0;
+}
+
+```
