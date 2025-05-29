@@ -1,6 +1,9 @@
 # Insertion & Deletion in Linked List
+
 ::: code-group
+
 ```c++ {20-31,33-51,53-91,93-102,104-123,125-169,171-179,181-189} [DLL]
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -406,8 +409,8 @@ int main()
 
 :::
 
-# Linked List Problems
 ## 1. Print Size of Linked List
+
 ![Linked List Size](/DSA/Question_Image/Linked%20List/print_linked_list_size.png)
 
 ```c++ {32-41,50}
@@ -467,6 +470,7 @@ int main()
 ```
 
 ## 2. Print Middle Node
+
 ![Middle Node SLL](/DSA//Question_Image//Linked%20List/print_middle_node_SLL.png)
 
 ```c++ {33-50,69}
@@ -548,6 +552,7 @@ int main()
 ```
 
 ## 3. Print Nmbr of Occurences
+
 ![Count Occurences](/DSA/Question_Image/Linked%20List/print_Occurences_SLL.png)
 
 ```c++ {32-42,62-63}
@@ -623,6 +628,7 @@ int main()
 ```
 
 ## 4. Insert In Sorted Linked List
+
 ![Insert In Sorted List](/DSA/Question_Image/Linked%20List/insert_in_sorted_list_SLL.png)
 
 ```c++ {42-51,80-81}
@@ -717,6 +723,7 @@ int main()
 ```
 
 ## 5. Delete Even Numbers
+
 ![Delete Even Numbers](/DSA/Question_Image/Linked%20List/delete_even_numbers_SLL.png)
 
 ```c++ {42-75,96}
@@ -822,8 +829,11 @@ int main()
 
     return 0;
 }
+
 ```
+
 ## 6. Reverse DLL
+
 ![Reverse DLL](/DSA/Question_Image/Linked%20List/reverse_DLL.png)
 
 ```c++ {44-60,78}
@@ -914,6 +924,7 @@ int main()
 ```
 
 ## 7. Reverse SLL
+
 ![Reverse SLL](/DSA/Question_Image/Linked%20List/reverse_SLL.png)
 
 ```c++ {42-59,79}
@@ -1004,7 +1015,9 @@ int main()
 }
 
 ```
+
 ## 8. Rotate SLL By K position
+
 ![Rotate SLL](/DSA/Question_Image/Linked%20List/rotate_by_k_place_SLL.png)
 
 ```c++ {42-76,97}
@@ -1115,6 +1128,7 @@ int main()
 ```
 
 ## 9. Check Palindrome
+
 ![Check Palindrome](/DSA/Question_Image/Linked%20List/check_palindrome_SLL.png)
 
 ```c++ {42-55,57-88,104}
@@ -1228,7 +1242,9 @@ int main()
 }
 
 ```
+
 ## 10. Detect Circularity
+
 ![Detect Circularity](/DSA/Question_Image/Linked%20List/detect_circularity_SLL.png)
 
 ```c++ {50-65,80-81}
@@ -1320,7 +1336,6 @@ int main()
 ```
 
 ## 11. Print Entry Node of Loop
-
 
 ```c++ {64-78,80-97,110,111}
 #include <bits/stdc++.h>
@@ -1561,4 +1576,456 @@ int main()
 
     return 0;
 }
+```
+
+## 13. Assignment Problem 1
+
+![lab assignment prblm 1](/DSA/Question_Image/Linked%20List/lab_ass_prblm1.png)
+
+```c++
+
+#include <iostream>
+using namespace std;
+
+static int current_size = 0;
+
+class Node
+{
+public:
+    string id;
+    Node *next;
+
+    Node(string id)
+        : id(id),
+          next(nullptr) {};
+};
+
+Node *head = nullptr;
+Node *tail = nullptr;
+
+void add_train(string id)
+{
+    current_size++;
+
+    if (!head)
+    {
+        head = new Node(id);
+        tail = head;
+        return;
+    }
+    tail->next = new Node(id);
+    tail = tail->next;
+}
+
+void depart_train(string id)
+{
+    if (head->id == id)
+    {
+        current_size--;
+        Node *reserve = head;
+        head = head->next;
+        delete (reserve);
+        return;
+    }
+
+    Node *temp = head;
+
+    while (temp->next && temp->next->id != id)
+    {
+        temp = temp->next;
+    }
+    if (!temp->next)
+    {
+        cout << "Invalid Train ID\n";
+        return;
+    }
+
+    Node *reserve = temp->next;
+
+    if (!temp->next->next) // NOTE:: Handle Tail
+    {
+        tail = temp;
+        temp->next = nullptr;
+        delete (reserve);
+    }
+    else
+    {
+        temp->next = reserve->next;
+        delete (reserve);
+    }
+    current_size--;
+}
+
+void emergency_block(int pos)
+{
+    if (pos >= current_size)
+    {
+        cout << "Invalid Position\n";
+        return;
+    }
+
+    if (pos == 0)
+    {
+        current_size--;
+        Node *reserve = head;
+        head = head->next;
+        delete (reserve);
+        return;
+    }
+
+    Node *temp = head;
+    int cnt = 0;
+
+    while ((cnt + 1) < pos)
+    {
+        temp = temp->next;
+        cnt++;
+    }
+
+    Node *reserve = temp->next;
+
+    // NOTE:: Handle Tail
+    if (!temp->next->next)
+    {
+        tail = temp;
+        temp->next = nullptr;
+        delete (reserve);
+    }
+    else
+    {
+        temp->next = reserve->next;
+        delete (reserve);
+    }
+    current_size--;
+}
+void display_tracks()
+{
+    if (!head)
+    {
+        cout << "Empty\n";
+        return;
+    }
+    Node *temp = head;
+    while (temp)
+    {
+        cout << temp->id << " ";
+        temp = temp->next;
+    }
+    cout << "\n";
+}
+
+int main()
+{
+    add_train("T123");
+    add_train("T456");
+    add_train("T789");
+    depart_train("T456");
+    emergency_block(0);
+    display_tracks();
+
+    return 0;
+}
+
+
+```
+
+## 14. Assignment Problem 2
+
+![lab assignment prblm 2](/DSA/Question_Image/Linked%20List/lab_ass_prblm2.png)
+
+```c++
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+class Node
+{
+public:
+    string Row;
+    int index;
+    Node *next;
+    Node(string row, int index)
+        : Row(row),
+          index(index),
+          next(nullptr) {};
+};
+Node *head = nullptr;
+Node *tail = nullptr;
+
+void add_Row(string row, int index)
+{
+    if (!head)
+    {
+        head = new Node(row, index);
+        tail = head;
+        return;
+    }
+
+    tail->next = new Node(row, index);
+    tail = tail->next;
+}
+
+void display_mirrored()
+{
+    Node *temp = head;
+    while (temp)
+    {
+        string cpy = temp->Row;
+        reverse(cpy.begin(), cpy.end());
+        cout << "Row " << temp->index << ": " << cpy << endl;
+        temp = temp->next;
+    }
+}
+
+int main()
+{
+    add_Row("000..00..0", 0);
+    add_Row("0....0", 1);
+
+    display_mirrored();
+
+    return 0;
+}
+
+
+```
+
+## 15. Assignment Problem 3
+
+![lab assignment prblm 3](/DSA/Question_Image/Linked%20List/lab_ass_prblm3.png)
+
+```c++
+#include <iostream>
+using namespace std;
+
+class Node
+{
+public:
+    char node_name;
+    int freq;
+    Node *next;
+    Node(char node_name)
+        : node_name(node_name),
+          freq(0),
+          next(nullptr) {};
+};
+
+Node *head = nullptr;
+Node *tail = nullptr;
+
+void initialize_nodes()
+{
+    head = tail = new Node((char)97);
+
+    for (int i = 1; i < 26; i++)
+        tail = tail->next = new Node((char)(97 + i));
+}
+
+void update_frequency(char ch)
+{
+    if (!(ch >= 'a' && ch <= 'z'))
+        return;
+
+    Node *temp = head;
+    while (temp->node_name != ch)
+    {
+        temp = temp->next;
+    }
+    temp->freq++;
+}
+
+void show_freq()
+{
+    Node *temp = head;
+    while (temp)
+    {
+        cout << temp->node_name << ": " << temp->freq << "\n";
+        temp = temp->next;
+    }
+}
+
+int main()
+{
+    initialize_nodes();
+
+    string str;
+    cin >> str;
+
+    for (auto x : str)
+        update_frequency(x);
+
+    show_freq();
+    return 0;
+}
+
+```
+
+## 16. ASSignment Problem 4
+
+![lab assignment prblm 4](/DSA/Question_Image/Linked%20List/lab_ass_prblm4.png)
+
+```text
+Test Case 1:
+5x^3+2x^2+3x+4
+4x^2+3
+
+Test Case 2:
+5x^3+2x^2+3x+4
+4x^2+2
+
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+class Node
+{
+public:
+    int coeff;
+    int expo;
+    Node *next;
+
+    Node(int coeff, int expo)
+        : coeff(coeff),
+          expo(expo),
+          next(nullptr) {};
+};
+
+void parse_and_initialize(string str, Node *&head, Node *&tail)
+{
+
+    for (int i = 0; i < str.length();)
+    {
+        int coeff = 0;
+        int expo = 0;
+        int cnt = 0;
+        while (str[i] != '+' && i < str.length())
+        {
+            cnt++;
+            i++;
+        }
+        if (cnt == 4) // NOTE:: (coeff)x^(expo)
+        {
+
+            coeff = str[i - cnt] - '0';
+            expo = str[i - 1] - '0';
+        }
+        if (cnt == 2) // NOTE::(coeff)x
+        {
+
+            coeff = str[i - cnt] - '0';
+            expo = 1;
+        }
+        if (cnt == 1) // NOTE::(coeff)
+        {
+
+            coeff = str[i - cnt] - '0';
+            expo = 0;
+        }
+        i++; // NOTE:: Skip the addition sign
+
+        // NOTE:: creating Node with parsed Value
+        if (!head)
+        {
+            head = tail = new Node(coeff, expo);
+        }
+        else
+        {
+            tail = tail->next = new Node(coeff, expo);
+        }
+    }
+}
+
+Node *addition(Node *head1, Node *head2)
+{
+    Node *final_expr = nullptr;
+    Node *tail = nullptr;
+
+    // NOTE::Brute Force
+    while (head1)
+    {
+        Node *temp = head2;
+
+        bool flag = true;
+        while (temp)
+        {
+            if (head1->expo == temp->expo)
+            {
+                flag = false;
+
+                if (!final_expr)
+                {
+                    tail = final_expr = new Node(head1->coeff + temp->coeff, head1->expo);
+                }
+                else
+                {
+                    tail = tail->next = new Node(head1->coeff + temp->coeff, head1->expo);
+                }
+                break;
+            }
+            temp = temp->next;
+        }
+
+        if (flag) // NOTE:: if exponent does not match
+        {
+            if (!final_expr)
+            {
+                tail = final_expr = new Node(head1->coeff, head1->expo);
+            }
+            else
+            {
+                tail = tail->next = new Node(head1->coeff, head1->expo);
+            }
+        }
+
+        head1 = head1->next;
+    }
+    return final_expr;
+}
+void display(Node *head)
+{
+    while (head)
+    {
+        if (head->expo == 0)
+        {
+            cout << head->coeff;
+        }
+
+        else if (head->expo == 1)
+        {
+            cout << head->coeff << "x";
+        }
+        else
+        {
+            cout << head->coeff << "x^" << head->expo;
+        }
+
+        head = head->next;
+        if (head)
+            cout << " + ";
+    }
+}
+
+int main()
+{
+    string str1;
+    string str2;
+    cin >> str1 >> str2;
+    Node *head1, *tail1;
+    Node *head2, *tail2;
+    head1 = tail1 = nullptr;
+    head2 = tail2 = nullptr;
+
+    parse_and_initialize(str1, head1, tail1);
+    parse_and_initialize(str2, head2, tail2);
+
+    Node *final_expr = addition(head1, head2);
+    display(final_expr);
+
+    return 0;
+}
+
 ```
