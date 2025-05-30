@@ -1605,31 +1605,42 @@ Node *tail = nullptr;
 
 void add_train(string id)
 {
-    current_size++;
 
+    Node *temp = new Node(id);
     if (!head)
     {
-        head = new Node(id);
-        tail = head;
-        return;
+        head = tail = temp;
     }
-    tail->next = new Node(id);
-    tail = tail->next;
+    else
+    {
+        tail = tail->next = temp;
+    }
+    current_size++;
 }
 
 void depart_train(string id)
 {
+    if (!head)
+    {
+        cout << "Invalid ID | List is Empty!\n";
+        return;
+    }
     if (head->id == id)
     {
-        current_size--;
         Node *reserve = head;
         head = head->next;
+
+        // NOTE:: if head became null
+        if (!head)
+            tail = nullptr;
+
         delete (reserve);
+        current_size--;
         return;
     }
 
     Node *temp = head;
-
+    //NOTE::Traverse to the node before the id
     while (temp->next && temp->next->id != id)
     {
         temp = temp->next;
@@ -1641,24 +1652,21 @@ void depart_train(string id)
     }
 
     Node *reserve = temp->next;
+    temp->next = reserve->next;
 
-    if (!temp->next->next) // NOTE:: Handle Tail
+    // NOTE:: if tail is removed, update it
+    if (reserve == tail)
     {
         tail = temp;
-        temp->next = nullptr;
-        delete (reserve);
     }
-    else
-    {
-        temp->next = reserve->next;
-        delete (reserve);
-    }
+
+    delete (reserve);
     current_size--;
 }
 
 void emergency_block(int pos)
 {
-    if (pos >= current_size)
+    if (pos >= current_size || pos < 0)
     {
         cout << "Invalid Position\n";
         return;
@@ -1666,16 +1674,21 @@ void emergency_block(int pos)
 
     if (pos == 0)
     {
-        current_size--;
         Node *reserve = head;
         head = head->next;
         delete (reserve);
+
+        // NOTE:: if head became null
+        if (!head)
+            tail = nullptr;
+
+        current_size--;
         return;
     }
 
     Node *temp = head;
-    int cnt = 0;
-
+    int cnt = 0; 
+   // NOTE::Traverse to the node before the pos
     while ((cnt + 1) < pos)
     {
         temp = temp->next;
@@ -1684,18 +1697,15 @@ void emergency_block(int pos)
 
     Node *reserve = temp->next;
 
-    // NOTE:: Handle Tail
-    if (!temp->next->next)
+    temp->next = reserve->next;
+
+    // NOTE:: if tail is removed, update it
+    if (reserve == tail)
     {
         tail = temp;
-        temp->next = nullptr;
-        delete (reserve);
     }
-    else
-    {
-        temp->next = reserve->next;
-        delete (reserve);
-    }
+
+    delete reserve;
     current_size--;
 }
 void display_tracks()
@@ -1829,10 +1839,13 @@ void update_frequency(char ch)
         return;
 
     Node *temp = head;
-    while (temp->node_name != ch)
+    while (temp && temp->node_name != ch)
     {
         temp = temp->next;
     }
+    if (!temp)
+        return;
+
     temp->freq++;
 }
 
@@ -1908,14 +1921,15 @@ void parse_and_initialize(string str, Node *&head, Node *&tail)
         int coef_sign = 1;
         int expo_sign = 1;
 
+        //NOTE::Handle Sign
         if (str[i] == '+' || str[i] == '-')
         {
             coef_sign = ((str[i] == '+') ? 1 : -1);
             i++;
         }
 
-        // TODO: handle negetive Values
 
+         //NOTE:: update coefficient
         if (isdigit(str[i]))
         {
             while (i < n && isdigit(str[i]))
@@ -1929,18 +1943,19 @@ void parse_and_initialize(string str, Node *&head, Node *&tail)
             coeff = 1;
         }
 
-        if (i < n && str[i] == 'x')
+        if (i < n && str[i] == 'x') 
         {
             i++;
             if (i < n && str[i] == '^')
             {
                 i++;
+                //NOTE::Handle Exponent Sign
                 if (str[i] == '+' || str[i] == '-')
                 {
                     expo_sign = ((str[i] == '+') ? 1 : -1);
                     i++;
                 }
-
+                //NOTE::Update Exponent
                 while (i < n && isdigit(str[i]))
                 {
                     expo = str[i] - '0' + expo * 10;
@@ -2018,7 +2033,7 @@ Node *addition(Node *head1, Node *head2)
         head1 = head1->next;
     }
 
-    // NOTE:: add remaining nodes
+    // NOTE:: if head2 has any remaining terms add them
     while (head2)
     {
         Node *temp = final_expr;
@@ -2073,9 +2088,8 @@ void display(Node *head)
         }
         else
         {
-            if (absC != 1)
-                cout << absC; // NOTE:: remove 1 before x
-            cout << "x";
+            if (absC != 1)// NOTE:: remove 1 before x
+                cout << absC<<"x"; 
             if (e != 1)
                 cout << "^" << e;
         }
