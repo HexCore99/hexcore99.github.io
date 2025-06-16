@@ -173,6 +173,7 @@ items:[
        {  text: "Sorting", link: '/DSA/Problem_Solve/Sorting.md' },
        {  text: "Searching", link: '/DSA/Problem_Solve/Searching.md' },
        {  text: "Linked List", link: '/DSA/Problem_Solve/LinkedList.md' },
+       {  text: "Graph", link: '/DSA/Problem_Solve/Graph.md' },
       ]
     }
   ]
