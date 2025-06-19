@@ -135,14 +135,13 @@ int main() {
 ::: code-group
 
 ```c++ [BFS]
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-int shortest_path(vector<vector<int>> adj, int V, int strt, int trgt)
-{
+int shortest_path(vector<vector<int>>adj,int V,int strt, int trgt){
 
-    vector<int> dst(V, -1);
-    queue<int> node;
+    vector<int>dst(V,-1);
+    queue<int>node;
     node.push(strt);
     dst[strt] = 0;
     while (!node.empty())
@@ -150,43 +149,39 @@ int shortest_path(vector<vector<int>> adj, int V, int strt, int trgt)
         int curr = node.front();
         node.pop();
 
-        if (curr == trgt)
-        {
+        if(curr == trgt){
             return dst[curr];
         }
 
-        for (auto v : adj[curr])
-        {
-            if (dst[v] == -1)
-            {
-                dst[v] = dst[curr] + 1;
-                node.push(v);
+        for(auto v:adj[curr]){
+            if(dst[v] == -1){
+                dst[v] = dst[curr]+1;
+               node.push(v); 
             }
         }
     }
     return -1;
+    
 }
 
-int main()
-{
-    int V, E;
-    cin >> V >> E;
+
+int main(){
+    int V,E;
+    cin>> V>> E;
     vector<vector<int>> adj(V);
 
-    for (int i = 0; i < E; i++)
+for(int i =0;i<E;i++)
     {
         int u, v;
-        cin >> u >> v;
+        cin>> u>> v;
 
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
 
-    cout << "Min Number of Edges Between (0 , 5): " << shortest_path(adj, V, 0, 5) << endl;
-    cout << "Min Number of Edges Between (3 , 8): " << shortest_path(adj, V, 3, 8) << endl;
-    cout << "Min Number of Edges Between (2 , 6): " << shortest_path(adj, V, 2, 6) << endl;
-}
+    cout<<shortest_path(adj,V,2,6);
 
+}
 
 ```
 
@@ -239,9 +234,7 @@ for(int i =0;i<E;i++)
         adj[v].push_back(u);
     }
 
-    cout << "Min Number of Edges Between (0 , 5): " << shortest_path(adj, V, 0, 5) << endl;
-    cout << "Min Number of Edges Between (3 , 8): " << shortest_path(adj, V, 3, 8) << endl;
-    cout << "Min Number of Edges Between (2 , 6): " << shortest_path(adj, V, 2, 6) << endl;
+    cout<<shortest_path(adj,V,2,6);
 
 }
 
@@ -252,6 +245,24 @@ for(int i =0;i<E;i++)
 ::: code-group
 
 ```txt [Input 1]
+9 13
+0 1
+0 7
+1 7
+1 2
+2 3
+2 5
+2 8
+3 4
+3 5
+4 5
+5 6
+6 7
+7 8
+
+```
+
+```txt [Input 2]
 7 16
 0 1
 0 2
@@ -269,24 +280,6 @@ for(int i =0;i<E;i++)
 5 2
 5 4
 6 4
-```
-
-```txt [Input 2]
-9 13
-0 1
-0 7
-1 7
-1 2
-2 3
-2 5
-2 8
-3 4
-3 5
-4 5
-5 6
-6 7
-7 8
-
 ```
 
 :::
