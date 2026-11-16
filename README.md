@@ -79,4 +79,4 @@ Spotted a mistake or have an improvement to suggest? Feel free to [open an issue
 
 ## License
 
-This repository is licensed under the [MIT License](LICENSE).
+This repository is licensed under the [MIT License](https://github.com/HexCore99/hexcore99.github.io/blob/main/LICENSE).
